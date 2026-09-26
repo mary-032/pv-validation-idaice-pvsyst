@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# PyCharm / JetBrains
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary / backup files
+~$*
+*.tmp
+*.bak
+*.swp
+
+# Python test / cache files
+.pytest_cache/
+.mypy_cache/
+.coverage
+
+# Local scratch files
+scratch/
+temp/
+tmp/
+
+# Logs
+*.log
