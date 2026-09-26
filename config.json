@@ -1,0 +1,78 @@
+{
+  "systems": {
+    "A": {
+      "rise_system": 3,
+      "kWp": 3.9,
+      "measured_gti_col": "GTI3M",
+      "measured_temp_col": "Tp3M",
+      "measured_power_col": "P3M"
+    },
+    "B": {
+      "rise_system": 8,
+      "kWp": 4.8,
+      "measured_gti_col": "GTI9M",
+      "measured_temp_col": "Tp8M",
+      "measured_power_col": "P8M"
+    },
+    "C": {
+      "rise_system": 9,
+      "kWp": 3.3,
+      "measured_gti_col": "GTI9M",
+      "measured_temp_col": "Tp9M",
+      "measured_power_col": "P9M"
+    }
+  },
+  "site": {
+    "latitude": 57.719231,
+    "longitude": 12.884806,
+    "altitude_m": 170,
+    "surface_tilt_deg": 45,
+    "surface_azimuth_deg_pvlib": 180,
+    "timezone": "Europe/Stockholm"
+  },
+  "annual": {
+    "expected_common_timestamps": 8736,
+    "power_excluded_timestamps": [
+      "2021-02-02 12:00:00",
+      "2021-02-02 13:00:00",
+      "2021-04-02 13:00:00",
+      "2021-04-30 13:00:00"
+    ],
+    "weather_aoi_limit_deg": 80
+  },
+  "sky_bins": [
+    {
+      "name": "Overcast/very cloudy",
+      "min": 0.0,
+      "max": 0.2
+    },
+    {
+      "name": "Cloudy",
+      "min": 0.2,
+      "max": 0.4
+    },
+    {
+      "name": "Mixed/broken",
+      "min": 0.4,
+      "max": 0.6
+    },
+    {
+      "name": "Mostly clear",
+      "min": 0.6,
+      "max": 0.75
+    },
+    {
+      "name": "Clear",
+      "min": 0.75,
+      "max": null
+    }
+  ],
+  "shading": {
+    "clear_start": "2023-06-05 00:00:00",
+    "clear_end": "2023-06-06 00:00:00",
+    "cloudy_start": "2023-05-15 00:00:00",
+    "cloudy_end": "2023-05-16 00:00:00",
+    "full_start": "2023-05-01 00:00:00",
+    "full_end": "2023-06-20 00:00:00"
+  }
+}
