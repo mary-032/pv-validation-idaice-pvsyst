@@ -164,7 +164,7 @@ Some source files may not be publicly redistributed because they originate from 
 See:
 
 ```text
-data/README.md
+data/README_data.md
 docs/DATA_PROVENANCE.md
 ```
 
