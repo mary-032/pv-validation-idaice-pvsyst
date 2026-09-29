@@ -2,15 +2,15 @@ ANNUAL CANONICAL DATA PROVENANCE
 ================================
 
 Canonical output:
-  02_canonical_data/annual_unshaded_analysis.csv
+  derived_data/annual_unshaded_analysis.csv
 
 MEASURED DATA
 -------------
 Original raw source:
-  01_source_inputs/annual/measured/RISE_raw10min_389.xlsx
+  data/measured/annual/RISE_raw10min_389.xlsx
 
 Historical processed measurement layer used in the canonical dataset:
-  01_source_inputs/annual/measured/Results_PVsyst_E2_hour.xlsx
+  data/historical/Results_PVsyst_E2_hour.xlsx
 
 Measured columns used:
   System A: GTI3M, Tp3M, P3M

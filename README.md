@@ -287,3 +287,17 @@ Machine-readable citation information is provided in:
 
 ```text
 CITATION.cff
+```
+
+## Authors
+
+- Marieke Rynoson — Dalarna University
+- Chris Bales — Dalarna University
+- Michel Battikh — Independent Consultant
+
+## License
+
+The source code in this repository is licensed under the MIT License.
+
+Research data and derived datasets are provided for research transparency and reproducibility.
+Please see [LICENSE.md](LICENSE.md) for the applicable terms and attribution requirements.

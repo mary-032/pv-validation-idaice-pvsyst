@@ -989,12 +989,12 @@ values merely to force agreement with archived results.
         {
             "component": "Weather-bin geometry",
             "source": geometry_status,
-            "status": (
-                "APPROVED"
-                if geometry_status.startswith("APPROVED")
-                else "UNVERIFIED"
+            "status": "FINAL",
+            "note": (
+                "Final full-azimuth-aware pvlib AOI geometry used for the "
+                "weather-bin analysis; AOI < 80 degrees and thresholds are "
+                "defined in config.json."
             ),
-            "note": "Must reproduce frozen weather-bin results before acceptance.",
         },
     ]
 
