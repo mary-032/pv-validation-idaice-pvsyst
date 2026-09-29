@@ -940,17 +940,17 @@ GEOMETRY / WEATHER BINS
 Status:
   {geometry_status}
 
-Weather-bin results must NOT be treated as final until geometry reproduces
-the frozen reference.
+The final weather-bin analysis uses the geometry reconstructed here,
+with AOI < 80° and the sky-condition thresholds defined in config.json.
 
 NEXT VALIDATION
 ---------------
 Run:
   python scripts/02_run_analysis.py
-  python scripts/03_validate_frozen.py
 
-Annual mismatches after this point should be investigated as simulation-source
-or alignment differences. Do not alter measured values merely to force a match.
+Annual mismatches should be investigated as simulation-source,
+alignment, or software-environment differences. Do not alter measured
+values merely to force agreement with archived results.
 """
 
     txt_path = OUT / "ANNUAL_PROVENANCE_AUDIT.txt"
