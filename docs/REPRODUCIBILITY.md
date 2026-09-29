@@ -334,8 +334,6 @@ If the original proprietary/source files are unavailable, the statistical analys
 derived_data/
 ```
 
-or from the corresponding legacy working-directory locations where applicable.
-
 The canonical datasets should be treated as the authoritative analysis inputs.
 
 Do not substitute older processed workbooks or archived simulation results.
