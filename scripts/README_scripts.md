@@ -1,6 +1,3 @@
-# pv-validation-idaice-pvsyst
-Reproducible data-processing, validation, uncertainty, sensitivity, and figure-generation workflow for comparing PV simulations in IDA ICE and PVsyst against measured data.
-
 # Analysis scripts
 
 This directory contains the Python scripts used to reconstruct the analysis datasets, reproduce the primary validation results, perform uncertainty and sensitivity analyses, and generate the manuscript figures and tables.

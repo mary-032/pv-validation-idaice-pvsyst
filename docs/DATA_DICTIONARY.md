@@ -1,5 +1,3 @@
-# pv-validation-idaice-pvsyst
-Reproducible data-processing, validation, uncertainty, sensitivity, and figure-generation workflow for comparing PV simulations in IDA ICE and PVsyst against measured data.
 # Data dictionary
 
 This document describes the principal variables used in the canonical PV-validation datasets and analysis outputs.

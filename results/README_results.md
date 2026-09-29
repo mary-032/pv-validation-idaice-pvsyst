@@ -1,5 +1,3 @@
-# pv-validation-idaice-pvsyst
-Reproducible data-processing, validation, uncertainty, sensitivity, and figure-generation workflow for comparing PV simulations in IDA ICE and PVsyst against measured data.
 # Results
 
 This directory contains the generated numerical results, uncertainty analyses, sensitivity analyses, and publication figures produced by the reproducible Python workflow in this repository.
