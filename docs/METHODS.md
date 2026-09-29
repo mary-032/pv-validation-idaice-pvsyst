@@ -13,7 +13,7 @@ The associated manuscript should be consulted for the scientific background, det
 The study compares simulated PV performance from:
 
 ```text
-IDA ICE 5.1.1 beta 2
+IDA ICE 5.1.1.1
 PVsyst 8.0.2
 ```
 
