@@ -278,25 +278,3 @@ The repository distinguishes between:
 Known limitations and unresolved sources of uncertainty are documented in `docs/KNOWN_LIMITATIONS.md`.
 
 These include the use of auxiliary meteorological variables from a station approximately 16 km from the PV site and the hourly temporal resolution of the available PVsyst version.
-
-## Citation
-
-If you use this repository, please cite the associated publication.
-
-Publication details and DOI will be added following publication.
-
-A `CITATION.cff` file will also be provided for machine-readable citation information.
-
-## Authors
-
-Marieke Rynoson  
-Dalarna University  
-Swedish Solar Electricity Research Centre (SOLVE)
-
-Co-author and affiliation information will be added with the final publication metadata.
-
-## License
-
-A software and data license will be specified after confirming redistribution conditions for all included datasets and proprietary-software-derived files.
-
-Until then, inclusion of a file in this repository should not be interpreted as granting rights beyond those explicitly stated by its original owner or provider.
