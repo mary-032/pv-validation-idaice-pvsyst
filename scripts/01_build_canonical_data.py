@@ -13,11 +13,7 @@ import pandas as pd
 # Public-repository paths:
 #   data/        -> source/provenance inputs
 #   derived_data/ -> generated canonical datasets
-#
-# This version supersedes the working-directory paths
-# 01_source_inputs/ and 02_canonical_data/.
-#
-#
+
 # Measurement provenance:
 #   Original source:
 #       RISE_raw10min_389.xlsx
