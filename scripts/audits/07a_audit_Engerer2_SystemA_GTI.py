@@ -41,7 +41,7 @@ import pandas as pd
 #
 # OUTPUT FOLDER
 # -------------
-# 03a_analysis_output_Engerer2/audit_SystemA_GTI/
+# results/reverse_transposition/audits/SystemA_GTI/
 #
 # Main outputs:
 #   00_audit_checks.csv
@@ -63,20 +63,24 @@ import pandas as pd
 # =============================================================================
 
 
-ROOT = Path(__file__).resolve().parents[1]
+# This script lives under scripts/audits/, so the repository root is two
+# directory levels above the script directory.
+ROOT = Path(__file__).resolve().parents[2]
 
-SRC = ROOT / "01_source_inputs" / "annual"
-PD_CANON_PATH = ROOT / "02_canonical_data" / "annual_unshaded_analysis.csv"
-E2_CANON_PATH = (
-    ROOT
-    / "02a_canonical_data_Engerer2"
-    / "annual_unshaded_analysis_Engerer2.csv"
-)
+IDA_PD_DIR = ROOT / "data" / "ida_ice" / "annual" / "Perez_Driesse"
+IDA_E2_DIR = ROOT / "data" / "ida_ice" / "annual" / "Engerer2"
+PVS_PD_DIR = ROOT / "data" / "pvsyst" / "annual" / "Perez_Driesse"
+PVS_E2_DIR = ROOT / "data" / "pvsyst" / "annual" / "Engerer2"
+
+PD_CANON_PATH = ROOT / "derived_data" / "annual_unshaded_analysis.csv"
+E2_CANON_PATH = ROOT / "derived_data" / "annual_unshaded_analysis_Engerer2.csv"
 
 OUT = (
     ROOT
-    / "03a_analysis_output_Engerer2"
-    / "audit_SystemA_GTI"
+    / "results"
+    / "reverse_transposition"
+    / "audits"
+    / "SystemA_GTI"
 )
 OUT.mkdir(parents=True, exist_ok=True)
 
@@ -87,19 +91,19 @@ SYSTEM_FILE = {
 }
 
 IDA_PD = {
-    s: SRC / "IDA_ICE" / f"Syst{num}_PD.xlsx"
+    s: IDA_PD_DIR / f"Syst{num}_PD.xlsx"
     for s, num in SYSTEM_FILE.items()
 }
 IDA_E2 = {
-    s: SRC / "IDA_ICE" / f"Syst{num}_E2.xlsx"
+    s: IDA_E2_DIR / f"Syst{num}_E2.xlsx"
     for s, num in SYSTEM_FILE.items()
 }
 PVS_PD = {
-    s: SRC / "PVsyst" / f"PVsyst_{num}_PD_h.xlsx"
+    s: PVS_PD_DIR / f"PVsyst_{num}_PD_h.xlsx"
     for s, num in SYSTEM_FILE.items()
 }
 PVS_E2 = {
-    s: SRC / "PVsyst" / f"PVsyst_{num}_E2_h.xlsx"
+    s: PVS_E2_DIR / f"PVsyst_{num}_E2_h.xlsx"
     for s, num in SYSTEM_FILE.items()
 }
 
