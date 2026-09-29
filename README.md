@@ -97,7 +97,7 @@ The numbered scripts are intended to be run in approximately the following order
 08  Measurement + temporal uncertainty analysis
 09  Temporal-aggregation sensitivity analysis
 10  Weather-bin threshold sensitivity analysis
-12  Generate shading Figures 4–6
+11  Generate shading Figures 4–6
 ```
 
 Diagnostic scripts associated with specific data-quality investigations are stored under `scripts/audits/`.
