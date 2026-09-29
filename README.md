@@ -261,7 +261,7 @@ See `docs/REPRODUCIBILITY.md` for the complete reproduction procedure and expect
 
 The simulations evaluated in the study were performed using:
 
-- **IDA ICE 5.1.1 beta 2**
+- **IDA ICE 5.1.1.1**
 - **PVsyst 8.0.2**
 
 Python is used for reproducible data processing, statistical analysis, uncertainty analysis, and figure generation.
