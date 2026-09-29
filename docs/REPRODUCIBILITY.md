@@ -658,7 +658,7 @@ The analysis verifies whether the qualitative weather-dependent results depend s
 Execute:
 
 ```bash
-python scripts/12_make_figures4_5_6_shading.py
+python scripts/11_make_figures4_5_6_shading.py
 ```
 
 The script generates plots for:
