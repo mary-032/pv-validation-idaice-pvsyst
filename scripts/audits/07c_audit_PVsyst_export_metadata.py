@@ -44,7 +44,7 @@ from openpyxl import load_workbook
 #
 # OUTPUT FOLDER
 # -------------
-# 03a_analysis_output_Engerer2/audit_SystemA_GTI/
+# results/reverse_transposition/audits/SystemA_GTI/
 #
 # Outputs:
 #   15_PVsyst_workbook_structure.csv
@@ -59,24 +59,29 @@ from openpyxl import load_workbook
 # =============================================================================
 
 
-ROOT = Path(__file__).resolve().parents[1]
+# This script lives under scripts/audits/, so the repository root is two
+# directory levels above the script directory.
+ROOT = Path(__file__).resolve().parents[2]
 
-SRC = ROOT / "01_source_inputs" / "annual" / "PVsyst"
+PVS_PD_DIR = ROOT / "data" / "pvsyst" / "annual" / "Perez_Driesse"
+PVS_E2_DIR = ROOT / "data" / "pvsyst" / "annual" / "Engerer2"
 
 OUT = (
     ROOT
-    / "03a_analysis_output_Engerer2"
-    / "audit_SystemA_GTI"
+    / "results"
+    / "reverse_transposition"
+    / "audits"
+    / "SystemA_GTI"
 )
 OUT.mkdir(parents=True, exist_ok=True)
 
 FILES = {
-    ("A", "PD"): SRC / "PVsyst_3_PD_h.xlsx",
-    ("A", "E2"): SRC / "PVsyst_3_E2_h.xlsx",
-    ("B", "PD"): SRC / "PVsyst_8_PD_h.xlsx",
-    ("B", "E2"): SRC / "PVsyst_8_E2_h.xlsx",
-    ("C", "PD"): SRC / "PVsyst_9_PD_h.xlsx",
-    ("C", "E2"): SRC / "PVsyst_9_E2_h.xlsx",
+    ("A", "PD"): PVS_PD_DIR / "PVsyst_3_PD_h.xlsx",
+    ("A", "E2"): PVS_E2_DIR / "PVsyst_3_E2_h.xlsx",
+    ("B", "PD"): PVS_PD_DIR / "PVsyst_8_PD_h.xlsx",
+    ("B", "E2"): PVS_E2_DIR / "PVsyst_8_E2_h.xlsx",
+    ("C", "PD"): PVS_PD_DIR / "PVsyst_9_PD_h.xlsx",
+    ("C", "E2"): PVS_E2_DIR / "PVsyst_9_E2_h.xlsx",
 }
 
 TARGET = ("A", "E2")
