@@ -280,7 +280,7 @@ The analysis does not alter the underlying `kt_tilt` values or simulation result
 
 ---
 
-### `12_make_figures4_5_6_shading.py`
+### `11_make_figures4_5_6_shading.py`
 
 Generates the time-series plots used for the shading figures.
 
