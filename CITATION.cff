@@ -1,0 +1,59 @@
+cff-version: 1.2.0
+message: >-
+  If you use this repository, its analysis code, derived data, or results,
+  please cite both this repository and the associated publication when
+  publication metadata become available.
+
+title: >-
+  PV validation: reproducible comparison of IDA ICE and PVsyst
+  against measured data
+
+type: software
+
+authors:
+  - family-names: Rynoson
+    given-names: Marieke
+    affiliation: >-
+      Department of Energy and Construction Engineering,
+      Dalarna University, Falun, Sweden
+
+  - family-names: Bales
+    given-names: Chris
+    affiliation: >-
+      Department of Energy and Construction Engineering and
+      Sustainable Energy Research Centre,
+      Dalarna University, Falun, Sweden
+
+  - family-names: Battikh
+    given-names: Michel
+    affiliation: >-
+      Independent Consultant, Oslo, Norway
+
+repository-code: "https://github.com/mary-032/pv-validation-idaice-pvsyst"
+
+url: "https://github.com/mary-032/pv-validation-idaice-pvsyst"
+
+abstract: >-
+  Reproducible data-processing, validation, uncertainty, sensitivity,
+  and figure-generation workflow for comparing photovoltaic simulations
+  in IDA ICE and PVsyst against measured data from three PV systems in
+  Borås, Sweden. The repository accompanies the study "Validation of PV
+  Modeling in an Integrated Building Energy Simulation Tool" and includes
+  annual unshaded validation, near-field shading analysis, moving-block
+  bootstrap uncertainty analysis, reverse-transposition sensitivity,
+  measurement-uncertainty sensitivity, temporal-aggregation sensitivity,
+  and weather-condition sensitivity analyses.
+
+keywords:
+  - photovoltaic
+  - PV simulation
+  - IDA ICE
+  - PVsyst
+  - building energy simulation
+  - BIPV
+  - model validation
+  - uncertainty analysis
+  - solar irradiance
+  - reproducibility
+
+license: MIT
