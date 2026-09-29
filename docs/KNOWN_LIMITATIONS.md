@@ -366,13 +366,11 @@ The sensitivity analysis instead concentrates on uncertainty sources that could 
 The study evaluates specific software versions:
 
 ```text
-IDA ICE 5.1.1 beta 2
+IDA ICE 5.1.1.1
 PVsyst 8.0.2
 ```
 
 Software behaviour may change in later releases.
-
-In particular, the IDA ICE version evaluated was a beta version and some software-specific behaviour identified in the study may not apply to subsequent releases.
 
 The conclusions should therefore be associated with the documented software versions rather than assumed to describe all future versions.
 
