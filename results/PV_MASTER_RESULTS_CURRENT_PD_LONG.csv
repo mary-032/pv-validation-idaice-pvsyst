@@ -565,73 +565,73 @@ Shading_Energy,C,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,measured_kWh,867
 Shading_Energy,C,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,measured_kWh,867.19
 Shading_Energy,A,IDA ICE,,Clear_day_2023-06-05,,simulated_kWh,23.550928
 Shading_Energy,A,PVsyst,,Clear_day_2023-06-05,,simulated_kWh,24.8915
-Shading_Energy,B,IDA ICE,,Clear_day_2023-06-05,,simulated_kWh,28.584139000000004
+Shading_Energy,B,IDA ICE,,Clear_day_2023-06-05,,simulated_kWh,29.43188
 Shading_Energy,B,PVsyst,,Clear_day_2023-06-05,,simulated_kWh,30.1111
 Shading_Energy,C,IDA ICE,,Clear_day_2023-06-05,,simulated_kWh,21.24872
 Shading_Energy,C,PVsyst,,Clear_day_2023-06-05,,simulated_kWh,21.7475
 Shading_Energy,A,IDA ICE,,Partly_cloudy_day_2023-05-15,,simulated_kWh,11.328667
 Shading_Energy,A,PVsyst,,Partly_cloudy_day_2023-05-15,,simulated_kWh,11.7826
-Shading_Energy,B,IDA ICE,,Partly_cloudy_day_2023-05-15,,simulated_kWh,12.67684
+Shading_Energy,B,IDA ICE,,Partly_cloudy_day_2023-05-15,,simulated_kWh,13.50964
 Shading_Energy,B,PVsyst,,Partly_cloudy_day_2023-05-15,,simulated_kWh,14.0736
 Shading_Energy,C,IDA ICE,,Partly_cloudy_day_2023-05-15,,simulated_kWh,9.21503
 Shading_Energy,C,PVsyst,,Partly_cloudy_day_2023-05-15,,simulated_kWh,9.7397
 Shading_Energy,A,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,simulated_kWh,1019.343623
 Shading_Energy,A,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,simulated_kWh,1020.6063
-Shading_Energy,B,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,simulated_kWh,1220.718566
+Shading_Energy,B,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,simulated_kWh,1253.5217880000002
 Shading_Energy,B,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,simulated_kWh,1294.1203
 Shading_Energy,C,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,simulated_kWh,901.411219
 Shading_Energy,C,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,simulated_kWh,936.6602
 Shading_Energy,A,IDA ICE,,Clear_day_2023-06-05,,difference_kWh,-0.6600719999999995
 Shading_Energy,A,PVsyst,,Clear_day_2023-06-05,,difference_kWh,0.6805000000000021
-Shading_Energy,B,IDA ICE,,Clear_day_2023-06-05,,difference_kWh,-2.330860999999995
+Shading_Energy,B,IDA ICE,,Clear_day_2023-06-05,,difference_kWh,-1.4831199999999995
 Shading_Energy,B,PVsyst,,Clear_day_2023-06-05,,difference_kWh,-0.8038999999999987
 Shading_Energy,C,IDA ICE,,Clear_day_2023-06-05,,difference_kWh,1.0607200000000034
 Shading_Energy,C,PVsyst,,Clear_day_2023-06-05,,difference_kWh,1.5595
 Shading_Energy,A,IDA ICE,,Partly_cloudy_day_2023-05-15,,difference_kWh,0.0476670000000005
 Shading_Energy,A,PVsyst,,Partly_cloudy_day_2023-05-15,,difference_kWh,0.501599999999998
-Shading_Energy,B,IDA ICE,,Partly_cloudy_day_2023-05-15,,difference_kWh,-1.1901600000000006
+Shading_Energy,B,IDA ICE,,Partly_cloudy_day_2023-05-15,,difference_kWh,-0.3573600000000017
 Shading_Energy,B,PVsyst,,Partly_cloudy_day_2023-05-15,,difference_kWh,0.2065999999999999
 Shading_Energy,C,IDA ICE,,Partly_cloudy_day_2023-05-15,,difference_kWh,0.3590299999999988
 Shading_Energy,C,PVsyst,,Partly_cloudy_day_2023-05-15,,difference_kWh,0.883700000000001
 Shading_Energy,A,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,difference_kWh,-2.0643770000001496
 Shading_Energy,A,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,difference_kWh,-0.8016999999999825
-Shading_Energy,B,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,difference_kWh,-98.63343400000008
+Shading_Energy,B,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,difference_kWh,-65.83021199999985
 Shading_Energy,B,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,difference_kWh,-25.23170000000005
 Shading_Energy,C,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,difference_kWh,34.22121900000002
 Shading_Energy,C,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,difference_kWh,69.47019999999986
 Shading_Energy,A,IDA ICE,,Clear_day_2023-06-05,,difference_fraction,-0.0272633100656726
 Shading_Energy,A,PVsyst,,Clear_day_2023-06-05,,difference_fraction,0.0281070587749371
-Shading_Energy,B,IDA ICE,,Clear_day_2023-06-05,,difference_fraction,-0.0753957949215589
+Shading_Energy,B,IDA ICE,,Clear_day_2023-06-05,,difference_fraction,-0.0479741225942099
 Shading_Energy,B,PVsyst,,Clear_day_2023-06-05,,difference_fraction,-0.026003558143296
 Shading_Energy,C,IDA ICE,,Clear_day_2023-06-05,,difference_fraction,0.052542104220329
 Shading_Energy,C,PVsyst,,Clear_day_2023-06-05,,difference_fraction,0.0772488607093322
 Shading_Energy,A,IDA ICE,,Partly_cloudy_day_2023-05-15,,difference_fraction,0.0042254232780782
 Shading_Energy,A,PVsyst,,Partly_cloudy_day_2023-05-15,,difference_fraction,0.0444641432497117
-Shading_Energy,B,IDA ICE,,Partly_cloudy_day_2023-05-15,,difference_fraction,-0.0858267830100238
+Shading_Energy,B,IDA ICE,,Partly_cloudy_day_2023-05-15,,difference_fraction,-0.0257705343621548
 Shading_Energy,B,PVsyst,,Partly_cloudy_day_2023-05-15,,difference_fraction,0.0148986803201846
 Shading_Energy,C,IDA ICE,,Partly_cloudy_day_2023-05-15,,difference_fraction,0.0405408762420956
 Shading_Energy,C,PVsyst,,Partly_cloudy_day_2023-05-15,,difference_fraction,0.0997854561878953
 Shading_Energy,A,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,difference_fraction,-0.002021109096463
 Shading_Energy,A,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,difference_fraction,-0.0007848969265954
-Shading_Energy,B,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,difference_fraction,-0.0747589983567691
+Shading_Energy,B,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,difference_fraction,-0.0498958670620121
 Shading_Energy,B,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,difference_fraction,-0.0191243125413081
 Shading_Energy,C,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,difference_fraction,0.0394621928297143
 Shading_Energy,C,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,difference_fraction,0.0801095492337317
 Shading_Energy,A,IDA ICE,,Clear_day_2023-06-05,,difference_percent,-2.726331006567261
 Shading_Energy,A,PVsyst,,Clear_day_2023-06-05,,difference_percent,2.81070587749371
-Shading_Energy,B,IDA ICE,,Clear_day_2023-06-05,,difference_percent,-7.539579492155895
+Shading_Energy,B,IDA ICE,,Clear_day_2023-06-05,,difference_percent,-4.797412259420992
 Shading_Energy,B,PVsyst,,Clear_day_2023-06-05,,difference_percent,-2.600355814329609
 Shading_Energy,C,IDA ICE,,Clear_day_2023-06-05,,difference_percent,5.254210422032908
 Shading_Energy,C,PVsyst,,Clear_day_2023-06-05,,difference_percent,7.724886070933228
 Shading_Energy,A,IDA ICE,,Partly_cloudy_day_2023-05-15,,difference_percent,0.4225423278078234
 Shading_Energy,A,PVsyst,,Partly_cloudy_day_2023-05-15,,difference_percent,4.4464143249711725
-Shading_Energy,B,IDA ICE,,Partly_cloudy_day_2023-05-15,,difference_percent,-8.582678301002383
+Shading_Energy,B,IDA ICE,,Partly_cloudy_day_2023-05-15,,difference_percent,-2.5770534362154875
 Shading_Energy,B,PVsyst,,Partly_cloudy_day_2023-05-15,,difference_percent,1.4898680320184603
 Shading_Energy,C,IDA ICE,,Partly_cloudy_day_2023-05-15,,difference_percent,4.054087624209562
 Shading_Energy,C,PVsyst,,Partly_cloudy_day_2023-05-15,,difference_percent,9.978545618789534
 Shading_Energy,A,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,difference_percent,-0.2021109096463068
 Shading_Energy,A,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,difference_percent,-0.0784896926595427
-Shading_Energy,B,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,difference_percent,-7.4758998356769135
+Shading_Energy,B,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,difference_percent,-4.989586706201214
 Shading_Energy,B,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,difference_percent,-1.912431254130819
 Shading_Energy,C,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,difference_percent,3.946219282971439
 Shading_Energy,C,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,difference_percent,8.010954923373177
@@ -643,49 +643,49 @@ Shading_Hourly,C,IDA ICE,,,886.0,mean_measured,978.7697516930024
 Shading_Hourly,C,PVsyst,,,886.0,mean_measured,978.7697516930024
 Shading_Hourly,A,IDA ICE,,,932.0,RMSE,278.17623587387186
 Shading_Hourly,A,PVsyst,,,932.0,RMSE,251.77837932621884
-Shading_Hourly,B,IDA ICE,,,886.0,RMSE,566.9802434772816
+Shading_Hourly,B,IDA ICE,,,886.0,RMSE,213.32363358390504
 Shading_Hourly,B,PVsyst,,,886.0,RMSE,198.8329502070422
 Shading_Hourly,C,IDA ICE,,,886.0,RMSE,182.6585167062713
 Shading_Hourly,C,PVsyst,,,886.0,RMSE,253.69520291472068
 Shading_Hourly,A,IDA ICE,,,932.0,MAE,179.01423068669524
 Shading_Hourly,A,PVsyst,,,932.0,MAE,158.89055793991415
-Shading_Hourly,B,IDA ICE,,,886.0,MAE,421.6252505643341
+Shading_Hourly,B,IDA ICE,,,886.0,MAE,132.83014672686232
 Shading_Hourly,B,PVsyst,,,886.0,MAE,114.59492099322796
 Shading_Hourly,C,IDA ICE,,,886.0,MAE,104.62304627539504
 Shading_Hourly,C,PVsyst,,,886.0,MAE,140.04176072234762
 Shading_Hourly,A,IDA ICE,,,932.0,CVRMSE_percent,25.38380179333738
 Shading_Hourly,A,PVsyst,,,932.0,CVRMSE_percent,22.97497648060147
-Shading_Hourly,B,IDA ICE,,,886.0,CVRMSE_percent,38.07832507510927
+Shading_Hourly,B,IDA ICE,,,886.0,CVRMSE_percent,14.32678961791182
 Shading_Hourly,B,PVsyst,,,886.0,CVRMSE_percent,13.353597062205466
 Shading_Hourly,C,IDA ICE,,,886.0,CVRMSE_percent,18.66205166131487
 Shading_Hourly,C,PVsyst,,,886.0,CVRMSE_percent,25.91980417007144
 Shading_Hourly,A,IDA ICE,,,932.0,nMAE_percent,16.335190300001663
 Shading_Hourly,A,PVsyst,,,932.0,nMAE_percent,14.49888922721741
-Shading_Hourly,B,IDA ICE,,,886.0,nMAE_percent,28.31630120372336
+Shading_Hourly,B,IDA ICE,,,886.0,nMAE_percent,8.920856705375826
 Shading_Hourly,B,PVsyst,,,886.0,nMAE_percent,7.696181134592643
 Shading_Hourly,C,IDA ICE,,,886.0,nMAE_percent,10.689239843632883
 Shading_Hourly,C,PVsyst,,,886.0,nMAE_percent,14.307937130271334
 Shading_Hourly,A,IDA ICE,,,932.0,MBE,-2.164567596566524
 Shading_Hourly,A,PVsyst,,,932.0,MBE,-0.8491416309012716
-Shading_Hourly,B,IDA ICE,,,886.0,MBE,-111.19800677200904
+Shading_Hourly,B,IDA ICE,,,886.0,MBE,-74.17405417607223
 Shading_Hourly,B,PVsyst,,,886.0,MBE,-28.3698645598194
 Shading_Hourly,C,IDA ICE,,,886.0,MBE,38.62440067720091
 Shading_Hourly,C,PVsyst,,,886.0,MBE,78.40880361173816
 Shading_Hourly,A,IDA ICE,,,932.0,nMBE_percent,-0.1975185071683763
 Shading_Hourly,A,PVsyst,,,932.0,nMBE_percent,-0.0774848462003136
-Shading_Hourly,B,IDA ICE,,,886.0,nMBE_percent,-7.468044783360117
+Shading_Hourly,B,IDA ICE,,,886.0,nMBE_percent,-4.981520572450806
 Shading_Hourly,B,PVsyst,,,886.0,nMBE_percent,-1.9053166974924949
 Shading_Hourly,C,IDA ICE,,,886.0,nMBE_percent,3.9462192829714366
 Shading_Hourly,C,PVsyst,,,886.0,nMBE_percent,8.010954923373195
 Shading_Hourly,A,IDA ICE,,,932.0,RE_percent,-0.1975185071683763
 Shading_Hourly,A,PVsyst,,,932.0,RE_percent,-0.0774848462003136
-Shading_Hourly,B,IDA ICE,,,886.0,RE_percent,-7.468044783360117
+Shading_Hourly,B,IDA ICE,,,886.0,RE_percent,-4.981520572450806
 Shading_Hourly,B,PVsyst,,,886.0,RE_percent,-1.9053166974924949
 Shading_Hourly,C,IDA ICE,,,886.0,RE_percent,3.9462192829714366
 Shading_Hourly,C,PVsyst,,,886.0,RE_percent,8.010954923373195
 Shading_Hourly,A,IDA ICE,,,932.0,R2,0.9371650326330238
 Shading_Hourly,A,PVsyst,,,932.0,R2,0.9485247803011096
-Shading_Hourly,B,IDA ICE,,,886.0,R2,0.8437044474005821
+Shading_Hourly,B,IDA ICE,,,886.0,R2,0.9778747231770684
 Shading_Hourly,B,PVsyst,,,886.0,R2,0.9807784909231204
 Shading_Hourly,C,IDA ICE,,,886.0,R2,0.9651781995739837
 Shading_Hourly,C,PVsyst,,,886.0,R2,0.932826824475018
