@@ -1,7 +1,3 @@
----
-
-# `LICENSE`
-```text
 REPOSITORY LICENSE AND THIRD-PARTY MATERIAL NOTICE
 
 Copyright (c) 2026 Marieke Rynoson
