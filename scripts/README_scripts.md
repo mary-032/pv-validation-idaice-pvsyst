@@ -34,7 +34,7 @@ The main reproduction workflow is:
         ↓
 10_weather_bin_edge_sensitivity.py
         ↓
-12_make_figures4_5_6_shading.py
+11_make_figures4_5_6_shading.py
 ```
 
 Not every script must be rerun to inspect the published results. The canonical datasets can be used as a starting point for the main statistical analysis if the source-data reconstruction does not need to be repeated.
