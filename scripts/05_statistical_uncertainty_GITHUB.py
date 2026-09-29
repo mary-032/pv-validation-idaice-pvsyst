@@ -10,7 +10,7 @@ import pandas as pd
 #
 # Implements:
 #   * daily residual autocorrelation diagnostics
-#   * circular moving-block bootstrap (primary: 7 days, 5000 reps)
+#   * circular moving-block bootstrap (annual primary: 30 days, shading: 7 days, 5000 reps)
 #   * 95% CIs for annual metrics and annual energy bias
 #   * paired IDA ICE vs PVsyst bootstrap comparison + Holm correction
 #   * paired-comparison sensitivity for 1/7/14/21/30-day blocks
@@ -27,16 +27,17 @@ import pandas as pd
 # ============================================================
 
 ROOT = Path(__file__).resolve().parents[1]
-CANON = ROOT / "02_canonical_data"
-OUT = ROOT / "03_analysis_output"
-OUT.mkdir(exist_ok=True)
+CANON = ROOT / "derived_data"
+OUT = ROOT / "results"
+OUT.mkdir(parents=True, exist_ok=True)
 
 ANNUAL_PATH = CANON / "annual_unshaded_analysis.csv"
 SHADING_PATH = CANON / "shading_analysis.csv"
 CONFIG_PATH = ROOT / "config.json"
 
 N_BOOT = 5000
-PRIMARY_BLOCK_DAYS = 7
+ANNUAL_PRIMARY_BLOCK_DAYS = 30
+SHADING_BLOCK_DAYS = 7
 SENSITIVITY_BLOCK_DAYS = [1, 7, 14, 21, 30]
 SEED = 20260915
 ACF_MAX_LAG = 30
@@ -98,7 +99,7 @@ def physical_timestamp(ts):
 
 def load_data():
     if not ANNUAL_PATH.exists() or not SHADING_PATH.exists():
-        raise FileNotFoundError("Canonical annual/shading data missing. Run scripts 01 and 02 first.")
+        raise FileNotFoundError("Canonical annual/shading data missing from derived_data/. Run script 01 first.")
 
     a = pd.read_csv(ANNUAL_PATH, parse_dates=["timestamp"])
     a["timestamp"] = pd.to_datetime(a["timestamp"]).dt.floor("s")
@@ -374,7 +375,7 @@ def annual_cis(annual, days, dmap, W):
                         "System": system, "Variable": variable, "Software": software,
                         "Metric": metric, "unit": unit, "n": int(round(p["n"])),
                         "Estimate": p[metric], "CI95_low": lo, "CI95_high": hi,
-                        "block_days": PRIMARY_BLOCK_DAYS, "n_boot": N_BOOT,
+                        "block_days": ANNUAL_PRIMARY_BLOCK_DAYS, "n_boot": N_BOOT,
                     })
     return pd.DataFrame(rows)
 
@@ -395,7 +396,7 @@ def energy_cis(annual, days, dmap, W):
                 "Simulated_energy_kWh": p["sum_simulated"] / 1000,
                 "Energy_bias_percent": 100 * (p["sum_simulated"] - p["sum_measured"]) / p["sum_measured"],
                 "CI95_low": lo, "CI95_high": hi,
-                "block_days": PRIMARY_BLOCK_DAYS, "n_boot": N_BOOT,
+                "block_days": ANNUAL_PRIMARY_BLOCK_DAYS, "n_boot": N_BOOT,
                 "note": "Daytime-cleaned records only; energy-bias % equals power nMBE numerically.",
             })
     return pd.DataFrame(rows)
@@ -467,7 +468,7 @@ def paired_comparison(annual, days, dmap, W):
                 "Delta_CVRMSE_percentage_points": float(dc0[0]),
                 "Delta_CVRMSE_CI95_low": clo, "Delta_CVRMSE_CI95_high": chi,
                 "bootstrap_p_raw": bootstrap_p(dmb, observed),
-                "block_days": PRIMARY_BLOCK_DAYS, "n_boot": N_BOOT,
+                "block_days": ANNUAL_PRIMARY_BLOCK_DAYS, "n_boot": N_BOOT,
             })
     out = pd.DataFrame(rows)
     out["bootstrap_p_Holm"] = holm(out["bootstrap_p_raw"])
@@ -652,7 +653,7 @@ def weather_ci(annual, days, dmap, W):
                     "mean_kt_tilt": float(d["kt_tilt"].mean()),
                     "nMBE_percent": p["nMBE_percent"], "nMBE_CI95_low": nlo, "nMBE_CI95_high": nhi,
                     "CVRMSE_percent": p["CVRMSE_percent"], "CVRMSE_CI95_low": clo, "CVRMSE_CI95_high": chi,
-                    "block_days": PRIMARY_BLOCK_DAYS, "n_boot": N_BOOT,
+                    "block_days": ANNUAL_PRIMARY_BLOCK_DAYS, "n_boot": N_BOOT,
                 })
     return pd.DataFrame(rows)
 
@@ -661,7 +662,7 @@ def weather_ci(annual, days, dmap, W):
 
 def shading_ci(shading):
     days, dmap = day_axis(shading["physical_day"])
-    W = block_weights(len(days), PRIMARY_BLOCK_DAYS, seed=SEED+900)
+    W = block_weights(len(days), SHADING_BLOCK_DAYS, seed=SEED+900)
     rows = []
     for system in SYSTEMS:
         base = shading[shading["system"] == system].copy()
@@ -679,7 +680,7 @@ def shading_ci(shading):
                     "System": system, "Software": software, "Metric": metric,
                     "n": int(round(p["n"])), "Estimate": p[metric],
                     "CI95_low": lo, "CI95_high": hi,
-                    "block_days": PRIMARY_BLOCK_DAYS, "n_boot": N_BOOT,
+                    "block_days": SHADING_BLOCK_DAYS, "n_boot": N_BOOT,
                     "period": "full shading period",
                 })
     return pd.DataFrame(rows)
@@ -715,7 +716,8 @@ def main():
     print("\nSTATISTICAL UNCERTAINTY AND MODEL COMPARISON")
     print("="*72)
     print(f"Bootstrap replicates: {N_BOOT:,}")
-    print(f"Primary block length: {PRIMARY_BLOCK_DAYS} days")
+    print(f"Annual primary block: {ANNUAL_PRIMARY_BLOCK_DAYS} days")
+    print(f"Shading block length: {SHADING_BLOCK_DAYS} days")
     print(f"Sensitivity blocks:   {SENSITIVITY_BLOCK_DAYS}")
     print(f"Random seed:          {SEED}")
 
@@ -735,7 +737,7 @@ def main():
         )
         for b in SENSITIVITY_BLOCK_DAYS
     }
-    W = W_by_block[PRIMARY_BLOCK_DAYS]
+    W = W_by_block[ANNUAL_PRIMARY_BLOCK_DAYS]
 
     print("\n1/9 Individual-model ACF diagnostics...")
     acf_detail, acf_summary = acf_outputs(
@@ -808,7 +810,7 @@ def main():
         "Paired_Loss_ACF": paired_acf_summary,
         "Annual_CI": annual_ci,
         "Annual_Energy": energy_ci,
-        "Paired_Comparison_7d": paired,
+        "Paired_Comparison_30d": paired,
         "Paired_By_Block": paired_by_block,
         "Block_Sensitivity": block_sens,
         "Exclusion_Sensitivity": excl,
@@ -938,9 +940,9 @@ def main():
     )
 
     # --------------------------------------------------------------
-    # Primary 7-day paired results (kept for continuity)
+    # Primary 30-day paired results
     # --------------------------------------------------------------
-    print("\nPRIMARY 7-DAY PAIRED IDA ICE vs PVSYST")
+    print("\nPRIMARY 30-DAY PAIRED IDA ICE vs PVSYST")
     print("-"*72)
     cols = [
         "System",

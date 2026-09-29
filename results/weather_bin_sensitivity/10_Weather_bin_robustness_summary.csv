@@ -1,0 +1,3 @@
+Irradiance_method,nMBE_sign_preserved_fraction,tool_CVRMSE_ranking_preserved_fraction,max_abs_CVRMSE_change_pp,median_abs_CVRMSE_change_pp,max_abs_nMBE_change_pp,median_abs_nMBE_change_pp,cloudiest_gt_clearest_fraction_all_schemes,negative_gradient_fraction_all_schemes,strictly_nonincreasing_fraction_all_schemes
+Perez-Driesse,0.99,0.9866666666666667,13.688789370551945,0.17820113394070347,7.521296449541476,0.10442425264875099,1.0,1.0,0.25757575757575757
+Engerer2,0.9633333333333334,0.9666666666666667,21.28340408623444,0.2650723556830581,5.757480669104494,0.14498066873160198,1.0,1.0,0.25757575757575757

@@ -23,26 +23,26 @@ import pandas as pd
 # INPUTS
 # ------
 # Authoritative PD canonical data:
-#   02_canonical_data/annual_unshaded_analysis.csv
+#   derived_data/annual_unshaded_analysis.csv
 #
 # Engerer2 simulations:
-#   01_source_inputs/annual/IDA_ICE/Syst3_E2.xlsx
-#   01_source_inputs/annual/IDA_ICE/Syst8_E2.xlsx
-#   01_source_inputs/annual/IDA_ICE/Syst9_E2.xlsx
+#   data/ida_ice/annual/Engerer2/Syst3_E2.xlsx
+#   data/ida_ice/annual/Engerer2/Syst8_E2.xlsx
+#   data/ida_ice/annual/Engerer2/Syst9_E2.xlsx
 #
-#   01_source_inputs/annual/PVsyst/PVsyst_3_E2_h.xlsx
-#   01_source_inputs/annual/PVsyst/PVsyst_8_E2_h.xlsx
-#   01_source_inputs/annual/PVsyst/PVsyst_9_E2_h.xlsx
+#   data/pvsyst/annual/Engerer2/PVsyst_3_E2_h.xlsx
+#   data/pvsyst/annual/Engerer2/PVsyst_8_E2_h.xlsx
+#   data/pvsyst/annual/Engerer2/PVsyst_9_E2_h.xlsx
 #
 # OUTPUTS
 # -------
 # Canonical Engerer2 scenario:
-#   02a_canonical_data_Engerer2/
+#   derived_data/
 #       annual_unshaded_analysis_Engerer2.csv
 #       ENGERER2_PROVENANCE.txt
 #
 # Analysis:
-#   03a_analysis_output_Engerer2/
+#   results/reverse_transposition/
 #       Table4_GTI_Engerer2.csv
 #       Table5_Temperature_Engerer2.csv
 #       Table6_Power_Engerer2.csv
@@ -91,15 +91,17 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 
-SRC = ROOT / "01_source_inputs" / "annual"
-BASE_CANON = ROOT / "02_canonical_data"
-E2_CANON = ROOT / "02a_canonical_data_Engerer2"
+IDA_E2_DIR = ROOT / "data" / "ida_ice" / "annual" / "Engerer2"
+PVSYST_E2_DIR = ROOT / "data" / "pvsyst" / "annual" / "Engerer2"
 
-PD_OUT = ROOT / "03_analysis_output"
-E2_OUT = ROOT / "03a_analysis_output_Engerer2"
+BASE_CANON = ROOT / "derived_data"
+E2_CANON = ROOT / "derived_data"
 
-E2_CANON.mkdir(exist_ok=True)
-E2_OUT.mkdir(exist_ok=True)
+PD_OUT = ROOT / "results"
+E2_OUT = ROOT / "results" / "reverse_transposition"
+
+E2_CANON.mkdir(parents=True, exist_ok=True)
+E2_OUT.mkdir(parents=True, exist_ok=True)
 
 CFG = json.loads(
     (ROOT / "config.json").read_text(encoding="utf-8")
@@ -108,15 +110,15 @@ CFG = json.loads(
 BASELINE_CANONICAL = BASE_CANON / "annual_unshaded_analysis.csv"
 
 IDA_PATHS = {
-    "A": SRC / "IDA_ICE" / "Syst3_E2.xlsx",
-    "B": SRC / "IDA_ICE" / "Syst8_E2.xlsx",
-    "C": SRC / "IDA_ICE" / "Syst9_E2.xlsx",
+    "A": IDA_E2_DIR / "Syst3_E2.xlsx",
+    "B": IDA_E2_DIR / "Syst8_E2.xlsx",
+    "C": IDA_E2_DIR / "Syst9_E2.xlsx",
 }
 
 PVSYST_PATHS = {
-    "A": SRC / "PVsyst" / "PVsyst_3_E2_h.xlsx",
-    "B": SRC / "PVsyst" / "PVsyst_8_E2_h.xlsx",
-    "C": SRC / "PVsyst" / "PVsyst_9_E2_h.xlsx",
+    "A": PVSYST_E2_DIR / "PVsyst_3_E2_h.xlsx",
+    "B": PVSYST_E2_DIR / "PVsyst_8_E2_h.xlsx",
+    "C": PVSYST_E2_DIR / "PVsyst_9_E2_h.xlsx",
 }
 
 # Uniform timestamp correction established by the dedicated timing audit.
@@ -2308,7 +2310,7 @@ reverse-transposition / irradiance-input scenario.
 
 Authoritative baseline retained unchanged
 -----------------------------------------
-02_canonical_data/annual_unshaded_analysis.csv
+derived_data/annual_unshaded_analysis.csv
 
 The following are inherited exactly from the finalized PD canonical dataset:
 - processed measured GTI, AC power and panel temperature
@@ -2554,7 +2556,7 @@ def main():
     )
     print(
         "\nThe authoritative Perez-Driesse files in "
-        "02_canonical_data and 03_analysis_output were not modified."
+        "derived_data and results were not modified."
     )
 
 

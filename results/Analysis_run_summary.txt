@@ -1,0 +1,13 @@
+PV validation analysis run
+==========================
+
+Frozen conventions:
+- Error sign: simulated - measured
+- Annual daytime filter: system-specific measured GTI > 0 W/m2
+- GTI residual outlier deletion: none
+- Temperature residual outlier deletion: none
+- Power exclusions: exactly four common timestamps
+- nMBE and RE: sum(error) / sum(measured) * 100
+- Weather bins: cleaned power mask + AOI < 80 deg
+- Shading timestamps: hour-ending
+- Shading outlier deletion: none

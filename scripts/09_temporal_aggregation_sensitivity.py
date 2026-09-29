@@ -70,7 +70,7 @@ import pandas as pd
 #
 # OUTPUTS
 # -------
-# 03_analysis_output/temporal_aggregation/
+# results/temporal_aggregation/
 #
 #   09_Temporal_aggregation_metrics.csv
 #   09_Paired_IDA_vs_PVsyst_by_aggregation.csv
@@ -85,19 +85,19 @@ ROOT = Path(__file__).resolve().parents[1]
 
 PD_CANON = (
     ROOT
-    / "02_canonical_data"
+    / "derived_data"
     / "annual_unshaded_analysis.csv"
 )
 
 E2_CANON = (
     ROOT
-    / "02a_canonical_data_Engerer2"
+    / "derived_data"
     / "annual_unshaded_analysis_Engerer2.csv"
 )
 
 OUT = (
     ROOT
-    / "03_analysis_output"
+    / "results"
     / "temporal_aggregation"
 )
 OUT.mkdir(

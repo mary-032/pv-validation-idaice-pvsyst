@@ -1,6 +1,6 @@
 """Produce Figures 4–6: measured / IDA ICE / PVsyst shading-day power.
 
-Input: authoritative 02_canonical_data/shading_analysis.csv (from script 01).
+Input: authoritative derived_data/shading_analysis.csv (from script 01).
 Output: three two-panel figures (six plots total), and six individual panels.
 
 Hour-ending convention is identical to 02_run_analysis.py:
@@ -24,8 +24,8 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "02_canonical_data" / "shading_analysis.csv"
-DEST = ROOT / "03_analysis_output" / "shading_figures"
+SOURCE = ROOT / "derived_data" / "shading_analysis.csv"
+DEST = ROOT / "results" / "shading_figures"
 
 # All three curves use the same exact hourly power records.
 SERIES = {
@@ -79,7 +79,7 @@ def read_source() -> pd.DataFrame:
         raise FileNotFoundError(
             "Required canonical shading input is missing:\n"
             f"  {SOURCE}\n"
-            "Run script 01 to build 02_canonical_data/shading_analysis.csv. "
+            "Run script 01 to build derived_data/shading_analysis.csv. "
             "Do not substitute older raw/staging data or historical figure values."
         )
 

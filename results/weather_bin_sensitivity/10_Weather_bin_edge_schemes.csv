@@ -1,0 +1,12 @@
+scheme,scheme_type,perturbed_edge_index,direction,edge_1,edge_1_between,edge_2,edge_2_between,edge_3,edge_3_between,edge_4,edge_4_between
+nominal,nominal,,,0.2,Overcast/very cloudy | Cloudy,0.4,Cloudy | Mixed/broken,0.6,Mixed/broken | Mostly clear,0.75,Mostly clear | Clear
+all_edges_minus_0p05,coordinated,,minus,0.15000000000000002,Overcast/very cloudy | Cloudy,0.35000000000000003,Cloudy | Mixed/broken,0.5499999999999999,Mixed/broken | Mostly clear,0.7,Mostly clear | Clear
+all_edges_plus_0p05,coordinated,,plus,0.25,Overcast/very cloudy | Cloudy,0.45,Cloudy | Mixed/broken,0.65,Mixed/broken | Mostly clear,0.8,Mostly clear | Clear
+edge_1_minus_0p05,one_at_a_time,1.0,minus,0.15000000000000002,Overcast/very cloudy | Cloudy,0.4,Cloudy | Mixed/broken,0.6,Mixed/broken | Mostly clear,0.75,Mostly clear | Clear
+edge_1_plus_0p05,one_at_a_time,1.0,plus,0.25,Overcast/very cloudy | Cloudy,0.4,Cloudy | Mixed/broken,0.6,Mixed/broken | Mostly clear,0.75,Mostly clear | Clear
+edge_2_minus_0p05,one_at_a_time,2.0,minus,0.2,Overcast/very cloudy | Cloudy,0.35000000000000003,Cloudy | Mixed/broken,0.6,Mixed/broken | Mostly clear,0.75,Mostly clear | Clear
+edge_2_plus_0p05,one_at_a_time,2.0,plus,0.2,Overcast/very cloudy | Cloudy,0.45,Cloudy | Mixed/broken,0.6,Mixed/broken | Mostly clear,0.75,Mostly clear | Clear
+edge_3_minus_0p05,one_at_a_time,3.0,minus,0.2,Overcast/very cloudy | Cloudy,0.4,Cloudy | Mixed/broken,0.5499999999999999,Mixed/broken | Mostly clear,0.75,Mostly clear | Clear
+edge_3_plus_0p05,one_at_a_time,3.0,plus,0.2,Overcast/very cloudy | Cloudy,0.4,Cloudy | Mixed/broken,0.65,Mixed/broken | Mostly clear,0.75,Mostly clear | Clear
+edge_4_minus_0p05,one_at_a_time,4.0,minus,0.2,Overcast/very cloudy | Cloudy,0.4,Cloudy | Mixed/broken,0.6,Mixed/broken | Mostly clear,0.7,Mostly clear | Clear
+edge_4_plus_0p05,one_at_a_time,4.0,plus,0.2,Overcast/very cloudy | Cloudy,0.4,Cloudy | Mixed/broken,0.6,Mixed/broken | Mostly clear,0.8,Mostly clear | Clear

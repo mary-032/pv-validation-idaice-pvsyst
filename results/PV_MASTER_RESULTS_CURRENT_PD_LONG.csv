@@ -1,0 +1,691 @@
+source_table,System,Software,Sky_condition,period,n,metric_name,metric_value
+Annual_GTI,A,IDA ICE,,,4635.0,mean_measured,232.81185224040829
+Annual_GTI,A,PVsyst,,,4635.0,mean_measured,232.81185224040829
+Annual_GTI,B,IDA ICE,,,5351.0,mean_measured,197.48340877484796
+Annual_GTI,B,PVsyst,,,5351.0,mean_measured,197.48340877484796
+Annual_GTI,C,IDA ICE,,,5351.0,mean_measured,197.48340877484796
+Annual_GTI,C,PVsyst,,,5351.0,mean_measured,197.48340877484796
+Annual_GTI,A,IDA ICE,,,4635.0,RMSE,15.336261950901536
+Annual_GTI,A,PVsyst,,,4635.0,RMSE,22.43832707647833
+Annual_GTI,B,IDA ICE,,,5351.0,RMSE,21.73764128031257
+Annual_GTI,B,PVsyst,,,5351.0,RMSE,25.061181257585325
+Annual_GTI,C,IDA ICE,,,5351.0,RMSE,21.6221397512676
+Annual_GTI,C,PVsyst,,,5351.0,RMSE,26.874789684921307
+Annual_GTI,A,IDA ICE,,,4635.0,MAE,10.162257839845635
+Annual_GTI,A,PVsyst,,,4635.0,MAE,15.883208646247487
+Annual_GTI,B,IDA ICE,,,5351.0,MAE,10.06638756589902
+Annual_GTI,B,PVsyst,,,5351.0,MAE,13.864545460635554
+Annual_GTI,C,IDA ICE,,,5351.0,MAE,9.949259684931356
+Annual_GTI,C,PVsyst,,,5351.0,MAE,15.675428247148249
+Annual_GTI,A,IDA ICE,,,4635.0,CVRMSE_percent,6.587406011900487
+Annual_GTI,A,PVsyst,,,4635.0,CVRMSE_percent,9.63796596287884
+Annual_GTI,B,IDA ICE,,,5351.0,CVRMSE_percent,11.007325331869165
+Annual_GTI,B,PVsyst,,,5351.0,CVRMSE_percent,12.690271761592758
+Annual_GTI,C,IDA ICE,,,5351.0,CVRMSE_percent,10.948838631765332
+Annual_GTI,C,PVsyst,,,5351.0,CVRMSE_percent,13.608631657539105
+Annual_GTI,A,IDA ICE,,,4635.0,nMAE_percent,4.365008800905803
+Annual_GTI,A,PVsyst,,,4635.0,nMAE_percent,6.822336789729255
+Annual_GTI,B,IDA ICE,,,5351.0,nMAE_percent,5.097333304275587
+Annual_GTI,B,PVsyst,,,5351.0,nMAE_percent,7.020612793068916
+Annual_GTI,C,IDA ICE,,,5351.0,nMAE_percent,5.0380230656614655
+Annual_GTI,C,PVsyst,,,5351.0,nMAE_percent,7.937592501768035
+Annual_GTI,A,IDA ICE,,,4635.0,MBE,-9.33395289299925
+Annual_GTI,A,PVsyst,,,4635.0,MBE,-15.749996598552826
+Annual_GTI,B,IDA ICE,,,5351.0,MBE,-7.424480975246326
+Annual_GTI,B,PVsyst,,,5351.0,MBE,-12.33105104732037
+Annual_GTI,C,IDA ICE,,,5351.0,MBE,-7.222885563731484
+Annual_GTI,C,PVsyst,,,5351.0,MBE,-14.177430378286545
+Annual_GTI,A,IDA ICE,,,4635.0,nMBE_percent,-4.00922582041087
+Annual_GTI,A,PVsyst,,,4635.0,nMBE_percent,-6.765118032860682
+Annual_GTI,B,IDA ICE,,,5351.0,nMBE_percent,-3.759546698786744
+Annual_GTI,B,PVsyst,,,5351.0,nMBE_percent,-6.244094693230194
+Annual_GTI,C,IDA ICE,,,5351.0,nMBE_percent,-3.657464497165096
+Annual_GTI,C,PVsyst,,,5351.0,nMBE_percent,-7.179048845794596
+Annual_GTI,A,IDA ICE,,,4635.0,RE_percent,-4.00922582041087
+Annual_GTI,A,PVsyst,,,4635.0,RE_percent,-6.765118032860682
+Annual_GTI,B,IDA ICE,,,5351.0,RE_percent,-3.759546698786744
+Annual_GTI,B,PVsyst,,,5351.0,RE_percent,-6.244094693230194
+Annual_GTI,C,IDA ICE,,,5351.0,RE_percent,-3.657464497165096
+Annual_GTI,C,PVsyst,,,5351.0,RE_percent,-7.179048845794596
+Annual_GTI,A,IDA ICE,,,4635.0,R2,0.996738154172107
+Annual_GTI,A,PVsyst,,,4635.0,R2,0.9930175900579368
+Annual_GTI,B,IDA ICE,,,5351.0,R2,0.9931738436103577
+Annual_GTI,B,PVsyst,,,5351.0,R2,0.9909269255657902
+Annual_GTI,C,IDA ICE,,,5351.0,R2,0.9932461915574848
+Annual_GTI,C,PVsyst,,,5351.0,R2,0.9895662230776228
+Annual_Temperature,A,IDA ICE,,,4635.0,mean_measured,15.367920697562257
+Annual_Temperature,A,PVsyst,,,4635.0,mean_measured,15.367920697562257
+Annual_Temperature,B,IDA ICE,,,5351.0,mean_measured,14.47111637158757
+Annual_Temperature,B,PVsyst,,,5351.0,mean_measured,14.47111637158757
+Annual_Temperature,C,IDA ICE,,,4828.0,mean_measured,17.575758031751764
+Annual_Temperature,C,PVsyst,,,4828.0,mean_measured,17.575758031751764
+Annual_Temperature,A,IDA ICE,,,4635.0,RMSE,5.101330459543029
+Annual_Temperature,A,PVsyst,,,4635.0,RMSE,5.662695308518472
+Annual_Temperature,B,IDA ICE,,,5351.0,RMSE,4.717214554405476
+Annual_Temperature,B,PVsyst,,,5351.0,RMSE,6.399257012997224
+Annual_Temperature,C,IDA ICE,,,4828.0,RMSE,4.44004172791177
+Annual_Temperature,C,PVsyst,,,4828.0,RMSE,5.585629153718931
+Annual_Temperature,A,IDA ICE,,,4635.0,MAE,3.5659762316359247
+Annual_Temperature,A,PVsyst,,,4635.0,MAE,4.147486685930036
+Annual_Temperature,B,IDA ICE,,,5351.0,MAE,3.3059219731494487
+Annual_Temperature,B,PVsyst,,,5351.0,MAE,4.437587985111817
+Annual_Temperature,C,IDA ICE,,,4828.0,MAE,3.0584791775490383
+Annual_Temperature,C,PVsyst,,,4828.0,MAE,3.8605964412550096
+Annual_Temperature,A,IDA ICE,,,4635.0,CVRMSE_percent,33.19466933709666
+Annual_Temperature,A,PVsyst,,,4635.0,CVRMSE_percent,36.84750474679844
+Annual_Temperature,B,IDA ICE,,,5351.0,CVRMSE_percent,32.59744744826462
+Annual_Temperature,B,PVsyst,,,5351.0,CVRMSE_percent,44.220893873547
+Annual_Temperature,C,IDA ICE,,,4828.0,CVRMSE_percent,25.26230572752846
+Annual_Temperature,C,PVsyst,,,4828.0,CVRMSE_percent,31.78030298111822
+Annual_Temperature,A,IDA ICE,,,4635.0,nMAE_percent,23.204025461958423
+Annual_Temperature,A,PVsyst,,,4635.0,nMAE_percent,26.987949557729905
+Annual_Temperature,B,IDA ICE,,,5351.0,nMAE_percent,22.844968475550782
+Annual_Temperature,B,PVsyst,,,5351.0,nMAE_percent,30.665139241258043
+Annual_Temperature,C,IDA ICE,,,4828.0,nMAE_percent,17.401691420783642
+Annual_Temperature,C,PVsyst,,,4828.0,nMAE_percent,21.965461940705996
+Annual_Temperature,A,IDA ICE,,,4635.0,MBE,2.580222316463868
+Annual_Temperature,A,PVsyst,,,4635.0,MBE,2.298594728543461
+Annual_Temperature,B,IDA ICE,,,5351.0,MBE,1.1289058584759708
+Annual_Temperature,B,PVsyst,,,5351.0,MBE,0.7276110438487985
+Annual_Temperature,C,IDA ICE,,,4828.0,MBE,-1.425611102905449
+Annual_Temperature,C,PVsyst,,,4828.0,MBE,-0.3151042620748773
+Annual_Temperature,A,IDA ICE,,,4635.0,nMBE_percent,16.789664439595633
+Annual_Temperature,A,PVsyst,,,4635.0,nMBE_percent,14.957096498474751
+Annual_Temperature,B,IDA ICE,,,5351.0,nMBE_percent,7.801097230428278
+Annual_Temperature,B,PVsyst,,,5351.0,nMBE_percent,5.028022891705729
+Annual_Temperature,C,IDA ICE,,,4828.0,nMBE_percent,-8.1112353750546
+Annual_Temperature,C,PVsyst,,,4828.0,nMBE_percent,-1.7928345480497667
+Annual_Temperature,A,IDA ICE,,,4635.0,RE_percent,16.789664439595633
+Annual_Temperature,A,PVsyst,,,4635.0,RE_percent,14.957096498474751
+Annual_Temperature,B,IDA ICE,,,5351.0,RE_percent,7.801097230428278
+Annual_Temperature,B,PVsyst,,,5351.0,RE_percent,5.028022891705729
+Annual_Temperature,C,IDA ICE,,,4828.0,RE_percent,-8.1112353750546
+Annual_Temperature,C,PVsyst,,,4828.0,RE_percent,-1.7928345480497667
+Annual_Temperature,A,IDA ICE,,,4635.0,R2,0.8356177450865677
+Annual_Temperature,A,PVsyst,,,4635.0,R2,0.7974489929234856
+Annual_Temperature,B,IDA ICE,,,5351.0,R2,0.8474469079155342
+Annual_Temperature,B,PVsyst,,,5351.0,R2,0.719257048636671
+Annual_Temperature,C,IDA ICE,,,4828.0,R2,0.9318441081381972
+Annual_Temperature,C,PVsyst,,,4828.0,R2,0.8921367508569173
+Annual_Power,A,IDA ICE,,,4631.0,Common_power_timestamps_removed,4.0
+Annual_Power,A,PVsyst,,,4631.0,Common_power_timestamps_removed,4.0
+Annual_Power,B,IDA ICE,,,5347.0,Common_power_timestamps_removed,4.0
+Annual_Power,B,PVsyst,,,5347.0,Common_power_timestamps_removed,4.0
+Annual_Power,C,IDA ICE,,,5347.0,Common_power_timestamps_removed,4.0
+Annual_Power,C,PVsyst,,,5347.0,Common_power_timestamps_removed,4.0
+Annual_Power,A,IDA ICE,,,4631.0,RMSE_month_kWh_per_kWp,2.91782281787866
+Annual_Power,A,PVsyst,,,4631.0,RMSE_month_kWh_per_kWp,4.168466663504426
+Annual_Power,B,IDA ICE,,,5347.0,RMSE_month_kWh_per_kWp,5.702778711207914
+Annual_Power,B,PVsyst,,,5347.0,RMSE_month_kWh_per_kWp,2.715699404713776
+Annual_Power,C,IDA ICE,,,5347.0,RMSE_month_kWh_per_kWp,9.199042412694409
+Annual_Power,C,PVsyst,,,5347.0,RMSE_month_kWh_per_kWp,11.36158265054613
+Annual_Power,A,IDA ICE,,,4631.0,mean_measured,761.2563374397896
+Annual_Power,A,PVsyst,,,4631.0,mean_measured,761.2563374397896
+Annual_Power,B,IDA ICE,,,5347.0,mean_measured,770.0399846190282
+Annual_Power,B,PVsyst,,,5347.0,mean_measured,770.0399846190282
+Annual_Power,C,IDA ICE,,,5347.0,mean_measured,509.6366981857587
+Annual_Power,C,PVsyst,,,5347.0,mean_measured,509.6366981857587
+Annual_Power,A,IDA ICE,,,4631.0,RMSE,262.145837011316
+Annual_Power,A,PVsyst,,,4631.0,RMSE,257.2306251712121
+Annual_Power,B,IDA ICE,,,5347.0,RMSE,320.5248128128541
+Annual_Power,B,PVsyst,,,5347.0,RMSE,294.33501012838946
+Annual_Power,C,IDA ICE,,,5347.0,RMSE,245.08606799882148
+Annual_Power,C,PVsyst,,,5347.0,RMSE,230.4953269386916
+Annual_Power,A,IDA ICE,,,4631.0,MAE,167.35380878561088
+Annual_Power,A,PVsyst,,,4631.0,MAE,164.93286613437814
+Annual_Power,B,IDA ICE,,,5347.0,MAE,179.22701354676107
+Annual_Power,B,PVsyst,,,5347.0,MAE,161.71884415824286
+Annual_Power,C,IDA ICE,,,5347.0,MAE,135.38570340868728
+Annual_Power,C,PVsyst,,,5347.0,MAE,127.06539084723458
+Annual_Power,A,IDA ICE,,,4631.0,CVRMSE_percent,34.43594806618606
+Annual_Power,A,PVsyst,,,4631.0,CVRMSE_percent,33.7902770092285
+Annual_Power,B,IDA ICE,,,5347.0,CVRMSE_percent,41.624437589618346
+Annual_Power,B,PVsyst,,,5347.0,CVRMSE_percent,38.22334112611173
+Annual_Power,C,IDA ICE,,,5347.0,CVRMSE_percent,48.0903492372697
+Annual_Power,C,PVsyst,,,5347.0,CVRMSE_percent,45.2273801630113
+Annual_Power,A,IDA ICE,,,4631.0,nMAE_percent,21.983896954926497
+Annual_Power,A,PVsyst,,,4631.0,nMAE_percent,21.66587757930137
+Annual_Power,B,IDA ICE,,,5347.0,nMAE_percent,23.275026898172356
+Annual_Power,B,PVsyst,,,5347.0,nMAE_percent,21.00135673321589
+Annual_Power,C,IDA ICE,,,5347.0,nMAE_percent,26.56514020490342
+Annual_Power,C,PVsyst,,,5347.0,nMAE_percent,24.932543378365622
+Annual_Power,A,IDA ICE,,,4631.0,MBE,14.056586982583571
+Annual_Power,A,PVsyst,,,4631.0,MBE,-24.7123944469154
+Annual_Power,B,IDA ICE,,,5347.0,MBE,48.058397567244334
+Annual_Power,B,PVsyst,,,5347.0,MBE,16.788162005246967
+Annual_Power,C,IDA ICE,,,5347.0,MBE,50.34656909495914
+Annual_Power,C,PVsyst,,,5347.0,MBE,68.25007944655853
+Annual_Power,A,IDA ICE,,,4631.0,nMBE_percent,1.846498517156234
+Annual_Power,A,PVsyst,,,4631.0,nMBE_percent,-3.2462645276657534
+Annual_Power,B,IDA ICE,,,5347.0,nMBE_percent,6.241026248918864
+Annual_Power,B,PVsyst,,,5347.0,nMBE_percent,2.180167567993601
+Annual_Power,C,IDA ICE,,,5347.0,nMBE_percent,9.878913601431464
+Annual_Power,C,PVsyst,,,5347.0,nMBE_percent,13.39190833186073
+Annual_Power,A,IDA ICE,,,4631.0,RE_percent,1.846498517156234
+Annual_Power,A,PVsyst,,,4631.0,RE_percent,-3.2462645276657534
+Annual_Power,B,IDA ICE,,,5347.0,RE_percent,6.241026248918864
+Annual_Power,B,PVsyst,,,5347.0,RE_percent,2.180167567993601
+Annual_Power,C,IDA ICE,,,5347.0,RE_percent,9.878913601431464
+Annual_Power,C,PVsyst,,,5347.0,RE_percent,13.39190833186073
+Annual_Power,A,IDA ICE,,,4631.0,R2,0.9175392230794748
+Annual_Power,A,PVsyst,,,4631.0,R2,0.9206024981431724
+Annual_Power,B,IDA ICE,,,5347.0,R2,0.911079483394957
+Annual_Power,B,PVsyst,,,5347.0,R2,0.9250170517013668
+Annual_Power,C,IDA ICE,,,5347.0,R2,0.8910450304569951
+Annual_Power,C,PVsyst,,,5347.0,R2,0.9036317339482136
+Monthly_RMSE,A,IDA ICE,,,,kWp,3.9
+Monthly_RMSE,A,PVsyst,,,,kWp,3.9
+Monthly_RMSE,B,IDA ICE,,,,kWp,4.8
+Monthly_RMSE,B,PVsyst,,,,kWp,4.8
+Monthly_RMSE,C,IDA ICE,,,,kWp,3.3
+Monthly_RMSE,C,PVsyst,,,,kWp,3.3
+Monthly_RMSE,A,IDA ICE,,,,n_months,12.0
+Monthly_RMSE,A,PVsyst,,,,n_months,12.0
+Monthly_RMSE,B,IDA ICE,,,,n_months,12.0
+Monthly_RMSE,B,PVsyst,,,,n_months,12.0
+Monthly_RMSE,C,IDA ICE,,,,n_months,12.0
+Monthly_RMSE,C,PVsyst,,,,n_months,12.0
+Monthly_RMSE,A,IDA ICE,,,,RMSE_month_kWh,11.379508989726771
+Monthly_RMSE,A,PVsyst,,,,RMSE_month_kWh,16.25701998766726
+Monthly_RMSE,B,IDA ICE,,,,RMSE_month_kWh,27.37333781379799
+Monthly_RMSE,B,PVsyst,,,,RMSE_month_kWh,13.035357142626124
+Monthly_RMSE,C,IDA ICE,,,,RMSE_month_kWh,30.35683996189155
+Monthly_RMSE,C,PVsyst,,,,RMSE_month_kWh,37.49322274680223
+Monthly_RMSE,A,IDA ICE,,,,RMSE_month_kWh_per_kWp,2.91782281787866
+Monthly_RMSE,A,PVsyst,,,,RMSE_month_kWh_per_kWp,4.168466663504426
+Monthly_RMSE,B,IDA ICE,,,,RMSE_month_kWh_per_kWp,5.702778711207914
+Monthly_RMSE,B,PVsyst,,,,RMSE_month_kWh_per_kWp,2.715699404713776
+Monthly_RMSE,C,IDA ICE,,,,RMSE_month_kWh_per_kWp,9.199042412694409
+Monthly_RMSE,C,PVsyst,,,,RMSE_month_kWh_per_kWp,11.36158265054613
+Weather_Bins,A,IDA ICE,Overcast/very cloudy,,1713.0,kt_min,0.0
+Weather_Bins,A,PVsyst,Overcast/very cloudy,,1713.0,kt_min,0.0
+Weather_Bins,A,IDA ICE,Cloudy,,651.0,kt_min,0.2
+Weather_Bins,A,PVsyst,Cloudy,,651.0,kt_min,0.2
+Weather_Bins,A,IDA ICE,Mixed/broken,,497.0,kt_min,0.4
+Weather_Bins,A,PVsyst,Mixed/broken,,497.0,kt_min,0.4
+Weather_Bins,A,IDA ICE,Mostly clear,,336.0,kt_min,0.6
+Weather_Bins,A,PVsyst,Mostly clear,,336.0,kt_min,0.6
+Weather_Bins,A,IDA ICE,Clear,,337.0,kt_min,0.75
+Weather_Bins,A,PVsyst,Clear,,337.0,kt_min,0.75
+Weather_Bins,B,IDA ICE,Overcast/very cloudy,,1827.0,kt_min,0.0
+Weather_Bins,B,PVsyst,Overcast/very cloudy,,1827.0,kt_min,0.0
+Weather_Bins,B,IDA ICE,Cloudy,,611.0,kt_min,0.2
+Weather_Bins,B,PVsyst,Cloudy,,611.0,kt_min,0.2
+Weather_Bins,B,IDA ICE,Mixed/broken,,469.0,kt_min,0.4
+Weather_Bins,B,PVsyst,Mixed/broken,,469.0,kt_min,0.4
+Weather_Bins,B,IDA ICE,Mostly clear,,311.0,kt_min,0.6
+Weather_Bins,B,PVsyst,Mostly clear,,311.0,kt_min,0.6
+Weather_Bins,B,IDA ICE,Clear,,350.0,kt_min,0.75
+Weather_Bins,B,PVsyst,Clear,,350.0,kt_min,0.75
+Weather_Bins,C,IDA ICE,Overcast/very cloudy,,1827.0,kt_min,0.0
+Weather_Bins,C,PVsyst,Overcast/very cloudy,,1827.0,kt_min,0.0
+Weather_Bins,C,IDA ICE,Cloudy,,611.0,kt_min,0.2
+Weather_Bins,C,PVsyst,Cloudy,,611.0,kt_min,0.2
+Weather_Bins,C,IDA ICE,Mixed/broken,,469.0,kt_min,0.4
+Weather_Bins,C,PVsyst,Mixed/broken,,469.0,kt_min,0.4
+Weather_Bins,C,IDA ICE,Mostly clear,,311.0,kt_min,0.6
+Weather_Bins,C,PVsyst,Mostly clear,,311.0,kt_min,0.6
+Weather_Bins,C,IDA ICE,Clear,,350.0,kt_min,0.75
+Weather_Bins,C,PVsyst,Clear,,350.0,kt_min,0.75
+Weather_Bins,A,IDA ICE,Overcast/very cloudy,,1713.0,kt_max,0.2
+Weather_Bins,A,PVsyst,Overcast/very cloudy,,1713.0,kt_max,0.2
+Weather_Bins,A,IDA ICE,Cloudy,,651.0,kt_max,0.4
+Weather_Bins,A,PVsyst,Cloudy,,651.0,kt_max,0.4
+Weather_Bins,A,IDA ICE,Mixed/broken,,497.0,kt_max,0.6
+Weather_Bins,A,PVsyst,Mixed/broken,,497.0,kt_max,0.6
+Weather_Bins,A,IDA ICE,Mostly clear,,336.0,kt_max,0.75
+Weather_Bins,A,PVsyst,Mostly clear,,336.0,kt_max,0.75
+Weather_Bins,A,IDA ICE,Clear,,337.0,kt_max,
+Weather_Bins,A,PVsyst,Clear,,337.0,kt_max,
+Weather_Bins,B,IDA ICE,Overcast/very cloudy,,1827.0,kt_max,0.2
+Weather_Bins,B,PVsyst,Overcast/very cloudy,,1827.0,kt_max,0.2
+Weather_Bins,B,IDA ICE,Cloudy,,611.0,kt_max,0.4
+Weather_Bins,B,PVsyst,Cloudy,,611.0,kt_max,0.4
+Weather_Bins,B,IDA ICE,Mixed/broken,,469.0,kt_max,0.6
+Weather_Bins,B,PVsyst,Mixed/broken,,469.0,kt_max,0.6
+Weather_Bins,B,IDA ICE,Mostly clear,,311.0,kt_max,0.75
+Weather_Bins,B,PVsyst,Mostly clear,,311.0,kt_max,0.75
+Weather_Bins,B,IDA ICE,Clear,,350.0,kt_max,
+Weather_Bins,B,PVsyst,Clear,,350.0,kt_max,
+Weather_Bins,C,IDA ICE,Overcast/very cloudy,,1827.0,kt_max,0.2
+Weather_Bins,C,PVsyst,Overcast/very cloudy,,1827.0,kt_max,0.2
+Weather_Bins,C,IDA ICE,Cloudy,,611.0,kt_max,0.4
+Weather_Bins,C,PVsyst,Cloudy,,611.0,kt_max,0.4
+Weather_Bins,C,IDA ICE,Mixed/broken,,469.0,kt_max,0.6
+Weather_Bins,C,PVsyst,Mixed/broken,,469.0,kt_max,0.6
+Weather_Bins,C,IDA ICE,Mostly clear,,311.0,kt_max,0.75
+Weather_Bins,C,PVsyst,Mostly clear,,311.0,kt_max,0.75
+Weather_Bins,C,IDA ICE,Clear,,350.0,kt_max,
+Weather_Bins,C,PVsyst,Clear,,350.0,kt_max,
+Weather_Bins,A,IDA ICE,Overcast/very cloudy,,1713.0,mean_measured,211.8795270780476
+Weather_Bins,A,PVsyst,Overcast/very cloudy,,1713.0,mean_measured,211.8795270780476
+Weather_Bins,A,IDA ICE,Cloudy,,651.0,mean_measured,845.3179810990057
+Weather_Bins,A,PVsyst,Cloudy,,651.0,mean_measured,845.3179810990057
+Weather_Bins,A,IDA ICE,Mixed/broken,,497.0,mean_measured,1617.1499125174607
+Weather_Bins,A,PVsyst,Mixed/broken,,497.0,mean_measured,1617.1499125174607
+Weather_Bins,A,IDA ICE,Mostly clear,,336.0,mean_measured,2475.98792350287
+Weather_Bins,A,PVsyst,Mostly clear,,336.0,mean_measured,2475.98792350287
+Weather_Bins,A,IDA ICE,Clear,,337.0,mean_measured,2303.140124127053
+Weather_Bins,A,PVsyst,Clear,,337.0,mean_measured,2303.140124127053
+Weather_Bins,B,IDA ICE,Overcast/very cloudy,,1827.0,mean_measured,242.45306130560735
+Weather_Bins,B,PVsyst,Overcast/very cloudy,,1827.0,mean_measured,242.45306130560735
+Weather_Bins,B,IDA ICE,Cloudy,,611.0,mean_measured,1032.270090201274
+Weather_Bins,B,PVsyst,Cloudy,,611.0,mean_measured,1032.270090201274
+Weather_Bins,B,IDA ICE,Mixed/broken,,469.0,mean_measured,1966.3175174986948
+Weather_Bins,B,PVsyst,Mixed/broken,,469.0,mean_measured,1966.3175174986948
+Weather_Bins,B,IDA ICE,Mostly clear,,311.0,mean_measured,3005.082502408096
+Weather_Bins,B,PVsyst,Mostly clear,,311.0,mean_measured,3005.082502408096
+Weather_Bins,B,IDA ICE,Clear,,350.0,mean_measured,2764.4097445674824
+Weather_Bins,B,PVsyst,Clear,,350.0,mean_measured,2764.4097445674824
+Weather_Bins,C,IDA ICE,Overcast/very cloudy,,1827.0,mean_measured,138.92281178476168
+Weather_Bins,C,PVsyst,Overcast/very cloudy,,1827.0,mean_measured,138.92281178476168
+Weather_Bins,C,IDA ICE,Cloudy,,611.0,mean_measured,686.6083076774897
+Weather_Bins,C,PVsyst,Cloudy,,611.0,mean_measured,686.6083076774897
+Weather_Bins,C,IDA ICE,Mixed/broken,,469.0,mean_measured,1344.459666600938
+Weather_Bins,C,PVsyst,Mixed/broken,,469.0,mean_measured,1344.459666600938
+Weather_Bins,C,IDA ICE,Mostly clear,,311.0,mean_measured,2052.9757325071737
+Weather_Bins,C,PVsyst,Mostly clear,,311.0,mean_measured,2052.9757325071737
+Weather_Bins,C,IDA ICE,Clear,,350.0,mean_measured,1886.4930843953557
+Weather_Bins,C,PVsyst,Clear,,350.0,mean_measured,1886.4930843953557
+Weather_Bins,A,IDA ICE,Overcast/very cloudy,,1713.0,RMSE,142.62494684169448
+Weather_Bins,A,PVsyst,Overcast/very cloudy,,1713.0,RMSE,137.62637122807004
+Weather_Bins,A,IDA ICE,Cloudy,,651.0,RMSE,325.8532127200369
+Weather_Bins,A,PVsyst,Cloudy,,651.0,RMSE,310.06288875741694
+Weather_Bins,A,IDA ICE,Mixed/broken,,497.0,RMSE,445.13701320025615
+Weather_Bins,A,PVsyst,Mixed/broken,,497.0,RMSE,409.4331416480093
+Weather_Bins,A,IDA ICE,Mostly clear,,336.0,RMSE,394.2060957500098
+Weather_Bins,A,PVsyst,Mostly clear,,336.0,RMSE,375.1294517409827
+Weather_Bins,A,IDA ICE,Clear,,337.0,RMSE,350.76670033260973
+Weather_Bins,A,PVsyst,Clear,,337.0,RMSE,401.0179220321502
+Weather_Bins,B,IDA ICE,Overcast/very cloudy,,1827.0,RMSE,181.0285711109036
+Weather_Bins,B,PVsyst,Overcast/very cloudy,,1827.0,RMSE,172.82265540547974
+Weather_Bins,B,IDA ICE,Cloudy,,611.0,RMSE,454.37689173807513
+Weather_Bins,B,PVsyst,Cloudy,,611.0,RMSE,419.2508172635455
+Weather_Bins,B,IDA ICE,Mixed/broken,,469.0,RMSE,581.4980079030424
+Weather_Bins,B,PVsyst,Mixed/broken,,469.0,RMSE,525.7504070112727
+Weather_Bins,B,IDA ICE,Mostly clear,,311.0,RMSE,484.0586458327147
+Weather_Bins,B,PVsyst,Mostly clear,,311.0,RMSE,429.9251909298568
+Weather_Bins,B,IDA ICE,Clear,,350.0,RMSE,557.463816387105
+Weather_Bins,B,PVsyst,Clear,,350.0,RMSE,528.6874853378268
+Weather_Bins,C,IDA ICE,Overcast/very cloudy,,1827.0,RMSE,125.53174148309648
+Weather_Bins,C,PVsyst,Overcast/very cloudy,,1827.0,RMSE,130.3363789801267
+Weather_Bins,C,IDA ICE,Cloudy,,611.0,RMSE,326.5784605195542
+Weather_Bins,C,PVsyst,Cloudy,,611.0,RMSE,343.8737929103484
+Weather_Bins,C,IDA ICE,Mixed/broken,,469.0,RMSE,436.6529579019303
+Weather_Bins,C,PVsyst,Mixed/broken,,469.0,RMSE,431.126685151202
+Weather_Bins,C,IDA ICE,Mostly clear,,311.0,RMSE,449.5008245520795
+Weather_Bins,C,PVsyst,Mostly clear,,311.0,RMSE,364.034515399171
+Weather_Bins,C,IDA ICE,Clear,,350.0,RMSE,430.1901924090676
+Weather_Bins,C,PVsyst,Clear,,350.0,RMSE,369.5228276415485
+Weather_Bins,A,IDA ICE,Overcast/very cloudy,,1713.0,MAE,78.7721604754382
+Weather_Bins,A,PVsyst,Overcast/very cloudy,,1713.0,MAE,72.86042810677938
+Weather_Bins,A,IDA ICE,Cloudy,,651.0,MAE,255.60129936150423
+Weather_Bins,A,PVsyst,Cloudy,,651.0,MAE,239.7571241006402
+Weather_Bins,A,IDA ICE,Mixed/broken,,497.0,MAE,367.9939094894976
+Weather_Bins,A,PVsyst,Mixed/broken,,497.0,MAE,332.83347850158566
+Weather_Bins,A,IDA ICE,Mostly clear,,336.0,MAE,297.36234748320214
+Weather_Bins,A,PVsyst,Mostly clear,,336.0,MAE,296.97884527811385
+Weather_Bins,A,IDA ICE,Clear,,337.0,MAE,287.9792002431378
+Weather_Bins,A,PVsyst,Clear,,337.0,MAE,359.8102610525999
+Weather_Bins,B,IDA ICE,Overcast/very cloudy,,1827.0,MAE,100.81540118095984
+Weather_Bins,B,PVsyst,Overcast/very cloudy,,1827.0,MAE,92.83633139764552
+Weather_Bins,B,IDA ICE,Cloudy,,611.0,MAE,369.4713776882196
+Weather_Bins,B,PVsyst,Cloudy,,611.0,MAE,329.88691603703893
+Weather_Bins,B,IDA ICE,Mixed/broken,,469.0,MAE,470.092492748222
+Weather_Bins,B,PVsyst,Mixed/broken,,469.0,MAE,406.4038093389778
+Weather_Bins,B,IDA ICE,Mostly clear,,311.0,MAE,364.77455204334
+Weather_Bins,B,PVsyst,Mostly clear,,311.0,MAE,322.57536405506283
+Weather_Bins,B,IDA ICE,Clear,,350.0,MAE,345.2144757176756
+Weather_Bins,B,PVsyst,Clear,,350.0,MAE,369.78160199854887
+Weather_Bins,C,IDA ICE,Overcast/very cloudy,,1827.0,MAE,64.75188430716
+Weather_Bins,C,PVsyst,Overcast/very cloudy,,1827.0,MAE,75.85369675431356
+Weather_Bins,C,IDA ICE,Cloudy,,611.0,MAE,265.45367359690505
+Weather_Bins,C,PVsyst,Cloudy,,611.0,MAE,283.5629511667646
+Weather_Bins,C,IDA ICE,Mixed/broken,,469.0,MAE,362.7520931385453
+Weather_Bins,C,PVsyst,Mixed/broken,,469.0,MAE,356.68499185265784
+Weather_Bins,C,IDA ICE,Mostly clear,,311.0,MAE,382.4513466533243
+Weather_Bins,C,PVsyst,Mostly clear,,311.0,MAE,285.8458256188851
+Weather_Bins,C,IDA ICE,Clear,,350.0,MAE,284.4190685662975
+Weather_Bins,C,PVsyst,Clear,,350.0,MAE,203.53147283930124
+Weather_Bins,A,IDA ICE,Overcast/very cloudy,,1713.0,CVRMSE_percent,67.31417084443339
+Weather_Bins,A,PVsyst,Overcast/very cloudy,,1713.0,CVRMSE_percent,64.95501152283308
+Weather_Bins,A,IDA ICE,Cloudy,,651.0,CVRMSE_percent,38.548004420347496
+Weather_Bins,A,PVsyst,Cloudy,,651.0,CVRMSE_percent,36.68002996390794
+Weather_Bins,A,IDA ICE,Mixed/broken,,497.0,CVRMSE_percent,27.526020299954716
+Weather_Bins,A,PVsyst,Mixed/broken,,497.0,CVRMSE_percent,25.31819335231783
+Weather_Bins,A,IDA ICE,Mostly clear,,336.0,CVRMSE_percent,15.921163912314729
+Weather_Bins,A,PVsyst,Mostly clear,,336.0,CVRMSE_percent,15.15069795697038
+Weather_Bins,A,IDA ICE,Clear,,337.0,CVRMSE_percent,15.229933109934374
+Weather_Bins,A,PVsyst,Clear,,337.0,CVRMSE_percent,17.411790009265975
+Weather_Bins,B,IDA ICE,Overcast/very cloudy,,1827.0,CVRMSE_percent,74.66540951723461
+Weather_Bins,B,PVsyst,Overcast/very cloudy,,1827.0,CVRMSE_percent,71.28087163545447
+Weather_Bins,B,IDA ICE,Cloudy,,611.0,CVRMSE_percent,44.01724859135266
+Weather_Bins,B,PVsyst,Cloudy,,611.0,CVRMSE_percent,40.61444976883901
+Weather_Bins,B,IDA ICE,Mixed/broken,,469.0,CVRMSE_percent,29.572945504892417
+Weather_Bins,B,PVsyst,Mixed/broken,,469.0,CVRMSE_percent,26.737818400767093
+Weather_Bins,B,IDA ICE,Mostly clear,,311.0,CVRMSE_percent,16.107998547288425
+Weather_Bins,B,PVsyst,Mostly clear,,311.0,CVRMSE_percent,14.306601918095096
+Weather_Bins,B,IDA ICE,Clear,,350.0,CVRMSE_percent,20.165744874927192
+Weather_Bins,B,PVsyst,Clear,,350.0,CVRMSE_percent,19.124787357474204
+Weather_Bins,C,IDA ICE,Overcast/very cloudy,,1827.0,CVRMSE_percent,90.36078371174024
+Weather_Bins,C,PVsyst,Overcast/very cloudy,,1827.0,CVRMSE_percent,93.81927799018476
+Weather_Bins,C,IDA ICE,Cloudy,,611.0,CVRMSE_percent,47.56401238782463
+Weather_Bins,C,PVsyst,Cloudy,,611.0,CVRMSE_percent,50.0829641973792
+Weather_Bins,C,IDA ICE,Mixed/broken,,469.0,CVRMSE_percent,32.47795145880991
+Weather_Bins,C,PVsyst,Mixed/broken,,469.0,CVRMSE_percent,32.06691103208594
+Weather_Bins,C,IDA ICE,Mostly clear,,311.0,CVRMSE_percent,21.895087089175263
+Weather_Bins,C,PVsyst,Mostly clear,,311.0,CVRMSE_percent,17.732041817883445
+Weather_Bins,C,IDA ICE,Clear,,350.0,CVRMSE_percent,22.80369835264723
+Weather_Bins,C,PVsyst,Clear,,350.0,CVRMSE_percent,19.587817771406524
+Weather_Bins,A,IDA ICE,Overcast/very cloudy,,1713.0,nMAE_percent,37.17780644584024
+Weather_Bins,A,PVsyst,Overcast/very cloudy,,1713.0,nMAE_percent,34.38766789390682
+Weather_Bins,A,IDA ICE,Cloudy,,651.0,nMAE_percent,30.237295914277684
+Weather_Bins,A,PVsyst,Cloudy,,651.0,nMAE_percent,28.36295092042521
+Weather_Bins,A,IDA ICE,Mixed/broken,,497.0,nMAE_percent,22.75570784384681
+Weather_Bins,A,PVsyst,Mixed/broken,,497.0,nMAE_percent,20.58148573149009
+Weather_Bins,A,IDA ICE,Mostly clear,,336.0,nMAE_percent,12.009846439901564
+Weather_Bins,A,PVsyst,Mostly clear,,336.0,nMAE_percent,11.99435758385958
+Weather_Bins,A,IDA ICE,Clear,,337.0,nMAE_percent,12.503763762627733
+Weather_Bins,A,PVsyst,Clear,,337.0,nMAE_percent,15.622595311649864
+Weather_Bins,B,IDA ICE,Overcast/very cloudy,,1827.0,nMAE_percent,41.58140987705822
+Weather_Bins,B,PVsyst,Overcast/very cloudy,,1827.0,nMAE_percent,38.290434815598026
+Weather_Bins,B,IDA ICE,Cloudy,,611.0,nMAE_percent,35.792122739522505
+Weather_Bins,B,PVsyst,Cloudy,,611.0,nMAE_percent,31.957422690869304
+Weather_Bins,B,IDA ICE,Mixed/broken,,469.0,nMAE_percent,23.90725244345152
+Weather_Bins,B,PVsyst,Mixed/broken,,469.0,nMAE_percent,20.66826978462534
+Weather_Bins,B,IDA ICE,Mostly clear,,311.0,nMAE_percent,12.138586935667528
+Weather_Bins,B,PVsyst,Mostly clear,,311.0,nMAE_percent,10.734326388595653
+Weather_Bins,B,IDA ICE,Clear,,350.0,nMAE_percent,12.487818652646505
+Weather_Bins,B,PVsyst,Clear,,350.0,nMAE_percent,13.376512028480228
+Weather_Bins,C,IDA ICE,Overcast/very cloudy,,1827.0,nMAE_percent,46.60997245541108
+Weather_Bins,C,PVsyst,Overcast/very cloudy,,1827.0,nMAE_percent,54.60132557051648
+Weather_Bins,C,IDA ICE,Cloudy,,611.0,nMAE_percent,38.66158778282546
+Weather_Bins,C,PVsyst,Cloudy,,611.0,nMAE_percent,41.2990853731351
+Weather_Bins,C,IDA ICE,Mixed/broken,,469.0,nMAE_percent,26.9812551577434
+Weather_Bins,C,PVsyst,Mixed/broken,,469.0,nMAE_percent,26.529988270635783
+Weather_Bins,C,IDA ICE,Mostly clear,,311.0,nMAE_percent,18.629121649979755
+Weather_Bins,C,PVsyst,Mostly clear,,311.0,nMAE_percent,13.923487798357904
+Weather_Bins,C,IDA ICE,Clear,,350.0,nMAE_percent,15.07660276726948
+Weather_Bins,C,PVsyst,Clear,,350.0,nMAE_percent,10.788879881027269
+Weather_Bins,A,IDA ICE,Overcast/very cloudy,,1713.0,MBE,-8.713729646634985
+Weather_Bins,A,PVsyst,Overcast/very cloudy,,1713.0,MBE,-12.882854573669306
+Weather_Bins,A,IDA ICE,Cloudy,,651.0,MBE,107.48535223432764
+Weather_Bins,A,PVsyst,Cloudy,,651.0,MBE,63.25544440022626
+Weather_Bins,A,IDA ICE,Mixed/broken,,497.0,MBE,189.31527862942076
+Weather_Bins,A,PVsyst,Mixed/broken,,497.0,MBE,101.79475549058776
+Weather_Bins,A,IDA ICE,Mostly clear,,336.0,MBE,122.51499316379622
+Weather_Bins,A,PVsyst,Mostly clear,,336.0,MBE,-37.28137588382277
+Weather_Bins,A,IDA ICE,Clear,,337.0,MBE,-109.19142976503552
+Weather_Bins,A,PVsyst,Clear,,337.0,MBE,-251.1395306552432
+Weather_Bins,B,IDA ICE,Overcast/very cloudy,,1827.0,MBE,-2.969235908781997
+Weather_Bins,B,PVsyst,Overcast/very cloudy,,1827.0,MBE,3.765055826302859
+Weather_Bins,B,IDA ICE,Cloudy,,611.0,MBE,186.9837232193482
+Weather_Bins,B,PVsyst,Cloudy,,611.0,MBE,114.9225448232762
+Weather_Bins,B,IDA ICE,Mixed/broken,,469.0,MBE,284.8902010514121
+Weather_Bins,B,PVsyst,Mixed/broken,,469.0,MBE,156.37203474011145
+Weather_Bins,B,IDA ICE,Mostly clear,,311.0,MBE,225.59074518032827
+Weather_Bins,B,PVsyst,Mostly clear,,311.0,MBE,42.32778698097141
+Weather_Bins,B,IDA ICE,Clear,,350.0,MBE,74.30311257537495
+Weather_Bins,B,PVsyst,Clear,,350.0,MBE,-54.9623159960536
+Weather_Bins,C,IDA ICE,Overcast/very cloudy,,1827.0,MBE,-12.341847280110304
+Weather_Bins,C,PVsyst,Overcast/very cloudy,,1827.0,MBE,30.94325280199257
+Weather_Bins,C,IDA ICE,Cloudy,,611.0,MBE,123.844263517273
+Weather_Bins,C,PVsyst,Cloudy,,611.0,MBE,173.1524124534432
+Weather_Bins,C,IDA ICE,Mixed/broken,,469.0,MBE,240.49184939053308
+Weather_Bins,C,PVsyst,Mixed/broken,,469.0,MBE,245.25845706643923
+Weather_Bins,C,IDA ICE,Mostly clear,,311.0,MBE,311.5397980394499
+Weather_Bins,C,PVsyst,Mostly clear,,311.0,MBE,212.46381733205448
+Weather_Bins,C,IDA ICE,Clear,,350.0,MBE,166.63860131893028
+Weather_Bins,C,PVsyst,Clear,,350.0,MBE,124.71691560464464
+Weather_Bins,A,IDA ICE,Overcast/very cloudy,,1713.0,nMBE_percent,-4.112586886898804
+Weather_Bins,A,PVsyst,Overcast/very cloudy,,1713.0,nMBE_percent,-6.080273422983336
+Weather_Bins,A,IDA ICE,Cloudy,,651.0,nMBE_percent,12.715375117726108
+Weather_Bins,A,PVsyst,Cloudy,,651.0,nMBE_percent,7.4830354747674095
+Weather_Bins,A,IDA ICE,Mixed/broken,,497.0,nMBE_percent,11.706724105417573
+Weather_Bins,A,PVsyst,Mixed/broken,,497.0,nMBE_percent,6.294701233488063
+Weather_Bins,A,IDA ICE,Mostly clear,,336.0,nMBE_percent,4.948125635058421
+Weather_Bins,A,PVsyst,Mostly clear,,336.0,nMBE_percent,-1.5057171939303906
+Weather_Bins,A,IDA ICE,Clear,,337.0,nMBE_percent,-4.74098074282049
+Weather_Bins,A,PVsyst,Clear,,337.0,nMBE_percent,-10.90422280539406
+Weather_Bins,B,IDA ICE,Overcast/very cloudy,,1827.0,nMBE_percent,-1.2246642268786754
+Weather_Bins,B,PVsyst,Overcast/very cloudy,,1827.0,nMBE_percent,1.5529009227716364
+Weather_Bins,B,IDA ICE,Cloudy,,611.0,nMBE_percent,18.113837162800078
+Weather_Bins,B,PVsyst,Cloudy,,611.0,nMBE_percent,11.132991831708347
+Weather_Bins,B,IDA ICE,Mixed/broken,,469.0,nMBE_percent,14.488514622695018
+Weather_Bins,B,PVsyst,Mixed/broken,,469.0,nMBE_percent,7.952532251201655
+Weather_Bins,B,IDA ICE,Mostly clear,,311.0,nMBE_percent,7.506973435822582
+Weather_Bins,B,PVsyst,Mostly clear,,311.0,nMBE_percent,1.4085399301700507
+Weather_Bins,B,IDA ICE,Clear,,350.0,nMBE_percent,2.6878472962046507
+Weather_Bins,B,PVsyst,Clear,,350.0,nMBE_percent,-1.988211628325488
+Weather_Bins,C,IDA ICE,Overcast/very cloudy,,1827.0,nMBE_percent,-8.883960180155286
+Weather_Bins,C,PVsyst,Overcast/very cloudy,,1827.0,nMBE_percent,22.27370178047801
+Weather_Bins,C,IDA ICE,Cloudy,,611.0,nMBE_percent,18.03710530916624
+Weather_Bins,C,PVsyst,Cloudy,,611.0,nMBE_percent,25.21851403737682
+Weather_Bins,C,IDA ICE,Mixed/broken,,469.0,nMBE_percent,17.887620979998932
+Weather_Bins,C,PVsyst,Mixed/broken,,469.0,nMBE_percent,18.24215803263935
+Weather_Bins,C,IDA ICE,Mostly clear,,311.0,nMBE_percent,15.175035588900284
+Weather_Bins,C,PVsyst,Mostly clear,,311.0,nMBE_percent,10.349066185628285
+Weather_Bins,C,IDA ICE,Clear,,350.0,nMBE_percent,8.833247399491
+Weather_Bins,C,PVsyst,Clear,,350.0,nMBE_percent,6.611045470363754
+Weather_Bins,A,IDA ICE,Overcast/very cloudy,,1713.0,RE_percent,-4.112586886898804
+Weather_Bins,A,PVsyst,Overcast/very cloudy,,1713.0,RE_percent,-6.080273422983336
+Weather_Bins,A,IDA ICE,Cloudy,,651.0,RE_percent,12.715375117726108
+Weather_Bins,A,PVsyst,Cloudy,,651.0,RE_percent,7.4830354747674095
+Weather_Bins,A,IDA ICE,Mixed/broken,,497.0,RE_percent,11.706724105417573
+Weather_Bins,A,PVsyst,Mixed/broken,,497.0,RE_percent,6.294701233488063
+Weather_Bins,A,IDA ICE,Mostly clear,,336.0,RE_percent,4.948125635058421
+Weather_Bins,A,PVsyst,Mostly clear,,336.0,RE_percent,-1.5057171939303906
+Weather_Bins,A,IDA ICE,Clear,,337.0,RE_percent,-4.74098074282049
+Weather_Bins,A,PVsyst,Clear,,337.0,RE_percent,-10.90422280539406
+Weather_Bins,B,IDA ICE,Overcast/very cloudy,,1827.0,RE_percent,-1.2246642268786754
+Weather_Bins,B,PVsyst,Overcast/very cloudy,,1827.0,RE_percent,1.5529009227716364
+Weather_Bins,B,IDA ICE,Cloudy,,611.0,RE_percent,18.113837162800078
+Weather_Bins,B,PVsyst,Cloudy,,611.0,RE_percent,11.132991831708347
+Weather_Bins,B,IDA ICE,Mixed/broken,,469.0,RE_percent,14.488514622695018
+Weather_Bins,B,PVsyst,Mixed/broken,,469.0,RE_percent,7.952532251201655
+Weather_Bins,B,IDA ICE,Mostly clear,,311.0,RE_percent,7.506973435822582
+Weather_Bins,B,PVsyst,Mostly clear,,311.0,RE_percent,1.4085399301700507
+Weather_Bins,B,IDA ICE,Clear,,350.0,RE_percent,2.6878472962046507
+Weather_Bins,B,PVsyst,Clear,,350.0,RE_percent,-1.988211628325488
+Weather_Bins,C,IDA ICE,Overcast/very cloudy,,1827.0,RE_percent,-8.883960180155286
+Weather_Bins,C,PVsyst,Overcast/very cloudy,,1827.0,RE_percent,22.27370178047801
+Weather_Bins,C,IDA ICE,Cloudy,,611.0,RE_percent,18.03710530916624
+Weather_Bins,C,PVsyst,Cloudy,,611.0,RE_percent,25.21851403737682
+Weather_Bins,C,IDA ICE,Mixed/broken,,469.0,RE_percent,17.887620979998932
+Weather_Bins,C,PVsyst,Mixed/broken,,469.0,RE_percent,18.24215803263935
+Weather_Bins,C,IDA ICE,Mostly clear,,311.0,RE_percent,15.175035588900284
+Weather_Bins,C,PVsyst,Mostly clear,,311.0,RE_percent,10.349066185628285
+Weather_Bins,C,IDA ICE,Clear,,350.0,RE_percent,8.833247399491
+Weather_Bins,C,PVsyst,Clear,,350.0,RE_percent,6.611045470363754
+Weather_Bins,A,IDA ICE,Overcast/very cloudy,,1713.0,R2,0.701207258109355
+Weather_Bins,A,PVsyst,Overcast/very cloudy,,1713.0,R2,0.7217838281304354
+Weather_Bins,A,IDA ICE,Cloudy,,651.0,R2,0.5045991179196005
+Weather_Bins,A,PVsyst,Cloudy,,651.0,R2,0.551448473650687
+Weather_Bins,A,IDA ICE,Mixed/broken,,497.0,R2,0.4001991594753195
+Weather_Bins,A,PVsyst,Mixed/broken,,497.0,R2,0.4925588965592298
+Weather_Bins,A,IDA ICE,Mostly clear,,336.0,R2,0.6171736333779484
+Weather_Bins,A,PVsyst,Mostly clear,,336.0,R2,0.653329014617251
+Weather_Bins,A,IDA ICE,Clear,,337.0,R2,0.7407189576300817
+Weather_Bins,A,PVsyst,Clear,,337.0,R2,0.6611077682932313
+Weather_Bins,B,IDA ICE,Overcast/very cloudy,,1827.0,R2,0.6564472333877758
+Weather_Bins,B,PVsyst,Overcast/very cloudy,,1827.0,R2,0.6868873954306824
+Weather_Bins,B,IDA ICE,Cloudy,,611.0,R2,0.4174836114901151
+Weather_Bins,B,PVsyst,Cloudy,,611.0,R2,0.5040664248973614
+Weather_Bins,B,IDA ICE,Mixed/broken,,469.0,R2,0.3673246058641617
+Weather_Bins,B,PVsyst,Mixed/broken,,469.0,R2,0.4828176241218864
+Weather_Bins,B,IDA ICE,Mostly clear,,311.0,R2,0.5894699438752838
+Weather_Bins,B,PVsyst,Mostly clear,,311.0,R2,0.6761568007945529
+Weather_Bins,B,IDA ICE,Clear,,350.0,R2,0.6329501143827985
+Weather_Bins,B,PVsyst,Clear,,350.0,R2,0.6698663554972049
+Weather_Bins,C,IDA ICE,Overcast/very cloudy,,1827.0,R2,0.6551634580045858
+Weather_Bins,C,PVsyst,Overcast/very cloudy,,1827.0,R2,0.6282615564492933
+Weather_Bins,C,IDA ICE,Cloudy,,611.0,R2,0.4332757272969257
+Weather_Bins,C,PVsyst,Cloudy,,611.0,R2,0.3716597265387812
+Weather_Bins,C,IDA ICE,Mixed/broken,,469.0,R2,0.2963202759239967
+Weather_Bins,C,PVsyst,Mixed/broken,,469.0,R2,0.3140190831225191
+Weather_Bins,C,IDA ICE,Mostly clear,,311.0,R2,0.2325942882806334
+Weather_Bins,C,PVsyst,Mostly clear,,311.0,R2,0.4966742295180667
+Weather_Bins,C,IDA ICE,Clear,,350.0,R2,0.5146968411690505
+Weather_Bins,C,PVsyst,Clear,,350.0,R2,0.6419244619245665
+Shading_Energy,A,IDA ICE,,Clear_day_2023-06-05,,n_intervals,24.0
+Shading_Energy,A,PVsyst,,Clear_day_2023-06-05,,n_intervals,24.0
+Shading_Energy,B,IDA ICE,,Clear_day_2023-06-05,,n_intervals,24.0
+Shading_Energy,B,PVsyst,,Clear_day_2023-06-05,,n_intervals,24.0
+Shading_Energy,C,IDA ICE,,Clear_day_2023-06-05,,n_intervals,24.0
+Shading_Energy,C,PVsyst,,Clear_day_2023-06-05,,n_intervals,24.0
+Shading_Energy,A,IDA ICE,,Partly_cloudy_day_2023-05-15,,n_intervals,24.0
+Shading_Energy,A,PVsyst,,Partly_cloudy_day_2023-05-15,,n_intervals,24.0
+Shading_Energy,B,IDA ICE,,Partly_cloudy_day_2023-05-15,,n_intervals,24.0
+Shading_Energy,B,PVsyst,,Partly_cloudy_day_2023-05-15,,n_intervals,24.0
+Shading_Energy,C,IDA ICE,,Partly_cloudy_day_2023-05-15,,n_intervals,24.0
+Shading_Energy,C,PVsyst,,Partly_cloudy_day_2023-05-15,,n_intervals,24.0
+Shading_Energy,A,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,n_intervals,1200.0
+Shading_Energy,A,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,n_intervals,1200.0
+Shading_Energy,B,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,n_intervals,1200.0
+Shading_Energy,B,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,n_intervals,1200.0
+Shading_Energy,C,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,n_intervals,1200.0
+Shading_Energy,C,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,n_intervals,1200.0
+Shading_Energy,A,IDA ICE,,Clear_day_2023-06-05,,measured_kWh,24.211
+Shading_Energy,A,PVsyst,,Clear_day_2023-06-05,,measured_kWh,24.211
+Shading_Energy,B,IDA ICE,,Clear_day_2023-06-05,,measured_kWh,30.915
+Shading_Energy,B,PVsyst,,Clear_day_2023-06-05,,measured_kWh,30.915
+Shading_Energy,C,IDA ICE,,Clear_day_2023-06-05,,measured_kWh,20.188
+Shading_Energy,C,PVsyst,,Clear_day_2023-06-05,,measured_kWh,20.188
+Shading_Energy,A,IDA ICE,,Partly_cloudy_day_2023-05-15,,measured_kWh,11.281
+Shading_Energy,A,PVsyst,,Partly_cloudy_day_2023-05-15,,measured_kWh,11.281
+Shading_Energy,B,IDA ICE,,Partly_cloudy_day_2023-05-15,,measured_kWh,13.867
+Shading_Energy,B,PVsyst,,Partly_cloudy_day_2023-05-15,,measured_kWh,13.867
+Shading_Energy,C,IDA ICE,,Partly_cloudy_day_2023-05-15,,measured_kWh,8.856
+Shading_Energy,C,PVsyst,,Partly_cloudy_day_2023-05-15,,measured_kWh,8.856
+Shading_Energy,A,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,measured_kWh,1021.408
+Shading_Energy,A,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,measured_kWh,1021.408
+Shading_Energy,B,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,measured_kWh,1319.352
+Shading_Energy,B,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,measured_kWh,1319.352
+Shading_Energy,C,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,measured_kWh,867.19
+Shading_Energy,C,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,measured_kWh,867.19
+Shading_Energy,A,IDA ICE,,Clear_day_2023-06-05,,simulated_kWh,23.550928
+Shading_Energy,A,PVsyst,,Clear_day_2023-06-05,,simulated_kWh,24.8915
+Shading_Energy,B,IDA ICE,,Clear_day_2023-06-05,,simulated_kWh,28.584139000000004
+Shading_Energy,B,PVsyst,,Clear_day_2023-06-05,,simulated_kWh,30.1111
+Shading_Energy,C,IDA ICE,,Clear_day_2023-06-05,,simulated_kWh,21.24872
+Shading_Energy,C,PVsyst,,Clear_day_2023-06-05,,simulated_kWh,21.7475
+Shading_Energy,A,IDA ICE,,Partly_cloudy_day_2023-05-15,,simulated_kWh,11.328667
+Shading_Energy,A,PVsyst,,Partly_cloudy_day_2023-05-15,,simulated_kWh,11.7826
+Shading_Energy,B,IDA ICE,,Partly_cloudy_day_2023-05-15,,simulated_kWh,12.67684
+Shading_Energy,B,PVsyst,,Partly_cloudy_day_2023-05-15,,simulated_kWh,14.0736
+Shading_Energy,C,IDA ICE,,Partly_cloudy_day_2023-05-15,,simulated_kWh,9.21503
+Shading_Energy,C,PVsyst,,Partly_cloudy_day_2023-05-15,,simulated_kWh,9.7397
+Shading_Energy,A,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,simulated_kWh,1019.343623
+Shading_Energy,A,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,simulated_kWh,1020.6063
+Shading_Energy,B,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,simulated_kWh,1220.718566
+Shading_Energy,B,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,simulated_kWh,1294.1203
+Shading_Energy,C,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,simulated_kWh,901.411219
+Shading_Energy,C,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,simulated_kWh,936.6602
+Shading_Energy,A,IDA ICE,,Clear_day_2023-06-05,,difference_kWh,-0.6600719999999995
+Shading_Energy,A,PVsyst,,Clear_day_2023-06-05,,difference_kWh,0.6805000000000021
+Shading_Energy,B,IDA ICE,,Clear_day_2023-06-05,,difference_kWh,-2.330860999999995
+Shading_Energy,B,PVsyst,,Clear_day_2023-06-05,,difference_kWh,-0.8038999999999987
+Shading_Energy,C,IDA ICE,,Clear_day_2023-06-05,,difference_kWh,1.0607200000000034
+Shading_Energy,C,PVsyst,,Clear_day_2023-06-05,,difference_kWh,1.5595
+Shading_Energy,A,IDA ICE,,Partly_cloudy_day_2023-05-15,,difference_kWh,0.0476670000000005
+Shading_Energy,A,PVsyst,,Partly_cloudy_day_2023-05-15,,difference_kWh,0.501599999999998
+Shading_Energy,B,IDA ICE,,Partly_cloudy_day_2023-05-15,,difference_kWh,-1.1901600000000006
+Shading_Energy,B,PVsyst,,Partly_cloudy_day_2023-05-15,,difference_kWh,0.2065999999999999
+Shading_Energy,C,IDA ICE,,Partly_cloudy_day_2023-05-15,,difference_kWh,0.3590299999999988
+Shading_Energy,C,PVsyst,,Partly_cloudy_day_2023-05-15,,difference_kWh,0.883700000000001
+Shading_Energy,A,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,difference_kWh,-2.0643770000001496
+Shading_Energy,A,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,difference_kWh,-0.8016999999999825
+Shading_Energy,B,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,difference_kWh,-98.63343400000008
+Shading_Energy,B,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,difference_kWh,-25.23170000000005
+Shading_Energy,C,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,difference_kWh,34.22121900000002
+Shading_Energy,C,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,difference_kWh,69.47019999999986
+Shading_Energy,A,IDA ICE,,Clear_day_2023-06-05,,difference_fraction,-0.0272633100656726
+Shading_Energy,A,PVsyst,,Clear_day_2023-06-05,,difference_fraction,0.0281070587749371
+Shading_Energy,B,IDA ICE,,Clear_day_2023-06-05,,difference_fraction,-0.0753957949215589
+Shading_Energy,B,PVsyst,,Clear_day_2023-06-05,,difference_fraction,-0.026003558143296
+Shading_Energy,C,IDA ICE,,Clear_day_2023-06-05,,difference_fraction,0.052542104220329
+Shading_Energy,C,PVsyst,,Clear_day_2023-06-05,,difference_fraction,0.0772488607093322
+Shading_Energy,A,IDA ICE,,Partly_cloudy_day_2023-05-15,,difference_fraction,0.0042254232780782
+Shading_Energy,A,PVsyst,,Partly_cloudy_day_2023-05-15,,difference_fraction,0.0444641432497117
+Shading_Energy,B,IDA ICE,,Partly_cloudy_day_2023-05-15,,difference_fraction,-0.0858267830100238
+Shading_Energy,B,PVsyst,,Partly_cloudy_day_2023-05-15,,difference_fraction,0.0148986803201846
+Shading_Energy,C,IDA ICE,,Partly_cloudy_day_2023-05-15,,difference_fraction,0.0405408762420956
+Shading_Energy,C,PVsyst,,Partly_cloudy_day_2023-05-15,,difference_fraction,0.0997854561878953
+Shading_Energy,A,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,difference_fraction,-0.002021109096463
+Shading_Energy,A,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,difference_fraction,-0.0007848969265954
+Shading_Energy,B,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,difference_fraction,-0.0747589983567691
+Shading_Energy,B,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,difference_fraction,-0.0191243125413081
+Shading_Energy,C,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,difference_fraction,0.0394621928297143
+Shading_Energy,C,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,difference_fraction,0.0801095492337317
+Shading_Energy,A,IDA ICE,,Clear_day_2023-06-05,,difference_percent,-2.726331006567261
+Shading_Energy,A,PVsyst,,Clear_day_2023-06-05,,difference_percent,2.81070587749371
+Shading_Energy,B,IDA ICE,,Clear_day_2023-06-05,,difference_percent,-7.539579492155895
+Shading_Energy,B,PVsyst,,Clear_day_2023-06-05,,difference_percent,-2.600355814329609
+Shading_Energy,C,IDA ICE,,Clear_day_2023-06-05,,difference_percent,5.254210422032908
+Shading_Energy,C,PVsyst,,Clear_day_2023-06-05,,difference_percent,7.724886070933228
+Shading_Energy,A,IDA ICE,,Partly_cloudy_day_2023-05-15,,difference_percent,0.4225423278078234
+Shading_Energy,A,PVsyst,,Partly_cloudy_day_2023-05-15,,difference_percent,4.4464143249711725
+Shading_Energy,B,IDA ICE,,Partly_cloudy_day_2023-05-15,,difference_percent,-8.582678301002383
+Shading_Energy,B,PVsyst,,Partly_cloudy_day_2023-05-15,,difference_percent,1.4898680320184603
+Shading_Energy,C,IDA ICE,,Partly_cloudy_day_2023-05-15,,difference_percent,4.054087624209562
+Shading_Energy,C,PVsyst,,Partly_cloudy_day_2023-05-15,,difference_percent,9.978545618789534
+Shading_Energy,A,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,difference_percent,-0.2021109096463068
+Shading_Energy,A,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,difference_percent,-0.0784896926595427
+Shading_Energy,B,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,difference_percent,-7.4758998356769135
+Shading_Energy,B,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,difference_percent,-1.912431254130819
+Shading_Energy,C,IDA ICE,,Full_period_2023-05-01_to_2023-06-19,,difference_percent,3.946219282971439
+Shading_Energy,C,PVsyst,,Full_period_2023-05-01_to_2023-06-19,,difference_percent,8.010954923373177
+Shading_Hourly,A,IDA ICE,,,932.0,mean_measured,1095.8809012875536
+Shading_Hourly,A,PVsyst,,,932.0,mean_measured,1095.8809012875536
+Shading_Hourly,B,IDA ICE,,,886.0,mean_measured,1488.984198645598
+Shading_Hourly,B,PVsyst,,,886.0,mean_measured,1488.984198645598
+Shading_Hourly,C,IDA ICE,,,886.0,mean_measured,978.7697516930024
+Shading_Hourly,C,PVsyst,,,886.0,mean_measured,978.7697516930024
+Shading_Hourly,A,IDA ICE,,,932.0,RMSE,278.17623587387186
+Shading_Hourly,A,PVsyst,,,932.0,RMSE,251.77837932621884
+Shading_Hourly,B,IDA ICE,,,886.0,RMSE,566.9802434772816
+Shading_Hourly,B,PVsyst,,,886.0,RMSE,198.8329502070422
+Shading_Hourly,C,IDA ICE,,,886.0,RMSE,182.6585167062713
+Shading_Hourly,C,PVsyst,,,886.0,RMSE,253.69520291472068
+Shading_Hourly,A,IDA ICE,,,932.0,MAE,179.01423068669524
+Shading_Hourly,A,PVsyst,,,932.0,MAE,158.89055793991415
+Shading_Hourly,B,IDA ICE,,,886.0,MAE,421.6252505643341
+Shading_Hourly,B,PVsyst,,,886.0,MAE,114.59492099322796
+Shading_Hourly,C,IDA ICE,,,886.0,MAE,104.62304627539504
+Shading_Hourly,C,PVsyst,,,886.0,MAE,140.04176072234762
+Shading_Hourly,A,IDA ICE,,,932.0,CVRMSE_percent,25.38380179333738
+Shading_Hourly,A,PVsyst,,,932.0,CVRMSE_percent,22.97497648060147
+Shading_Hourly,B,IDA ICE,,,886.0,CVRMSE_percent,38.07832507510927
+Shading_Hourly,B,PVsyst,,,886.0,CVRMSE_percent,13.353597062205466
+Shading_Hourly,C,IDA ICE,,,886.0,CVRMSE_percent,18.66205166131487
+Shading_Hourly,C,PVsyst,,,886.0,CVRMSE_percent,25.91980417007144
+Shading_Hourly,A,IDA ICE,,,932.0,nMAE_percent,16.335190300001663
+Shading_Hourly,A,PVsyst,,,932.0,nMAE_percent,14.49888922721741
+Shading_Hourly,B,IDA ICE,,,886.0,nMAE_percent,28.31630120372336
+Shading_Hourly,B,PVsyst,,,886.0,nMAE_percent,7.696181134592643
+Shading_Hourly,C,IDA ICE,,,886.0,nMAE_percent,10.689239843632883
+Shading_Hourly,C,PVsyst,,,886.0,nMAE_percent,14.307937130271334
+Shading_Hourly,A,IDA ICE,,,932.0,MBE,-2.164567596566524
+Shading_Hourly,A,PVsyst,,,932.0,MBE,-0.8491416309012716
+Shading_Hourly,B,IDA ICE,,,886.0,MBE,-111.19800677200904
+Shading_Hourly,B,PVsyst,,,886.0,MBE,-28.3698645598194
+Shading_Hourly,C,IDA ICE,,,886.0,MBE,38.62440067720091
+Shading_Hourly,C,PVsyst,,,886.0,MBE,78.40880361173816
+Shading_Hourly,A,IDA ICE,,,932.0,nMBE_percent,-0.1975185071683763
+Shading_Hourly,A,PVsyst,,,932.0,nMBE_percent,-0.0774848462003136
+Shading_Hourly,B,IDA ICE,,,886.0,nMBE_percent,-7.468044783360117
+Shading_Hourly,B,PVsyst,,,886.0,nMBE_percent,-1.9053166974924949
+Shading_Hourly,C,IDA ICE,,,886.0,nMBE_percent,3.9462192829714366
+Shading_Hourly,C,PVsyst,,,886.0,nMBE_percent,8.010954923373195
+Shading_Hourly,A,IDA ICE,,,932.0,RE_percent,-0.1975185071683763
+Shading_Hourly,A,PVsyst,,,932.0,RE_percent,-0.0774848462003136
+Shading_Hourly,B,IDA ICE,,,886.0,RE_percent,-7.468044783360117
+Shading_Hourly,B,PVsyst,,,886.0,RE_percent,-1.9053166974924949
+Shading_Hourly,C,IDA ICE,,,886.0,RE_percent,3.9462192829714366
+Shading_Hourly,C,PVsyst,,,886.0,RE_percent,8.010954923373195
+Shading_Hourly,A,IDA ICE,,,932.0,R2,0.9371650326330238
+Shading_Hourly,A,PVsyst,,,932.0,R2,0.9485247803011096
+Shading_Hourly,B,IDA ICE,,,886.0,R2,0.8437044474005821
+Shading_Hourly,B,PVsyst,,,886.0,R2,0.9807784909231204
+Shading_Hourly,C,IDA ICE,,,886.0,R2,0.9651781995739837
+Shading_Hourly,C,PVsyst,,,886.0,R2,0.932826824475018

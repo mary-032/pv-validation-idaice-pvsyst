@@ -80,12 +80,12 @@ import pandas as pd
 #
 # INPUTS
 # ------
-# 02_canonical_data/annual_unshaded_analysis.csv
-# 02a_canonical_data_Engerer2/annual_unshaded_analysis_Engerer2.csv
+# derived_data/annual_unshaded_analysis.csv
+# derived_data/annual_unshaded_analysis_Engerer2.csv
 #
 # OUTPUTS
 # -------
-# 03_analysis_output/uncertainty/
+# results/uncertainty/
 #
 #   08_Measurement_scenario_metrics.csv
 #   08_Combined_metric_envelope.csv
@@ -101,19 +101,19 @@ ROOT = Path(__file__).resolve().parents[1]
 
 PD_CANON = (
     ROOT
-    / "02_canonical_data"
+    / "derived_data"
     / "annual_unshaded_analysis.csv"
 )
 
 E2_CANON = (
     ROOT
-    / "02a_canonical_data_Engerer2"
+    / "derived_data"
     / "annual_unshaded_analysis_Engerer2.csv"
 )
 
 OUT = (
     ROOT
-    / "03_analysis_output"
+    / "results"
     / "uncertainty"
 )
 OUT.mkdir(

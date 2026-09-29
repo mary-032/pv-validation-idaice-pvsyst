@@ -7,8 +7,16 @@ import pandas as pd
 
 
 # ============================================================
-# FINAL CANONICAL BUILDER - AUDITED PROCESSED MEASUREMENTS
+# FINAL CANONICAL BUILDER - GITHUB REPOSITORY LAYOUT
 # ============================================================
+#
+# Public-repository paths:
+#   data/        -> source/provenance inputs
+#   derived_data/ -> generated canonical datasets
+#
+# This version supersedes the working-directory paths
+# 01_source_inputs/ and 02_canonical_data/.
+#
 #
 # Measurement provenance:
 #   Original source:
@@ -63,32 +71,32 @@ import pandas as pd
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SRC = ROOT / "01_source_inputs"
-OUT = ROOT / "02_canonical_data"
-OUT.mkdir(exist_ok=True)
+DATA = ROOT / "data"
+OUT = ROOT / "derived_data"
+OUT.mkdir(parents=True, exist_ok=True)
 
 CFG = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
 
 ANALYSIS_START = pd.Timestamp("2021-01-01 00:00:00")
 
 MEASURED_PATH = (
-    SRC / "annual" / "measured" / "Results_PVsyst_E2_hour.xlsx"
+    DATA / "historical" / "Results_PVsyst_E2_hour.xlsx"
 )
 
 RAW_RISE_PATH = (
-    SRC / "annual" / "measured" / "RISE_raw10min_389.xlsx"
+    DATA / "measured" / "annual" / "RISE_raw10min_389.xlsx"
 )
 
 IDA_PATHS = {
-    "A": SRC / "annual" / "IDA_ICE" / "Syst3_PD.xlsx",
-    "B": SRC / "annual" / "IDA_ICE" / "Syst8_PD.xlsx",
-    "C": SRC / "annual" / "IDA_ICE" / "Syst9_PD.xlsx",
+    "A": DATA / "ida_ice" / "annual" / "Perez_Driesse" / "Syst3_PD.xlsx",
+    "B": DATA / "ida_ice" / "annual" / "Perez_Driesse" / "Syst8_PD.xlsx",
+    "C": DATA / "ida_ice" / "annual" / "Perez_Driesse" / "Syst9_PD.xlsx",
 }
 
 PVSYST_PATHS = {
-    "A": SRC / "annual" / "PVsyst" / "PVsyst_3_PD_h.xlsx",
-    "B": SRC / "annual" / "PVsyst" / "PVsyst_8_PD_h.xlsx",
-    "C": SRC / "annual" / "PVsyst" / "PVsyst_9_PD_h.xlsx",
+    "A": DATA / "pvsyst" / "annual" / "Perez_Driesse" / "PVsyst_3_PD_h.xlsx",
+    "B": DATA / "pvsyst" / "annual" / "Perez_Driesse" / "PVsyst_8_PD_h.xlsx",
+    "C": DATA / "pvsyst" / "annual" / "Perez_Driesse" / "PVsyst_9_PD_h.xlsx",
 }
 
 MEASURED_COLUMNS = {
@@ -109,7 +117,7 @@ MEASURED_COLUMNS = {
     },
 }
 
-# Explicit list of historical simulation columns that must never be used (because they used the wrong weather file).
+# Explicit list of historical simulation columns that must never be used.
 FORBIDDEN_OLD_SIMULATION_COLUMNS = {
     "GTI3IDAE2", "P3IDAE2", "Tp3IDAE2",
     "GTI8IDAE2", "P8IDAE2", "Tp8IDAE2",
@@ -122,7 +130,7 @@ def check_inputs():
         MEASURED_PATH,
         *IDA_PATHS.values(),
         *PVSYST_PATHS.values(),
-        SRC
+        DATA
         / "shading"
         / "audited_reconstruction"
         / "Shading_results_definitive_audit.xlsx",
@@ -1009,7 +1017,7 @@ def build_shading():
     Retain the already-audited definitive shading reconstruction.
     """
     path = (
-        SRC
+        DATA
         / "shading"
         / "audited_reconstruction"
         / "Shading_results_definitive_audit.xlsx"
@@ -1079,6 +1087,13 @@ if __name__ == "__main__":
 
     print("\nBUILD CANONICAL DATA - AUDITED PROVENANCE")
     print("=" * 64)
+    print(f"Repository root:      {ROOT}")
+    print(f"Source-data folder:   {DATA.relative_to(ROOT)}")
+    print(f"Derived-data folder:  {OUT.relative_to(ROOT)}")
+    if RAW_RISE_PATH.exists():
+        print(f"Raw RISE archive:     found ({RAW_RISE_PATH.relative_to(ROOT)})")
+    else:
+        print("Raw RISE archive:     not present (not required by this builder)")
 
     build_shading()
     build_annual()

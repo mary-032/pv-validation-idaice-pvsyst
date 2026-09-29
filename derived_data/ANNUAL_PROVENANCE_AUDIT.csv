@@ -1,0 +1,6 @@
+component,source,status,note
+Measured raw source,RISE_raw10min_389.xlsx,AUDITED,Raw source retained. Historical processed power not fully reconstructible from available raw Power_*.
+Measured canonical layer,Results_PVsyst_E2_hour.xlsx measured columns only,AUTHORITATIVE_PROCESSED_LAYER,All historical E2 simulation columns explicitly excluded.
+IDA ICE A/B/C,Syst3_PD.xlsx; Syst8_PD.xlsx; Syst9_PD.xlsx,FINAL_PD_INPUTS,Time=0 excluded; no variable-specific alignment correction.
+PVsyst A/B/C,PVsyst_3_PD_h.xlsx; PVsyst_8_PD_h.xlsx; PVsyst_9_PD_h.xlsx,FINAL_PD_INPUTS,Internal arbitrary calendar years ignored; row order retained.
+Weather-bin geometry,FULL_AZIMUTH_AWARE_PVLIB_AOI + documented Esc=1361.1 Eextn + CIVIL_TIME,UNVERIFIED,Must reproduce frozen weather-bin results before acceptance.

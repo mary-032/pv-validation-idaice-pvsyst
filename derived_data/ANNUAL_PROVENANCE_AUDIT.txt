@@ -1,0 +1,89 @@
+ANNUAL CANONICAL DATA PROVENANCE
+================================
+
+Canonical output:
+  02_canonical_data/annual_unshaded_analysis.csv
+
+MEASURED DATA
+-------------
+Original raw source:
+  01_source_inputs/annual/measured/RISE_raw10min_389.xlsx
+
+Historical processed measurement layer used in the canonical dataset:
+  01_source_inputs/annual/measured/Results_PVsyst_E2_hour.xlsx
+
+Measured columns used:
+  System A: GTI3M, Tp3M, P3M
+  System B: GTI9M, Tp8M, P8M
+  System C: GTI9M, Tp9M, P9M
+
+Verified System-A irradiance clock correction:
+  GTI3M is shifted forward by one hour before analysis
+  (old GTI3M[t] is assigned to timestamp t+1 h).
+  No corresponding shift is applied to Tp3M or P3M.
+
+Historical E2 simulation columns:
+  NOT USED.
+
+Reason:
+  Raw-data audit with 01a_diagnose_RISE_preprocessing_v2.py showed:
+  - panel-temperature preprocessing is exactly reproducible;
+  - GTI preprocessing is almost completely reproducible;
+  - historical measured-power preprocessing cannot be fully reconstructed
+    from the currently available raw Power_* columns without undocumented
+    corrections.
+
+Therefore the historical measured columns are treated as the authoritative
+processed-measurement layer for reproduction of the published/frozen analysis.
+
+ANALYSIS CLOCK
+--------------
+The processed measurement layer uses a synthetic Jan-Dec 2021 hourly clock.
+Excel floating timestamp artifacts are rounded to the nearest whole hour.
+
+IDA ICE:
+  Time = 0 excluded as initial state.
+  timestamp = 2021-01-01 00:00 + Time hours.
+  No variable-specific alignment correction is applied in this builder.
+
+PVsyst:
+  internal arbitrary export years ignored.
+  row 0 = 2021-01-01 00:00.
+  rows remain in exported order.
+
+Canonical common period:
+  2021-01-01 01:00:00
+  through
+  2021-12-31 00:00:00
+
+Common timestamps:
+  8,736
+
+SIMULATION SOURCES
+------------------
+IDA ICE:
+  Syst3_PD.xlsx
+  Syst8_PD.xlsx
+  Syst9_PD.xlsx
+
+PVsyst:
+  PVsyst_3_PD_h.xlsx
+  PVsyst_8_PD_h.xlsx
+  PVsyst_9_PD_h.xlsx
+
+GEOMETRY / WEATHER BINS
+-----------------------
+Status:
+  FULL_AZIMUTH_AWARE_PVLIB_AOI + documented Esc=1361.1 Eextn + CIVIL_TIME
+
+Weather-bin results must NOT be treated as final until geometry reproduces
+the frozen reference.
+
+NEXT VALIDATION
+---------------
+Run:
+  python scripts/02_run_analysis.py
+  python scripts/03_validate_frozen.py
+
+Annual mismatches after this point should be investigated as simulation-source
+or alignment differences. Do not alter measured values merely to force a match.

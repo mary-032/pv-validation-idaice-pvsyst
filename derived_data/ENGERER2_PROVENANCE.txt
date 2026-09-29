@@ -1,0 +1,85 @@
+ENGERER2 REVERSE-TRANSPOSITION SENSITIVITY
+============================================================
+
+Purpose
+-------
+Sensitivity analysis of the finalized annual PV validation to an alternative
+reverse-transposition / irradiance-input scenario.
+
+Authoritative baseline retained unchanged
+-----------------------------------------
+derived_data/annual_unshaded_analysis.csv
+
+The following are inherited exactly from the finalized PD canonical dataset:
+- processed measured GTI, AC power and panel temperature
+- verified System A measured-GTI +1 h correction
+- System B/C measured GTI source
+- common synthetic analysis timestamps
+- physical clock interpretation
+- full azimuth-aware AOI
+- Eext_tilt
+- kt_tilt
+- installed capacity metadata
+- four agreed power-exclusion timestamps
+- all analysis filters and metric conventions
+
+Engerer2 IDA ICE inputs
+-----------------------
+data\ida_ice\annual\Engerer2\Syst3_E2.xlsx
+data\ida_ice\annual\Engerer2\Syst8_E2.xlsx
+data\ida_ice\annual\Engerer2\Syst9_E2.xlsx
+
+Engerer2 PVsyst inputs
+----------------------
+data\pvsyst\annual\Engerer2\PVsyst_3_E2_h.xlsx
+data\pvsyst\annual\Engerer2\PVsyst_8_E2_h.xlsx
+data\pvsyst\annual\Engerer2\PVsyst_9_E2_h.xlsx
+
+System A Engerer2 PVsyst timing correction
+------------------------------------------
+A uniform +1 h timestamp correction is applied to the ENTIRE System A
+Engerer2 PVsyst hourly output record:
+- GlobEff / GTI
+- TArray / panel temperature
+- E_Grid / AC power
+
+Systems B and C receive 0 h correction.
+
+Correction:
+    corrected timestamp = row-order timestamp + 1 h   [System A only]
+
+No data values are scaled, interpolated or otherwise changed.
+
+Basis:
+Dedicated timing audits found that System A Engerer2 PVsyst GTI, panel
+temperature and AC power all independently had their lowest RMSE at +1 h,
+while System A Perez-Driesse and Systems B/C Engerer2 preferred zero lag.
+The A/E2 export also uniquely referenced the weather file
+Ekås_Custom_E2.MET. The original .MET file is no longer available, so the
+uniform correction is retained transparently as an audited preprocessing
+step. The original PVsyst source workbook remains unchanged.
+
+Audit output:
+results\reverse_transposition\PVsyst_Engerer2_timestamp_correction_audit.csv
+
+Separate outputs
+----------------
+Canonical:
+derived_data
+
+Analysis:
+results\reverse_transposition
+
+Uncertainty
+-----------
+30-day circular moving-block bootstrap
+Replicates: 5000
+Primary paired comparison:
+Delta RMSE = RMSE_IDA ICE - RMSE_PVsyst
+
+Interpretation
+--------------
+This is a scenario/sensitivity analysis, not a replacement for the
+Perez-Driesse baseline. Differences between the PD and E2 analyses quantify
+sensitivity to the alternative irradiance reconstruction used to generate the
+simulation weather inputs.

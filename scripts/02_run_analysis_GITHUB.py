@@ -6,9 +6,9 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
-CANON = ROOT / "02_canonical_data"
-OUT = ROOT / "03_analysis_output"
-OUT.mkdir(exist_ok=True)
+CANON = ROOT / "derived_data"
+OUT = ROOT / "results"
+OUT.mkdir(parents=True, exist_ok=True)
 
 CFG = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
 
@@ -137,7 +137,7 @@ def check_annual_structure(df):
 
 def run_annual_analysis():
     if not ANNUAL_PATH.exists():
-        print("ANNUAL: 02_canonical_data/annual_unshaded_analysis.csv is missing.")
+        print("ANNUAL: derived_data/annual_unshaded_analysis.csv is missing.")
         return False
 
     annual = pd.read_csv(ANNUAL_PATH, parse_dates=["timestamp"])
@@ -356,7 +356,7 @@ def run_annual_analysis():
 
 def run_shading_analysis():
     if not SHADING_PATH.exists():
-        print("SHADING: 02_canonical_data/shading_analysis.csv is missing.")
+        print("SHADING: derived_data/shading_analysis.csv is missing.")
         return False
 
     d = pd.read_csv(SHADING_PATH, parse_dates=["timestamp"])

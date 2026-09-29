@@ -1,0 +1,7 @@
+System,Software,n,Measured_energy_kWh,Simulated_energy_kWh,Energy_bias_percent,CI95_low,CI95_high,block_days,n_boot,note
+A,IDA ICE,4631,3525.378098683665,3590.4741530000097,1.8464985171562385,0.1274137972843816,5.191742041658492,30,5000,Daytime-cleaned records only; energy-bias % equals power nMBE numerically.
+A,PVsyst,4631,3525.378098683665,3410.935,-3.246264527665749,-4.640968084871166,-0.4511249209400042,30,5000,Daytime-cleaned records only; energy-bias % equals power nMBE numerically.
+B,IDA ICE,5347,4117.403797757943,4374.372049550001,6.241026248918935,4.952566523618505,7.897853399352127,30,5000,Daytime-cleaned records only; energy-bias % equals power nMBE numerically.
+B,PVsyst,5347,4117.403797757943,4207.1700999999985,2.1801675679936015,0.6504901892258148,4.371676462354478,30,5000,Daytime-cleaned records only; energy-bias % equals power nMBE numerically.
+C,IDA ICE,5347,2725.0274251992514,2994.230530149998,9.87891360143145,7.729297465582319,12.128973578524704,30,5000,Daytime-cleaned records only; energy-bias % equals power nMBE numerically.
+C,PVsyst,5347,2725.0274251992514,3089.9606,13.391908331860728,11.53870268534889,15.665088459336323,30,5000,Daytime-cleaned records only; energy-bias % equals power nMBE numerically.

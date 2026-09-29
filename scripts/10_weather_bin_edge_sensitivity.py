@@ -29,13 +29,13 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 CFG_PATH = ROOT / "config.json"
 
-PD_CANON = ROOT / "02_canonical_data" / "annual_unshaded_analysis.csv"
+PD_CANON = ROOT / "derived_data" / "annual_unshaded_analysis.csv"
 E2_CANON = (
-    ROOT / "02a_canonical_data_Engerer2"
+    ROOT / "derived_data"
     / "annual_unshaded_analysis_Engerer2.csv"
 )
 
-OUT = ROOT / "03_analysis_output" / "weather_bin_sensitivity"
+OUT = ROOT / "results" / "weather_bin_sensitivity"
 OUT.mkdir(parents=True, exist_ok=True)
 
 EDGE_SHIFT = 0.05

@@ -1,0 +1,4 @@
+System,Hourly_favored_tool_Engerer2,Hourly_favored_tool_Perez-Driesse,Daily_favored_tool_Engerer2,Daily_favored_tool_Perez-Driesse,Monthly_favored_tool_Engerer2,Monthly_favored_tool_Perez-Driesse,Favored_tool_same_hourly_daily_monthly_Engerer2,Favored_tool_same_hourly_daily_monthly_Perez-Driesse
+A,PVsyst,PVsyst,IDA ICE,IDA ICE,PVsyst,IDA ICE,False,False
+B,PVsyst,PVsyst,PVsyst,PVsyst,IDA ICE,PVsyst,False,True
+C,PVsyst,PVsyst,IDA ICE,IDA ICE,IDA ICE,IDA ICE,False,False

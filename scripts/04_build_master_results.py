@@ -18,8 +18,8 @@ import pandas as pd
 #   It only reads the outputs from 02_run_analysis.py and assembles them.
 #
 # Outputs:
-#   03_analysis_output/PV_MASTER_RESULTS_CURRENT_PD.xlsx
-#   03_analysis_output/PV_MASTER_RESULTS_CURRENT_PD_LONG.csv
+#   results/PV_MASTER_RESULTS_CURRENT_PD.xlsx
+#   results/PV_MASTER_RESULTS_CURRENT_PD_LONG.csv
 #
 # The Excel workbook is for human review/article work.
 # The long CSV is the machine-readable master table.
@@ -27,8 +27,9 @@ import pandas as pd
 
 
 ROOT = Path(__file__).resolve().parents[1]
-CANONICAL_DIR = ROOT / "02_canonical_data"
-OUT = ROOT / "03_analysis_output"
+CANONICAL_DIR = ROOT / "derived_data"
+OUT = ROOT / "results"
+OUT.mkdir(parents=True, exist_ok=True)
 
 MASTER_XLSX = OUT / "PV_MASTER_RESULTS_CURRENT_PD.xlsx"
 MASTER_LONG = OUT / "PV_MASTER_RESULTS_CURRENT_PD_LONG.csv"
@@ -272,19 +273,17 @@ def format_excel(writer, tables):
             ws.write(0, col_idx, col_name, header_fmt)
 
             # Sensible width based on header + a sample of contents.
-            # Robust width calculation: explicitly convert every sampled
-            # value to text before measuring its length. This avoids TypeError
-            # when a mixed/object column contains floats or other non-string
-            # values.
+            # Convert each sampled value explicitly to string. This is robust
+            # to pandas extension/nullable dtypes that may still yield numeric
+            # scalars during iteration after astype(str).
             sample = df[col_name].head(200)
             sample_lengths = [
                 len(str(x))
                 for x in sample
                 if pd.notna(x)
             ]
-
             width = max(
-                [len(str(col_name))] + sample_lengths
+                [len(str(col_name)), *sample_lengths]
             )
 
             width = min(max(width + 2, 10), 32)

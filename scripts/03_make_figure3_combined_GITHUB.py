@@ -7,7 +7,7 @@ from matplotlib.patches import Patch
 
 
 # =============================================================================
-# 11 - COMBINED FIGURE 3: WEATHER-BIN CV(RMSE) + nMBE
+# 03 - COMBINED FIGURE 3: WEATHER-BIN CV(RMSE) + nMBE
 # =============================================================================
 #
 # Creates one two-panel Figure 3 in the style of the original combined figure:
@@ -34,7 +34,8 @@ from matplotlib.patches import Patch
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT_DIR = ROOT / "03_analysis_output"
+OUT_DIR = ROOT / "results"
+OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # Try the current/recomputed Figure 3 table first, then common alternatives.
 INPUT_CANDIDATES = [

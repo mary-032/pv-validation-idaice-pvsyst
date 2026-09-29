@@ -33,8 +33,9 @@ import pandas as pd
 
 
 ROOT = Path(__file__).resolve().parents[1]
-CANON = ROOT / "02_canonical_data"
-OUT = ROOT / "03_analysis_output"
+CANON = ROOT / "derived_data"
+OUT = ROOT / "results"
+OUT.mkdir(parents=True, exist_ok=True)
 
 ANNUAL = CANON / "annual_unshaded_analysis.csv"
 

@@ -1,0 +1,4 @@
+system,n_canonical_rows,pvsyst_time_shift_h,first_corrected_timestamp,last_corrected_timestamp,first_source_timestamp_used,last_source_timestamp_used,first_source_hour_index_used,last_source_hour_index_used,correction_basis
+A,8736,1,2021-01-01 01:00:00,2021-12-31,2021-01-01 00:00:00,2021-12-30 23:00:00,0,8735,"Dedicated timing audit: A/E2 PVsyst GTI, panel temperature and AC power all independently preferred +1 h; A/PD and B/C E2 preferred 0 h; A/E2 uniquely referenced Ekås_Custom_E2.MET."
+B,8736,0,2021-01-01 01:00:00,2021-12-31,2021-01-01 01:00:00,2021-12-31 00:00:00,1,8736,No timing correction indicated by audit.
+C,8736,0,2021-01-01 01:00:00,2021-12-31,2021-01-01 01:00:00,2021-12-31 00:00:00,1,8736,No timing correction indicated by audit.
