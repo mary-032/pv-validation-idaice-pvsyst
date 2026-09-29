@@ -131,35 +131,25 @@ Contains statistical outputs, uncertainty results, sensitivity results, tables, 
 
 ---
 
-## 5. Current path compatibility note
+## 5. Repository path structure
 
-The analysis scripts were originally developed in a working research directory that used folder names such as:
+The active analysis workflow uses the public repository structure directly. All active Python scripts determine the repository root from their own file location and use repository-relative paths; no user-specific absolute paths are required.
 
-```text
-01_source_inputs/
-02_canonical_data/
-02a_canonical_data_Engerer2/
-03_analysis_output/
-03a_analysis_output_Engerer2/
-```
+The main path convention is:
 
-The public repository is being standardised to the clearer structure:
+- `data/` contains source and provenance inputs used by the analysis.
+- `derived_data/` contains canonical datasets generated from the source inputs.
+- `results/` contains statistical results, sensitivity analyses, summary tables, and publication figures.
+- `scripts/` contains the active reproducibility workflow.
+- `scripts/audits/` contains diagnostic and provenance audits that support specific preprocessing decisions but are not required for routine regeneration of the main results.
+- `config.json` in the repository root contains shared analysis settings.
+- `archive/` contains superseded or historical material and is not part of the active reproducibility workflow.
 
-```text
-data/
-derived_data/
-results/
-```
+The active scripts no longer depend on the legacy working-directory folders used during development, such as `01_source_inputs/`, `02_canonical_data/`, `02a_canonical_data_Engerer2/`, `03_analysis_output/`, or `03a_analysis_output_Engerer2/`. These names may occur in archived historical material but should not be used when reproducing the published analysis.
 
-Before the repository is archived as a formal release, all active scripts should be verified to use the public repository structure consistently.
+The recommended procedure is to run the scripts from the repository root. Because each active script resolves the repository root from its own location, the workflow does not depend on the current working directory.
 
-Until that harmonisation is complete:
-
-> `00_check_inputs.py`, `config.json`, and the path definitions at the top of each active script are the authoritative description of the file locations expected by that script.
-
-Do not assume that renaming or moving a file is harmless without checking the relevant script.
-
-This section can be removed once all active script paths have been harmonised and the repository has passed a clean-clone reproduction test.
+Generated files should not be manually moved between stages. Each script reads the outputs of the preceding stages from `derived_data/` or `results/` and writes its own outputs to the corresponding repository directory.
 
 ---
 
