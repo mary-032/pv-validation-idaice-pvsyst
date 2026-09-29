@@ -278,3 +278,12 @@ The repository distinguishes between:
 Known limitations and unresolved sources of uncertainty are documented in `docs/KNOWN_LIMITATIONS.md`.
 
 These include the use of auxiliary meteorological variables from a station approximately 16 km from the PV site and the hourly temporal resolution of the available PVsyst version.
+
+## Citation
+
+If you use this repository, please cite the repository and the associated publication.
+
+Machine-readable citation information is provided in:
+
+```text
+CITATION.cff
