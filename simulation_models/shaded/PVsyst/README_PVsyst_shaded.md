@@ -1,0 +1,7 @@
+# PVsyst Shaded Simulation Models
+
+This folder is reserved for the PVsyst project files used for the partial-shading simulations of Systems A, B, and C (RISE Systems 3, 8, and 9).
+
+The complete and cleaned set of PVsyst shaded simulation files is currently being prepared and will be uploaded by **9 October 2026**.
+
+Until then, this folder should be considered a placeholder and does not yet contain the authoritative simulation files used for the final analysis.
