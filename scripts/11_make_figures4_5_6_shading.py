@@ -1,6 +1,6 @@
 """Produce Figures 4–6: measured / IDA ICE / PVsyst shading-day power.
 
-Input: authoritative derived_data/shading_analysis.csv (from script 01).
+Input: versioned derived_data/shading_analysis_final_A3_C9.csv (from script 17).
 Output: three two-panel figures (six plots total), and six individual panels.
 
 Hour-ending convention is identical to 02_run_analysis.py:
@@ -24,7 +24,7 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "derived_data" / "shading_analysis.csv"
+SOURCE = ROOT / "derived_data" / "shading_analysis_final_A3_C9.csv"
 DEST = ROOT / "results" / "shading_figures"
 
 # All three curves use the same exact hourly power records.
@@ -96,9 +96,40 @@ def read_source() -> pd.DataFrame:
     for col in SERIES.values():
         d[col] = pd.to_numeric(d[col], errors="raise")
 
-    if not np.isfinite(d[list(SERIES.values())].to_numpy(dtype=float)).all():
-        raise ValueError("Measured and simulated shading power contain nonfinite values.")
-
+    # System A's pole moved at 13:10 on 10 May 2023. The hour ending
+    # 14:00 contains both configurations. Its modeled AC values are
+    # deliberately blank in the final canonical dataset, although the
+    # measured value and original model variants remain preserved there.
+    if "exclude_primary_shading" not in d.columns:
+        raise ValueError("Missing exclusion flag; expected final A3/C9 shading dataset.")
+    flagged = pd.to_numeric(d["exclude_primary_shading"], errors="raise").eq(1)
+    transition = (
+        d["system"].eq("A")
+        & d["timestamp"].eq(pd.Timestamp("2023-05-10 14:00:00"))
+    )
+    expected_missing = (
+        flagged & transition
+        & np.isfinite(d["P_measured_W"].to_numpy(dtype=float))
+        & d["P_IDA_W"].isna()
+        & d["P_PVsyst_W"].isna()
+    )
+    power_cols = list(SERIES.values())
+    has_nonfinite = ~np.isfinite(d[power_cols].to_numpy(dtype=float)).all(axis=1)
+    if (
+        int(flagged.sum()) != 1
+        or int(expected_missing.sum()) != 1
+        or not np.array_equal(has_nonfinite, expected_missing.to_numpy())
+    ):
+        bad = d.loc[has_nonfinite | flagged, ["timestamp", "system", *power_cols]].head(10)
+        raise ValueError(
+            "Unexpected missing shading power (only the A/3 mixed hour "
+            "ending 2023-05-10 14:00 may have blank model values):\n"
+            + bad.to_string(index=False)
+        )
+    # Drop ONLY this row from the figure's in-memory selection. Do not
+    # change the source CSV or fill the excluded model values with zeros.
+    d = d.loc[~expected_missing].copy()
+    print("Plot filter: skipped the excluded A/3 mixed hour ending 10 May 14:00.")
     return d
 
 

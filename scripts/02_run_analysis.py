@@ -13,7 +13,7 @@ OUT.mkdir(parents=True, exist_ok=True)
 CFG = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
 
 ANNUAL_PATH = CANON / "annual_unshaded_analysis.csv"
-SHADING_PATH = CANON / "shading_analysis.csv"
+SHADING_PATH = CANON / "shading_analysis_final_A3_C9.csv"
 
 POWER_EXCLUSIONS = pd.to_datetime(CFG["annual"]["power_excluded_timestamps"])
 POWER_EXCLUSION_SET = set(POWER_EXCLUSIONS)
@@ -373,6 +373,21 @@ def run_shading_analysis():
             + str(counts)
         )
 
+    # Field photographs date the move to 10 May 2023 around 13:10.
+    # The ending-14:00 hour includes both physical pole positions.
+    # Keep the row for provenance but EXCLUDE it from model validation.
+    if "exclude_primary_shading" not in d.columns:
+        raise ValueError(
+            "Please run scripts/16_rebuild_A3_shading.py first; "
+            "the new canonical shading table needs exclude_primary_shading."
+        )
+    d["exclude_primary_shading"] = pd.to_numeric(
+        d["exclude_primary_shading"], errors="coerce"
+    ).fillna(0).astype(int)
+    excluded = d[d["exclude_primary_shading"] == 1]
+    if len(excluded) != 1 or excluded.iloc[0]["system"] != "A" or excluded.iloc[0]["timestamp"] != pd.Timestamp("2023-05-10 14:00:00"):
+        raise ValueError("Unexpected shading geometry transition exclusions.")
+
     sh = CFG["shading"]
 
     periods = {
@@ -402,6 +417,10 @@ def run_shading_analysis():
 
         for system in ("A", "B", "C"):
             s = period[period["system"] == system].copy()
+
+            # Do not count the mixed-geometry measured hour against either
+            # model, including in the period-energy denominator.
+            s = s[s["exclude_primary_shading"] == 0].copy()
 
             measured_kwh = (
                 pd.to_numeric(
@@ -463,6 +482,7 @@ def run_shading_analysis():
 
     for system in ("A", "B", "C"):
         s = full[full["system"] == system].copy()
+        s = s[s["exclude_primary_shading"] == 0].copy()
 
         s = s[
             pd.to_numeric(
@@ -492,7 +512,7 @@ def run_shading_analysis():
 
     print("\nSHADING ANALYSIS")
     print("=" * 48)
-    print("Canonical rows: 3,600")
+    print("Canonical rows: 3,600 (A/3 transition hour excluded in metrics)")
     print("Wrote Shading_energy_recomputed.csv")
     print("Wrote Shading_hourly_diagnostics_recomputed.csv")
 
@@ -514,6 +534,8 @@ def write_run_summary():
         "- Weather bins: cleaned power mask + AOI < 80 deg",
         "- Shading timestamps: hour-ending",
         "- Shading outlier deletion: none",
+        "- Shading A/3: SH1/middle -> SH2/corner on 10 May 2023; mixed hour ending 14:00 excluded",
+        "- Shading C/9: original measured-reference reindexed (2 h early 12–14 Jun, 1 h early 15–19 Jun), original IDA inverter_o restored; sensitivity results retained separately",
     ]
 
     (OUT / "Analysis_run_summary.txt").write_text(
