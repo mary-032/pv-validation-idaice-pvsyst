@@ -1,0 +1,4 @@
+system,scenario,IDA_channel,delta_RMSE_IDA_minus_PVsyst_W,CI95_low_W,CI95_high_W,p_two_sided_unadjusted,n_days,n_boot,block_days,seed,Holm_p_power_3_systems
+A,fixed_CET_hypothesis,"IDA ICE hourly Table, interval-end",-102.482327989,-124.951938867,-73.582434032,0.000399920,365,5000,30,20261027,0.001199760
+B,fixed_CET_hypothesis,"IDA ICE hourly Table, interval-end",-68.958862039,-96.180126643,-41.010792389,0.000399920,365,5000,30,20261027,0.001199760
+C,fixed_CET_hypothesis,"IDA ICE hourly Table, interval-end",-54.967285723,-72.681322048,-36.002520325,0.000399920,365,5000,30,20261027,0.001199760

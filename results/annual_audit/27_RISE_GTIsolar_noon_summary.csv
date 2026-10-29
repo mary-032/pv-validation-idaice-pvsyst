@@ -1,0 +1,3 @@
+season,n_days_with_positive_GTI,mean_observed_GTI_centroid_local_h,mean_expected_noon_civil_h,mean_expected_noon_fixed_CET_h,mean_observed_minus_noon_civil_h,mean_observed_minus_noon_civil_CI95_low_h,mean_observed_minus_noon_civil_CI95_high_h,mean_observed_minus_noon_fixed_CET_h
+CET,153,12.226206280,12.166153774,12.166153774,0.060052506,-0.010586992,0.130396415,0.060052506
+CEST,210,13.106905396,13.121642557,12.121642557,-0.014737160,-0.116206215,0.090982237,0.985262840

@@ -1,0 +1,73 @@
+{
+  "status": "RELEASE_CANDIDATE_NOT_FINAL_OR_LOCKED",
+  "primary_clock_hypothesis": "fixed_CET_hypothesis",
+  "mandatory_alternative": "civil_unshifted",
+  "series": {
+    "IDA": "Hourly Table produced_p, preceding hour (interval end)",
+    "PVsyst": "E_Grid, interval-start source",
+    "RISE": "Six 10-min samples/hour"
+  },
+  "cohort": {
+    "per_system_hours": 4478,
+    "systems": [
+      "A",
+      "B",
+      "C"
+    ],
+    "mask": "solar elevation >0 at measured interval START",
+    "physical_period": "June 2020 - May 2021"
+  },
+  "clock_interpretation": "RISE source labels assessed as CET/CEST; simulation standard time; independently suggested by measured GTI centroid, not authenticated by logger documentation",
+  "important_caveats": [
+    "No original RISE logger time or sampling documentation was available.",
+    "Ten-minute raw workbook contains 52,560 regular records per system and no duplicate civil timestamps; its time handling may already have been regularized.",
+    "PVsyst imported .MET has HourShift=-1; do not apply it again to exported E_Grid.",
+    "GTI-weighted solar-noon centroid is a weather-dependent sanity check, not exact noon observation.",
+    "Model ranking reverses under alternative unshifted civil clock; both scenarios must be disclosed.",
+    "IDA hourly Table closely matches adjacent sampled output mean; this does not prove native subhourly numerical integration.",
+    "IDA produced_p versus inverter_o physical meter boundary remains a sensitivity limitation.",
+    "This step does not update historical annual master outputs or frozen shading results."
+  ],
+  "pvsyst_weather_import_sources_missing": [
+    "Meteo_89_PD.csv",
+    "pvsyst Rise project.MEF"
+  ],
+  "primary_30day_bootstrap": "Resampled CI carried from verified Step 26, not rerun in Step 28",
+  "step26_table_export_sha256": {
+    "A": "a61c2de4a4db0e058b74c9f064eba04c6dbcb993d00b26bfc947ba8444d2d284",
+    "B": "c2e12f67fcc4af355df565ce37ab33e43e3130f589a7f488609ea10d1481d8df",
+    "C": "a3641a3baf379821dc359ba8a16d1daa4d784c25070b63be380a33218624a70b"
+  },
+  "source_fingerprints": {
+    "23_annual_AC_channel_comparison_hourly.csv": {
+      "sha256": "2d3c46f9cd172aa819b747d6cc3e1074b661a663369d6dd163a9d0af9376c139",
+      "bytes": 4776586
+    },
+    "26_annual_AC_all_systems_hourly.csv": {
+      "sha256": "246de715e8d6df34eb652d3b9818d9a3a0c625033c5f4698870e5e3e978e0da8",
+      "bytes": 4872647
+    },
+    "26_annual_AC_all_systems_metrics.csv": {
+      "sha256": "c2e1b32688638726f765ed17a3a797795d6c2bc9002b9797e7ee71fa98dd2745",
+      "bytes": 6263
+    },
+    "26_annual_AC_all_systems_paired_CI30d.csv": {
+      "sha256": "05fddfb522243ad06c3f914e91316cc4320bcff67a3a14f00301f66721a09175",
+      "bytes": 3020
+    },
+    "26_annual_AC_source_QC.csv": {
+      "sha256": "ba67aea1f7e611291d3e6e833d8617b59b8a86a60cc790959d09e40ef74dbc84",
+      "bytes": 1329
+    },
+    "26_IDA_hourly_mean_normalized.csv": {
+      "sha256": "4442ce5d40de008799b72b20b64470a108e1fedc2466f6cc7f65428a5a7b4447",
+      "bytes": 3515282
+    },
+    "27_RISE_GTIsolar_noon_summary.csv": {
+      "sha256": "2067d05532417caa1ae19546bdc9ba535d4ef58f6405bebadc5832395e6f999e",
+      "bytes": 477
+    }
+  },
+  "created_by": "scripts/28_build_annual_AC_release_candidate.py",
+  "audit_date": "2026-10-29"
+}
