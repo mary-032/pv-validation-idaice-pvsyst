@@ -1,0 +1,39 @@
+{
+  "created": "2026-11-05",
+  "curated_output_sha256": {
+    "18_historical_sampled_AC_targets.csv": "d757f63907bdd08df90582eec4f79715133eff2acb58139f5ee662327cae387b",
+    "19_pvsyst_inventory_consistency.csv": "c13d5a426ddd43975dfef548a3655a444286b63ad198ce192362cf39e9070311",
+    "20_alignment_diagnostic_coverage.csv": "c3ed3b579cc16825781a842f6446048ccc1777280a5588f7ff527d8300b221bc",
+    "22_source_channel_consistency.csv": "ee9a41b7d2848b5a66e6e1f33edb5208f816401bbcb7e1b17b0b74902b24b420",
+    "24_SystemA_hourly_Table_QC.csv": "a550b1a2ab1d2d86d00e07a969f0c981a813d3c799d6ef40d27b71752aa5f574",
+    "25_SystemA_hourly_Table_paired_CI30d.csv": "72cb5a396b3950f1eb331ce11747961c1df05c2db8770fedaf96e49470948479",
+    "25_SystemA_selected_model_metrics.csv": "2bcd50c876e35e062114ca1659492bbb955f1b03686a07961db567864f36feec"
+  },
+  "current_reference": [
+    "results/annual_audit/28_*",
+    "results/revision2/29_*",
+    "results/revision2/35_*"
+  ],
+  "not_authoritative_for_revision2": true,
+  "note": "These curated aggregates are not full source reproduction; avoid claims of upstream configuration verification.",
+  "original_logger_clock_authenticated": false,
+  "original_source_artifact_sha256": {
+    "18_approved_raw_reference_targets.csv": "a2aad83601d504bf629f9dad54319c3c7fb41bd6cdca936775a5ea812f059320",
+    "18_pvsyst_project_manifest.csv": "8526cd39d7379043eb1e662e92dfa18cfdf4aa0022ad47b4d56840f598bb0207",
+    "19_pvsyst_meteo_matrix.csv": "67ce1befd41ca0bfdeb417d955123268e16ee3b03802c2b6af10a87d2aa48c3f",
+    "19_pvsyst_module_matrix.csv": "2309adff8016df8b917c3d078af4e3cbec2cd43db4fa5aaee37312afbc4ec847",
+    "19_pvsyst_variant_matrix.csv": "1dda07e6ab4c61ab9da288cba6cb89a31e88d6cd9bf07624255d5975f0e5c26b",
+    "20_raw_AC_alignment_candidates.csv": "417ec62e91d0a2b476945c51d3fd4decf8bf99fcf2f57655539ffba57c4b0066",
+    "20_raw_measurement_inventory.csv": "ad2b7c884a8ccae7d15017134d08130f63057b0e0d978d58164a6413169a27fd",
+    "22_ida_source_channel_reconciliation.csv": "47961843f43ff4202d5ffb5a42aae622592d3d39357ba1ad7dac8b3dde2e2155",
+    "22_pvsyst_EGrid_unit_reconciliation.csv": "e1c967e23a10921bed6240508d548753a78a58bbf0d39675dfc94ba288ea3d30",
+    "24_SystemA_hourly_table_vs_sampled_audit.csv": "19f6943faba1468d64950aab52ea80c597889cbf941f1e46e3283d8a99bef239",
+    "25_SystemA_interval_corrected_metrics.csv": "efeef3d0e2a73f86161cec73636bbd25f0a9044144c6b67a2a1c535ef4268bc4",
+    "25_SystemA_interval_corrected_paired_CI30d.csv": "9268847a2661e9a6bf0596c4d6366a379d625ad86699b2d51409aa63aa0e7191"
+  },
+  "purpose": "non-destructive curation of 2026-10 historical source diagnostics",
+  "source_release_permissions_confirmed": false,
+  "stage": 36,
+  "status": "HISTORICAL_DIAGNOSTIC_NOT_CURRENT_REVISION2",
+  "third_party_native_project_files_distributed": false
+}
