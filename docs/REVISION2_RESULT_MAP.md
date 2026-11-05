@@ -1,5 +1,8 @@
 # Revision 2 result map and provenance status
 
+> **Step 29 update (5 November 2026):** New provisional source-derived monthly, seasonal and diurnal summaries of both Step 28 clock cohorts are present in `results/revision2/`. Refer to `results/revision2/README.md` and `scripts/29_aggregate_revision2_annual_AC.py`. These are not yet independently clean-clone checked, nor a signed-off publication release. Old Figure 3/weather-bin results and prior `05_*` uncertainties remain historical.
+
+
 **Documentation checkpoint:** 5 November 2026.  
 **Repository baseline inspected:** `d89e8d48292c6c422710d53169eb2563029e3bed` (29 October 2026).  
 **Status:** **Working Revision 2 manuscript candidate, not a signed-off or immutable release.** No code, numeric outputs, raw data, or historical assets were changed in preparing this map.

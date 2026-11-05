@@ -1,5 +1,8 @@
 # Revision 2 publication release-readiness register
 
+> **Phase 2 update (5 November 2026):** Source-derived provisional Step 29 monthly-energy RMSE, seasonal and diurnal statistics have been added in `results/revision2/` with a reproducible aggregation script and tests. Their independent execution and manuscript acceptance remain open. The older Figure 3 and `05_*` inferential files remain historical. A source-cohort coverage review is warranted: **31 December 2020 has no selected daylight hour** in the corrected Step 28 cohort; do not infer a missing-source cause without checking.
+
+
 **Prepared:** 5 November 2026. **Status:** OPEN; no approval, DOI, merged change or final release is asserted.
 
 This is a **work checklist**, not a report that every test below has passed. It separates actions that are safe to address in documentation from changes that require regenerated source-derived analyses or external verification.

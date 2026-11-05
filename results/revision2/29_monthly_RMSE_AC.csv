@@ -1,0 +1,13 @@
+scenario,system,model,kWp,n_months,RMSE_month_kWh,RMSE_month_kWh_per_kWp,calendar
+fixed_CET_hypothesis,A,IDA_ICE,3.900000000,12.000000000,16.269147421,4.171576262,physical_month_Jun2020_to_May2021
+fixed_CET_hypothesis,A,PVsyst,3.900000000,12.000000000,27.900897324,7.154076237,physical_month_Jun2020_to_May2021
+fixed_CET_hypothesis,B,IDA_ICE,4.800000000,12.000000000,19.196453105,3.999261064,physical_month_Jun2020_to_May2021
+fixed_CET_hypothesis,B,PVsyst,4.800000000,12.000000000,11.587346312,2.414030482,physical_month_Jun2020_to_May2021
+fixed_CET_hypothesis,C,IDA_ICE,3.300000000,12.000000000,25.963944855,7.867862077,physical_month_Jun2020_to_May2021
+fixed_CET_hypothesis,C,PVsyst,3.300000000,12.000000000,32.338706944,9.799608165,physical_month_Jun2020_to_May2021
+civil_unshifted,A,IDA_ICE,3.900000000,12.000000000,17.109877014,4.387147952,physical_month_Jun2020_to_May2021
+civil_unshifted,A,PVsyst,3.900000000,12.000000000,28.267059159,7.247963887,physical_month_Jun2020_to_May2021
+civil_unshifted,B,IDA_ICE,4.800000000,12.000000000,17.651934627,3.677486381,physical_month_Jun2020_to_May2021
+civil_unshifted,B,PVsyst,4.800000000,12.000000000,11.743876578,2.446640954,physical_month_Jun2020_to_May2021
+civil_unshifted,C,IDA_ICE,3.300000000,12.000000000,25.398240426,7.696436493,physical_month_Jun2020_to_May2021
+civil_unshifted,C,PVsyst,3.300000000,12.000000000,32.183912845,9.752700862,physical_month_Jun2020_to_May2021
