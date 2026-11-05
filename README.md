@@ -1,303 +1,90 @@
-# pv-validation-idaice-pvsyst
+# PV validation: IDA ICE versus PVsyst
 
-Reproducible data-processing, validation, uncertainty, sensitivity, and figure-generation workflow for comparing photovoltaic (PV) simulations in **IDA ICE** and **PVsyst** against measured data.
+This repository preserves the measured-data processing, simulation exports, numerical analyses, and audit trail accompanying **“Validation of PV Modeling in an Integrated Building Energy Simulation Tool”** (Rynoson, Bales and Battikh).
 
-This repository accompanies the study:
+**Current state (5 November 2026): Revision 2 working candidate, NOT a fully frozen/publication-verified release.** The repository intentionally retains earlier analyses. **The original `01–11` numerical workflow is *not* the authoritative annual AC-power result for Revision 2.**
 
-> **Validation of PV Modeling in an Integrated Building Energy Simulation Tool**
+## Start here
 
-The study evaluates the PV model implemented in IDA ICE against measured data from three PV systems and compares its performance with PVsyst. The analysis includes annual unshaded validation, near-field shading cases, uncertainty analysis, and sensitivity tests related to irradiance reconstruction and analysis methodology.
-
-## Study overview
-
-Three PV systems installed at the RISE research facility in Borås, Sweden, were evaluated:
-
-| System | Technology | Installation | Nominal power |
-|---|---|---|---:|
-| A | Monocrystalline silicon | BAPV | 3.9 kWp |
-| B | Monocrystalline silicon with power optimizers | BAPV | 4.8 kWp |
-| C | CIGS thin-film | BIPV | 3.3 kWp |
-
-The annual validation uses measured data covering one year. A separate shading experiment evaluates the ability of the two simulation tools to represent near-field shading from physical obstructions.
-
-The principal validation variables are:
-
-- plane-of-array irradiance / effective irradiance;
-- panel temperature;
-- AC power output.
-
-Model performance is evaluated using RMSE, CV(RMSE), MBE, nMBE, relative error, monthly RMSE normalized by installed capacity, and additional uncertainty and sensitivity analyses.
-
-## Repository structure
-
-```text
-pv-validation-idaice-pvsyst/
-│
-├── README.md
-├── requirements.txt
-├── config.json
-├── .gitignore
-│
-├── data/
-│   ├── measured/
-│   │   ├── annual/
-│   │   └── shading/
-│   ├── ida_ice/
-│   ├── pvsyst/
-│   ├── weather/
-│   └── historical/
-│
-├── derived_data/
-│
-├── scripts/
-│   ├── audits/
-│   └── ...
-│
-├── results/
-│
-├── docs/
-│   ├── DATA_DICTIONARY.md
-│   ├── DATA_PROVENANCE.md
-│   ├── KNOWN_LIMITATIONS.md
-│   ├── METHODS.md
-│   └── REPRODUCIBILITY.md
-│
-└── archive/
-```
-
-### `data/`
-
-Contains the source data used to construct the analysis datasets, including measured data and simulation exports from IDA ICE and PVsyst.
-
-The annual and shading datasets are kept separate where appropriate.
-
-Some source files may be subject to third-party redistribution restrictions. Where a source file cannot be distributed publicly, its provenance and required role in the workflow are documented instead.
-
-### `derived_data/`
-
-Contains the canonical analysis datasets generated from the source files.
-
-These datasets represent the aligned and processed data used by the statistical analysis scripts. They are included separately from the raw/source files so that the statistical results can be reproduced without repeating all software-specific parsing steps.
-
-### `scripts/`
-
-Contains the Python workflow used for data reconstruction, analysis, uncertainty assessment, sensitivity testing, and generation of manuscript figures and tables.
-
-The numbered scripts are intended to be run in approximately the following order:
-
-```text
-00  Check required inputs
-01  Build canonical datasets
-02  Run primary validation analysis
-03  Generate Figure 3
-04  Build consolidated/master results
-05  Statistical uncertainty analysis
-06  Add uncertainty results to Tables 4–6
-07  Reverse-transposition sensitivity analysis
-08  Measurement + temporal uncertainty analysis
-09  Temporal-aggregation sensitivity analysis
-10  Weather-bin threshold sensitivity analysis
-11  Generate shading Figures 4–6
-```
-
-Diagnostic scripts associated with specific data-quality investigations are stored under `scripts/audits/`.
-
-### `results/`
-
-Contains generated analysis outputs, including manuscript tables, figures, uncertainty results, sensitivity analyses, and audit outputs.
-
-Where possible, manuscript numbers are generated programmatically rather than entered manually.
-
-### `docs/`
-
-Contains additional documentation describing the analysis methods, variable definitions, data provenance, known limitations, and reproduction procedure.
-
-### `archive/`
-
-Contains superseded or historical analysis code retained for provenance.
-
-Files in this directory are **not part of the final manuscript reproduction workflow** and should not be used to regenerate the published results.
-
-## Analysis workflow
-
-The workflow separates source data, canonical data, and statistical analysis.
-
-Source measurements and simulation exports are first converted into common canonical datasets. The canonical datasets preserve aligned measured and simulated variables together with the timestamps and geometry variables required for the analysis.
-
-The annual analysis uses daytime observations, defined by measured plane-of-array irradiance greater than 0 W/m².
-
-For GTI and panel temperature, no residual outliers are removed.
-
-For AC power, a conservative gross-error screening procedure was applied. A timestamp was identified as anomalous only when power residuals exceeded ten times the robust standard deviation for both IDA ICE and PVsyst, had the same sign, and occurred simultaneously across all three systems. Four hourly timestamps met this criterion and were excluded consistently across measured and simulated AC power data.
-
-The same cleaned hourly power records are used for the annual power validation, monthly energy analysis, and weather-condition analysis.
-
-## Irradiance reconstruction
-
-The primary analysis uses irradiance components derived using the **Perez–Driesse** approach.
-
-An additional **Engerer2** reconstruction is included as a sensitivity case to determine whether conclusions concerning relative IDA ICE and PVsyst performance depend on the irradiance-processing method.
-
-The Perez–Driesse case is the primary/reference analysis. Engerer2 results are treated as sensitivity results rather than as an alternative primary dataset.
-
-## Solar geometry and weather-condition analysis
-
-The tilted clearness index is calculated using measured plane-of-array irradiance and extraterrestrial irradiance projected onto the module plane using full solar geometry, including solar azimuth.
-
-The nominal sky-condition classes are:
-
-| Condition | Tilted clearness index |
+| Need | Read / use |
 |---|---|
-| Overcast / very cloudy | `kt_tilt < 0.20` |
-| Cloudy | `0.20 ≤ kt_tilt < 0.40` |
-| Mixed / broken | `0.40 ≤ kt_tilt < 0.60` |
-| Mostly clear | `0.60 ≤ kt_tilt < 0.75` |
-| Clear | `kt_tilt ≥ 0.75` |
+| **Which values can I use for Revision 2?** | [Revision 2 result map](docs/REVISION2_RESULT_MAP.md) — authoritative-versus-historical file paths, sample counts, clock uncertainty and remaining gaps |
+| Reproduce the **corrected annual AC** candidate | [Revision 2 reproduction guide](docs/REVISION2_REPRODUCIBILITY.md) and [Step 28 data](results/annual_audit/) |
+| Inspect the shaded 2023 experiment | [Final shading audit](docs/Final_Shading_Audit_2026-10-27.md), [System A chronology](docs/README_A3_SHADING_REBUILD.md), [System C clock sensitivity](docs/README_C9_CLOCK_INTEGRATION.md) |
+| Understand source files and variables | [Data provenance](docs/DATA_PROVENANCE.md), [data dictionary](docs/DATA_DICTIONARY.md) |
+| Understand earlier methods and outputs | [Historical workflow documentation](docs/REPRODUCIBILITY.md), [results index](results/README_results.md), [archive](archive/README_archive.md) |
+| See what is **not yet publication-ready** | [Release-readiness checklist](docs/RELEASE_READINESS.md) |
 
-The weather-bin analysis additionally restricts observations to angles of incidence below 80°.
+**Crucial distinction:** `derived_data/annual_unshaded_analysis.csv`, `results/Table6_Power_recomputed.csv`, `results/Monthly_RMSE_recomputed.csv`, `results/Figure3_weather_bins_recomputed.csv`, the original `05_*` inference results, and `results/PV_MASTER_RESULTS_CURRENT_PD.*` all belong to the earlier analytical generation. They remain **preserved for provenance and for explaining the earlier revisions**, but they do not reproduce the corrected Step 28 annual AC comparison. Do **not** use the older master workbook as the Revision 2 master dataset.
 
-A dedicated sensitivity analysis shifts the internal bin boundaries by ±0.05 to test whether the qualitative results depend on the exact thresholds.
+## Study design
 
-## Uncertainty and sensitivity analyses
+Three south-facing, 45° PV installations at the RISE research facility in Borås, Sweden:
 
-The repository includes several analyses intended to assess the robustness of the comparison between IDA ICE and PVsyst.
+| Manuscript system | RISE ID | Technology and installation | DC nameplate |
+|---|---:|---|---:|
+| A | 3 | Monocrystalline silicon, BAPV | 3.9 kWp |
+| B | 8 | Monocrystalline silicon, BAPV with SolarEdge optimisers | 4.8 kWp |
+| C | 9 | CIGS thin-film, BIPV | 3.3 kWp |
 
-Temporal dependence is addressed using a moving-block bootstrap. A 30-day block length is used for the primary annual inference, with shorter block lengths evaluated as sensitivity cases.
+There are two *different* measurement campaigns: **1 June 2020–31 May 2021** for annual unshaded comparisons (original measurements every 10 minutes) and **1 May–19 June 2023** for the near-field shading experiment (original measurements every 30 seconds, compared hourly). The study evaluates PV output, not experimentally validated joint whole-building energy demand and PV operation.
 
-Measurement uncertainties are evaluated using systematic low, nominal, and high measurement scenarios corresponding to the stated sensor uncertainty bounds:
+## Corrected annual AC-power analysis — conditional working result
 
-- GTI: ±2%;
-- AC power: ±1%;
-- panel temperature: ±0.5 °C.
+`results/annual_audit/28_annual_AC_primary_fixed_CET.csv` contains the paired comparison observations. The point estimates are in `28_annual_AC_primary_and_sensitivity_metrics.csv`; the three paired 95% RMSE-difference bootstrap intervals are in `28_annual_AC_primary_CI30d.csv`.
 
-The measurement bounds are treated as bounded sensitivity scenarios rather than as assumed probability distributions.
+The working cohort consists of **4,478 common, complete astronomical-daylight hourly intervals per system**, derived from six original 10-minute AC measurements per interval. Daylight selection uses solar elevation above 0° **at the measured interval start**. No model-residual-based outliers were removed in this corrected AC cohort.
 
-Additional sensitivity analyses examine:
+IDA ICE AC generation uses the **hourly-averaged electrical-system “Produced power” results Table**, matched to the preceding physical hour at interval end; it must not be confused with sampled `.prn` electrical-system or inverter output. PVsyst uses hourly `E_Grid`.
 
-- Perez–Driesse versus Engerer2 irradiance reconstruction;
-- hourly, daily, and monthly temporal aggregation;
-- weather-bin threshold selection.
+| System | IDA ICE RMSE (W) | PVsyst RMSE (W) | Paired difference (IDA − PVsyst, W) | 95% bootstrap interval (W) |
+|---|---:|---:|---:|---|
+| A | 149.98 | 252.46 | −102.48 | [−124.95, −73.58] |
+| B | 242.51 | 311.47 | −68.96 | [−96.18, −41.01] |
+| C | 190.03 | 245.00 | −54.97 | [−72.68, −36.00] |
 
-## Shading analysis
+**These model rankings are conditional on an incompletely authenticated clock convention.** The selected interpretation treats the model as fixed CET and RISE measurements as Swedish CET/CEST. Under the mandatory alternative *unshifted civil-clock* interpretation, the ranking reverses for all three systems. The bootstrap intervals do not include this structural uncertainty. Original logger setup records and some PVsyst import inputs are unavailable. The existing `28_annual_AC_release_candidate_manifest.json` explicitly records that this is **not a final locked release**.
 
-A separate measurement period from 1 May to 19 June 2023 is used to evaluate near-field shading.
+## Shading experiment
 
-The shading analysis includes:
+The independently audited shaded-period analysis is stored under `derived_data/shading_analysis_final_A3_C9.csv` and the `results/Shading_*` files. System A's pole moved on **10 May 2023 around 13:10**. Its mixed 13:00–14:00 hour is excluded only for A, leaving 1,199 full-period intervals for A and 1,200 each for B and C.
 
-- a clear-sky case on 5 June 2023;
-- a partly cloudy case on 15 May 2023;
-- the complete shading measurement period.
+System C's measured AC power is also examined under an **inferred** timestamp reindexing; the as-recorded measured-series sensitivity is retained. The inferred clock behaviour is not a verified logger fault. Original PVsyst shading project geometries were not independently authenticated, and an independent measured unshaded baseline for 2023 is unavailable. Hourly AC and energy agreement should not be interpreted as uniquely identified shading losses or validated diode/optimizer switching dynamics.
 
-The selected daily cases were chosen to represent contrasting irradiance conditions during the periods when the physical shading objects affected the PV arrays.
+The shaded-case source baseline was frozen at tag `shading-a3c9-freeze-2026-10-27` (commit `41b6904`).
 
-Both case-study days use the same later System A shading-object configuration.
+## Scientific boundaries
 
-The case-study figures are intended to illustrate the temporal shading behaviour, while the complete-period analysis provides the broader quantitative comparison.
+- **Irradiance:** available effective-irradiance model outputs have different physical definitions and are not like-for-like measured GTI. Earlier GTI RMSE tables are **inverse–forward or channel diagnostics, not independent transposition-model validation**.
+- **Temperature:** field sensors measure panel back-surface temperature, which is not automatically the modelled cell-temperature boundary.
+- **Annual sample populations:** earlier irradiance and temperature comparison cohorts differ from the revised AC cohort. Never imply all annual tables share 4,478 rows.
+- **Bias and uncertainty:** report whether an error is simulated minus measured. A 30-day paired moving-block CI describes conditional sampling variability, not uncertainty in clocks or unavailable physical inputs.
+- **Sensitivity analyses:** an analysis computed using the earlier `01–11` cohort must not be represented as having been recomputed on the Step 28 cohort.
 
-The available PVsyst version used for the study provides hourly simulation results. Consequently, the shading comparison is performed at a common hourly resolution for both tools.
-
-## Important data-processing notes
-
-Several data-alignment and provenance issues identified during the reproducibility audit are documented explicitly rather than hidden in the processing workflow.
-
-In particular:
-
-- System A measured GTI required a one-hour alignment correction identified through reconstruction of the historical processing workflow.
-- The System A Engerer2 PVsyst export exhibited a consistent one-hour displacement across irradiance, panel temperature, and AC power. The complete record was therefore shifted uniformly by +1 h before comparison.
-- The corresponding Perez–Driesse PVsyst simulation and Systems B and C did not exhibit this displacement.
-- No variable-specific scaling or interpolation was applied as part of this correction.
-
-Further details are provided in `docs/DATA_PROVENANCE.md` and in the audit scripts.
-
-## Configuration
-
-Analysis constants and frozen methodological settings are stored in:
+## Repository layout
 
 ```text
-config.json
+data/                Original RISE measurements, simulation exports and historical input layers
+simulation_models/   Historical simulator project assets and component documentation
+derived_data/        Processed canonical datasets; several annual files are historical-generation
+scripts/             Original 00–11 pipeline and subsequent 16–28 targeted source audits
+results/             Legacy outputs, shaded analyses, and results/annual_audit/28_* working AC release
+docs/                Provenance map, methods, data dictionary, reproducibility and audit records
+archive/             Superseded development scripts (retained, not deleted)
+tests/               Existing targeted tests (not a comprehensive release regression suite)
+config.json          Settings for the original canonical 01–11 workflow; NOT a Step 28 cohort definition
 ```
 
-This includes parameters such as site geometry, timezone, weather-bin definitions, analysis thresholds, and predefined gross-error timestamps.
+Use [the Revision 2 reproduction guide](docs/REVISION2_REPRODUCIBILITY.md) to work from the corrected AC source files. [The original comprehensive reproduction guide](docs/REPRODUCIBILITY.md) still documents the **historical** canonical analysis; running the old workflow does **not** regenerate the new annual AC-power table.
 
-Centralizing these settings helps ensure that the individual analysis scripts use consistent assumptions.
+## Installation and historical reproduction
 
-## Installation
+Use an isolated Python environment and install `requirements.txt`. A clean clone may require third-party or proprietary files for full reconstruction; see [data/README_data.md](data/README_data.md). The `00–11` scripts were used for prior analysis generations and are retained for auditability. They can overwrite historical-generation outputs; do **not** run them expecting to reproduce Revision 2 power metrics. The `20–28` scripts are the corrected annual AC diagnostic chain and should be rerun in a scratch clone/branch with explicit source and output verification.
 
-Clone the repository and create a Python environment of your choice.
+The source code and original documentation use the MIT License with third-party data restrictions described in [LICENSE.md](LICENSE.md). Presence of third-party data in a public repository does not alone establish redistribution permission; check source agreements before archival release.
 
-Install the required Python packages with:
+## Citation, authors and release status
 
-```bash
-pip install -r requirements.txt
-```
+Citation metadata are in [CITATION.cff](CITATION.cff). Authors: Marieke Rynoson, Chris Bales and Michel Battikh. Cite a **specific reviewed Git commit/tag**, not the continuously changing default branch, for reproducible numerical claims. A DOI and final publication metadata should be added only after formal approval.
 
-The analysis uses packages including NumPy, pandas, SciPy, matplotlib, pvlib, openpyxl, and XlsxWriter.
-
-## Reproducing the analysis
-
-After installing the dependencies and making the required source data available in the expected folders, begin by running:
-
-```bash
-python scripts/00_check_inputs.py
-```
-
-If all required inputs are present, construct the canonical datasets with:
-
-```bash
-python scripts/01_build_canonical_data.py
-```
-
-The primary analysis can then be generated with:
-
-```bash
-python scripts/02_run_analysis.py
-```
-
-Subsequent scripts generate the manuscript outputs and sensitivity analyses.
-
-See `docs/REPRODUCIBILITY.md` for the complete reproduction procedure and expected outputs.
-
-## Software
-
-The simulations evaluated in the study were performed using:
-
-- **IDA ICE 5.1.1.1**
-- **PVsyst 8.0.2**
-
-Python is used for reproducible data processing, statistical analysis, uncertainty analysis, and figure generation.
-
-## Data provenance and limitations
-
-The repository distinguishes between:
-
-1. original measurements;
-2. software simulation exports;
-3. reconstructed/canonical datasets;
-4. final analysis outputs.
-
-Known limitations and unresolved sources of uncertainty are documented in `docs/KNOWN_LIMITATIONS.md`.
-
-These include the use of auxiliary meteorological variables from a station approximately 16 km from the PV site and the hourly temporal resolution of the available PVsyst version.
-
-## Citation
-
-If you use this repository, please cite the repository and the associated publication.
-
-Machine-readable citation information is provided in:
-
-```text
-CITATION.cff
-```
-
-## Authors
-
-- Marieke Rynoson — Dalarna University
-- Chris Bales — Dalarna University
-- Michel Battikh — Independent Consultant
-
-## License
-
-The source code in this repository is licensed under the MIT License.
-
-Research data and derived datasets are provided for research transparency and reproducibility.
-Please see [LICENSE.md](LICENSE.md) for the applicable terms and attribution requirements.
+**No final Revision 2 release tag or independent clean-clone numerical reproduction is asserted here.** Outstanding tasks are recorded in [docs/RELEASE_READINESS.md](docs/RELEASE_READINESS.md).
