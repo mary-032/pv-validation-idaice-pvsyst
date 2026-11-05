@@ -1,0 +1,69 @@
+{
+  "status": "REVISION2_FIGURE3_CANDIDATE_NOT_FINAL",
+  "script": "scripts/35_rebuild_revision2_sky_bins.py",
+  "source_sha256": {
+    "config.json": "da6c5e07b43d4c54cec74d51ae6c7719d6d235a2ec696a6d6fc01929a72e79a9",
+    "derived_data\\annual_unshaded_analysis.csv": "e404014077d6f3d9443832c0655a26349606858e2b4f8c5f0986750ce5644dee",
+    "results\\annual_audit\\28_annual_AC_primary_fixed_CET.csv": "0b22af2999d4833cf8b7f11b3177404c3c397ca2553fd933ca0d3d2dee2ce826",
+    "results\\annual_audit\\28_annual_AC_sensitivity_civil_unshifted.csv": "e3cd20d747d416a2a6d3e43907b37d24cb92496e439c556260ccfcb881c20100"
+  },
+  "primary_clock": "fixed_CET_hypothesis",
+  "alternative_clock": "civil_unshifted",
+  "primary_selection": "Eext_positive_AOI_lt80",
+  "n_primary_selected_hours_per_system": 3593,
+  "n_annual_matched_AC_hours_per_system": 4478,
+  "nMBE_definition": "100 * sum(P_sim_W - P_meas_W) / sum(P_meas_W); denominator n; positive overproduction",
+  "GTI_source": "Step28 GTI_measured_Wm2 (original RISE 10-min reconstruction)",
+  "Eext_source": "existing legacy canonical Eext_tilt_Wm2, geometry only (physical interval start)",
+  "AOI_rule": "AOI < 80 deg, Eext_tilt > 0 for primary plot",
+  "sky_bins": [
+    {
+      "name": "Overcast/very cloudy",
+      "lower_inclusive": 0.0,
+      "upper_exclusive": 0.2
+    },
+    {
+      "name": "Cloudy",
+      "lower_inclusive": 0.2,
+      "upper_exclusive": 0.4
+    },
+    {
+      "name": "Mixed/broken",
+      "lower_inclusive": 0.4,
+      "upper_exclusive": 0.6
+    },
+    {
+      "name": "Mostly clear",
+      "lower_inclusive": 0.6,
+      "upper_exclusive": 0.75
+    },
+    {
+      "name": "Clear",
+      "lower_inclusive": 0.75,
+      "upper_exclusive": null
+    }
+  ],
+  "colors": {
+    "IDA ICE": "#77AC30",
+    "PVsyst": "#0072BD"
+  },
+  "missing_day": "2020-12-31 (no daylight-matched Step28 model output; do not impute)",
+  "output_files": [
+    "35_Figure3_fixed_CET_AOI_lt80_CANDIDATE.pdf",
+    "35_Figure3_fixed_CET_AOI_lt80_CANDIDATE.svg",
+    "35_Figure3_fixed_CET_AOI_lt80_CANDIDATE.png",
+    "35_Figure3_civil_unshifted_AOI_lt80_SENSITIVITY.pdf",
+    "35_Figure3_civil_unshifted_AOI_lt80_SENSITIVITY.svg",
+    "35_Figure3_civil_unshifted_AOI_lt80_SENSITIVITY.png",
+    "35_sky_bin_statistics_all_scenarios.csv",
+    "35_Figure3_primary_source_statistics.csv",
+    "35_sky_bin_QC.csv",
+    "35_annual_AC_date_coverage.csv"
+  ],
+  "limitations": [
+    "original RISE logger clock not independently verified",
+    "sky index is tilted GTI / extraterrestrial beam projection, not measured sky-cover class",
+    "original MATLAB TT_IDA.Eextt not authenticated",
+    "no formal within-bin paired model significance tests"
+  ]
+}
