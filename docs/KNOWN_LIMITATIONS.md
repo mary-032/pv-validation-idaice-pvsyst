@@ -1,5 +1,8 @@
 # Known limitations
 
+> **Revision 2 update (5 November 2026):** This limitations catalogue was written partly for the original `01–11` workflow. The corrected annual AC reference supersedes the old *historical processed measured-power* limitation in Section 7: its 4,478-hour cohort was reconstructed directly from original RISE 10-minute records, using six valid records per hour. Sections describing four power gross-error exclusions refer to the **older** AC processing only; no residual trimming is used for the Step 28 annual AC candidate. The new primary model result uses the IDA hourly-averaged electrical-system output Table and two disclosed clock interpretations. The underlying clock ambiguity reverses all tool rankings, and its structural uncertainty is **not** included in the paired bootstrap CIs. A non-equivalent effective-irradiance comparison cannot independently validate transposition. See [REVISION2_RESULT_MAP.md](REVISION2_RESULT_MAP.md), [REVISION2_REPRODUCIBILITY.md](REVISION2_REPRODUCIBILITY.md), and [RELEASE_READINESS.md](RELEASE_READINESS.md). Historical sections remain for traceability rather than being silently deleted.
+
+
 This document summarises limitations relevant to interpretation and reproduction of the PV-model validation study.
 
 The purpose is not to list every possible uncertainty in PV simulation, but to identify limitations that materially affect this dataset, workflow, or comparison.
@@ -104,7 +107,7 @@ The timing anomaly can therefore be diagnosed from the exported data and metadat
 
 ---
 
-## 7. Historical preprocessing cannot be reconstructed exactly for every variable
+## 7. Older-generation preprocessing cannot be reconstructed exactly for every variable
 
 The historical processed annual workbook reproduces the measured panel-temperature series exactly and the measured irradiance series to a high degree.
 
@@ -177,7 +180,7 @@ Results from the full-period shading analysis span both configurations and shoul
 
 ---
 
-## 12. Gross-error screening is residual-based
+## 12. Historical-generation gross-error screening is residual-based
 
 Four annual AC-power timestamps are excluded using a conservative robust-residual screening procedure.
 
