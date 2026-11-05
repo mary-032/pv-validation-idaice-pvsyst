@@ -1,0 +1,28 @@
+name: Revision 2 early provenance snapshot integrity
+
+on:
+  push:
+    paths:
+      - 'scripts/36_curate_early_provenance.py'
+      - 'tests/test_36_early_provenance.py'
+      - 'results/revision2/provenance/**'
+      - '.github/workflows/revision2-early-provenance-checks.yml'
+  pull_request:
+    paths:
+      - 'scripts/36_curate_early_provenance.py'
+      - 'tests/test_36_early_provenance.py'
+      - 'results/revision2/provenance/**'
+      - '.github/workflows/revision2-early-provenance-checks.yml'
+
+jobs:
+  verify-public-aggregates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Validate clean-clone curation snapshot (does not need local raw sources)
+        run: python scripts/36_curate_early_provenance.py --verify-published
+      - name: Run provenance unit tests
+        run: python -m unittest discover -s tests -p 'test_36*.py' -v

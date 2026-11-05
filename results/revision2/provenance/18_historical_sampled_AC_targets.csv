@@ -1,0 +1,4 @@
+historical_generation,source_file,interpretation,status,system,daylight_hours,measured_energy_kWh,IDA_RMSE_W,PVsyst_RMSE_W,IDA_minus_PVsyst_RMSE_W,CI95_low_W,CI95_high_W,IDA_nMBE_percent,PVsyst_nMBE_percent
+Step18_sampled_IDA_prn,18_approved_raw_reference_targets.csv,historical_sampled_AC_not_Step28_hourly_Table,HISTORICAL_DIAGNOSTIC_NOT_CURRENT_REVISION2,A,4478,3648.54078,249.5025044,252.463083,-2.9605786,-11.26089097,8.923914587,-1.328224908,-6.256988593
+Step18_sampled_IDA_prn,18_approved_raw_reference_targets.csv,historical_sampled_AC_not_Step28_hourly_Table,HISTORICAL_DIAGNOSTIC_NOT_CURRENT_REVISION2,B,4478,4230.834711,335.1115271,311.4655027,23.6460244,15.83974386,32.4975778,3.665712537,-0.3001277994
+Step18_sampled_IDA_prn,18_approved_raw_reference_targets.csv,historical_sampled_AC_not_Step28_hourly_Table,HISTORICAL_DIAGNOSTIC_NOT_CURRENT_REVISION2,C,4478,2809.807941,263.3929704,244.9995602,18.3934102,12.65777747,23.66147348,6.860322583,10.43512456
