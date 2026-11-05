@@ -1,5 +1,8 @@
 # Reproducibility guide
 
+> **REVISION 2 NOTICE (5 November 2026):** This guide describes the **original `01–11` canonical workflow**, with its older sample selection, four robust-residual AC exclusions, older AC power channels and older monthly/bin/statistical outputs. It **does not reproduce** the corrected annual AC analysis used in the Revision 2 working manuscript. For that analysis read [REVISION2_REPRODUCIBILITY.md](REVISION2_REPRODUCIBILITY.md) and [REVISION2_RESULT_MAP.md](REVISION2_RESULT_MAP.md). The current annual AC candidate uses 4,478 astronomical-daylight matched hours per system, original six-sample/hour RISE AC reconstruction, IDA ICE *hourly Table* `Produced power`, PVsyst `E_Grid`, two explicit clock hypotheses and **no residual-based exclusions**. Re-running `02_run_analysis.py` regenerates an **older generation**, not the Step 28 candidate. Preserve the old artifacts for provenance rather than silently editing values.
+
+
 This document describes how to reproduce the data processing, statistical analysis, uncertainty analyses, sensitivity analyses, and figures associated with the PV validation study.
 
 The workflow is designed so that the analysis can be reproduced at two levels:
@@ -332,7 +335,7 @@ If the original proprietary/source files are unavailable, the statistical analys
 derived_data/
 ```
 
-The canonical datasets should be treated as the authoritative analysis inputs.
+These canonical datasets are authoritative inputs **for the original 01–11 workflow only**; the Revision 2 annual AC cohort is instead in `results/annual_audit/28_*`.
 
 Do not substitute older processed workbooks or archived simulation results.
 
@@ -340,7 +343,7 @@ Do not substitute older processed workbooks or archived simulation results.
 
 # Part C — Primary analysis
 
-## 15. Run the primary validation
+## 15. Run the original-generation validation
 
 Execute:
 
