@@ -1,5 +1,8 @@
 # Data provenance
 
+> **Revision 2 provenance update (5 November 2026):** This text primarily documents the original canonical `01–11` workflow. It should be read alongside [REVISION2_RESULT_MAP.md](REVISION2_RESULT_MAP.md), [REVISION2_REPRODUCIBILITY.md](REVISION2_REPRODUCIBILITY.md), the Step 26–28 annual audits and [Final_Shading_Audit_2026-10-27.md](Final_Shading_Audit_2026-10-27.md). In particular, the historical `Results_PVsyst_E2_hour.xlsx` measured-power layer **is not** the revised annual AC reference: that reference is freshly reconstructed from six original 10-minute observations per selected hour. The old four annual power outlier timestamps, `GTI > 0` daytime rule, original `produced_p`/inverter selections and historical `01–11` annual confidence intervals do **not** define the new Step 28 cohort. The original RISE source-clock/processing metadata are not independently authenticated; the alternate clock reverses all primary tool rankings. **Do not edit source files to conceal this history.**
+
+
 This document describes the origin, transformation, alignment, and status of the datasets used in the validation of PV simulations performed with IDA ICE and PVsyst.
 
 The purpose is to distinguish clearly between:
@@ -517,13 +520,13 @@ This ensures that the clear and partly cloudy illustrative cases use the same Sy
 
 ## 16. Canonical datasets
 
-The authoritative processed datasets are generated programmatically from the source material by:
+The **original-generation** processed datasets are generated programmatically from the source material by:
 
 ```bash
 python scripts/01_build_canonical_data.py
 ```
 
-The canonical datasets are intended to provide a single analysis-ready layer containing the aligned:
+The original canonical datasets are intended to provide a single analysis-ready layer containing the aligned:
 
 - measured observations;
 - IDA ICE results;

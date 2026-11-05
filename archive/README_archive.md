@@ -1,5 +1,8 @@
 # Archive
 
+> **Revision 2 context (5 November 2026):** Historical artifacts are *not limited to this directory*. For script compatibility, important superseded **generated outputs** still reside under `results/`, `derived_data/` and in the original `00–11` workflow. In particular, the old master workbook, Table 6, monthly RMSE, Figure 3, and `05_*` statistics are historical for the new annual AC comparison even though they have not been physically moved into `archive/`. The current conditional annual AC dataset is under `results/annual_audit/28_*`. Refer to [REVISION2_RESULT_MAP.md](../docs/REVISION2_RESULT_MAP.md). Keep historical files and commit history; do not break old script paths simply to make the tree look cleaner.
+
+
 This directory contains superseded, historical, or development-stage analysis material retained for provenance.
 
 Files stored here are **not part of the active manuscript reproduction workflow**.

@@ -1,5 +1,8 @@
 # RISE System A/3 shading chronology and original-source reconciliation
 
+> **Current repository status (5 November 2026):** This is an October 2026 *reconstruction instruction record*, originally written while moving files and applying patches. The referenced ZIPs and patch-application directions are preserved as history; they are **not steps an external researcher should blindly reapply to the current repository**. The corrected shaded data and source-audit results are already represented in `derived_data/shading_analysis_final_A3_C9.csv` and the `results/Shading_*` files. Check [REVISION2_RESULT_MAP.md](REVISION2_RESULT_MAP.md), [REVISION2_REPRODUCIBILITY.md](REVISION2_REPRODUCIBILITY.md) and [Final_Shading_Audit_2026-10-27.md](Final_Shading_Audit_2026-10-27.md). The historical `01–11` AC results are **not** the updated Revision 2 annual AC reference.
+
+
 **Evidence as of 22 October 2026**
 
 - Geometry: pole was moved **10 May 2023 approximately 13:10 Swedish local time**, supported by contemporaneous correspondence and photos timestamped 13:15:16 and 13:15:25.

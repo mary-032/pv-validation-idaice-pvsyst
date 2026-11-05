@@ -1,5 +1,8 @@
 # Methods
 
+> **Scope clarification, Revision 2 (5 November 2026).** Much of this document describes the **original 01–11 analysis generation**, not the corrected annual AC source/clock/output analysis. Its original daytime definitions, residual-based exclusions, confidence intervals, monthly RMSE, weather bins and master workbook must not be interpreted as the revised annual AC methods. The current conditional annual AC comparison and its exact method are described in [REVISION2_RESULT_MAP.md](REVISION2_RESULT_MAP.md) and [REVISION2_REPRODUCIBILITY.md](REVISION2_REPRODUCIBILITY.md). Its common reference uses six raw 10-minute RISE AC records for each of 4,478 astronomical-daylight intervals, IDA ICE's *hourly averaged electrical system Produced power Table*, PVsyst `E_Grid`, no residual-dependent trimming, and both the fixed-CET hypothesis and the reversing civil-unshifted alternative. For temperature and effective irradiance, the old cohorts and physically non-equivalent observation boundaries must be disclosed. The following original method text remains intact for historical reconstruction; it is not proof that all metrics were recomputed on the new AC cohort.
+
+
 This document describes the data-processing and analysis methods implemented in the repository for the validation of photovoltaic (PV) simulations performed with IDA ICE and PVsyst.
 
 The associated manuscript should be consulted for the scientific background, detailed system descriptions, and interpretation of the results. This document focuses on the computational workflow required to reproduce the analysis.
@@ -22,7 +25,7 @@ The validation consists of two principal parts:
 1. annual validation without explicit near-field shading objects;
 2. a dedicated near-field shading experiment.
 
-The primary annual comparison evaluates:
+The **original-generation** annual comparison evaluates:
 
 - plane-of-array/effective irradiance;
 - panel temperature;

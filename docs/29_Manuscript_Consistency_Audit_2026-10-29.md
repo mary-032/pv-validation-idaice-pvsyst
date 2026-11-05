@@ -1,5 +1,8 @@
 # Step 29 — Manuscript consistency audit after annual AC release-candidate commit
 
+> **Historical audit notice (5 November 2026):** This register compared the October 29 annual AC candidate with the **June submission manuscript**, not the subsequently uploaded 4 November Revision 2 draft. It is retained as an audit trail, **not a current up-to-date claim that the listed manuscript corrections remain outstanding**. Refer first to [REVISION2_RESULT_MAP.md](REVISION2_RESULT_MAP.md) for current version-specific source authority, and [RELEASE_READINESS.md](RELEASE_READINESS.md) for the current open repository/release issues. The historical recommended numerical corrections below should not be mechanically applied to the newer manuscript without checking the actual revised draft.
+
+
 **Audit date:** 29 October 2026
 **Repository:** `mary-032/pv-validation-idaice-pvsyst`
 **Annual AC release-candidate commit:** `b7eb7a27aaebaa41a83836bb8ee4b592dae542d0`

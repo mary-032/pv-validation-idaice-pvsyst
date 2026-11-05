@@ -1,5 +1,8 @@
 # Data
 
+> **Revision 2 source note (5 November 2026):** Original sources under `data/` are retained unchanged. For the corrected annual AC reference, original `data/measured/annual/RISE_raw10min_389.xlsx` power observations are re-aggregated to six-sample hourly means through the Step 20–28 audit pipeline; the older historical `Results_PVsyst_E2_hour.xlsx` processed-power layer is **not** its authoritative reference. See [REVISION2_RESULT_MAP.md](../docs/REVISION2_RESULT_MAP.md) and [REVISION2_REPRODUCIBILITY.md](../docs/REVISION2_REPRODUCIBILITY.md). The following original `01–11` processing notes (including four residual outliers and source-correction conventions) are retained for historical traceability, not as the corrected annual AC selection. The shading experiment has its own audited original-source reconstruction, documented in `docs/Final_Shading_Audit_2026-10-27.md`. Third-party redistribution rights require a separate review.
+
+
 This directory contains the source data required to reconstruct the canonical datasets used in the validation of PV simulations performed with IDA ICE and PVsyst.
 
 The repository distinguishes between original measurements, simulation outputs, weather/input data, historical processing files, and derived canonical datasets.
@@ -323,7 +326,7 @@ See `docs/DATA_PROVENANCE.md` for the reconstruction evidence.
 
 ---
 
-## Data exclusions
+## Historical-generation data exclusions
 
 Nighttime observations are excluded from the annual validation by retaining observations where measured plane-of-array irradiance is greater than 0 W/m².
 
