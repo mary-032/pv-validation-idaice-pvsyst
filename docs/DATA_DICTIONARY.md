@@ -1,5 +1,8 @@
 # Data dictionary
 
+> **Version-specific dictionary note (5 November 2026):** The variable names and selections below principally describe the original `01–11` canonical datasets. The *current conditional annual AC* release candidate is `results/annual_audit/28_annual_AC_primary_fixed_CET.csv` with cohort/clock/output semantics documented in [REVISION2_RESULT_MAP.md](REVISION2_RESULT_MAP.md). Its measured power is reconstructed from original 10-minute observations; `n=4478` for every system; daylight is astronomical solar elevation > 0 at measured interval start; **no four-timestamp residual screen** is applied. The four dates under “AC-power gross-error exclusions” below apply only to the **original analysis generation**. The dataset's model output channels have distinct physical definitions: `IDA_hourly_table_end_aligned_W` is the primary electrical-system hourly Table comparison, `PVsyst_EGrid_W` is the PVsyst export. Do not conflate `inverter_o` with `Produced power` or claim effective-irradiance channels are incident GTI.
+
+
 This document describes the principal variables used in the canonical PV-validation datasets and analysis outputs.
 
 Exact column availability may differ slightly between the annual and shading canonical datasets.
@@ -441,7 +444,7 @@ The daytime filter is applied using the measured irradiance reference rather tha
 
 ---
 
-## 17. AC-power gross-error exclusions
+## 17. Historical-generation AC-power gross-error exclusions
 
 Four timestamps are excluded from the annual AC-power analysis:
 
