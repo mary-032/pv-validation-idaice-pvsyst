@@ -1,5 +1,8 @@
 # PV validation: IDA ICE versus PVsyst
 
+> **Phase 2 analytical update (5 November 2026):** Provisional Step 29 monthly energy RMSE, seasonal and composite diurnal AC diagnostics for **both** Step 28 clock hypotheses are now in [results/revision2/](results/revision2/), with an accompanying Python script. These outputs still require independent clean-clone checking. Older Figure 3 and `05_*` uncertainties have **not** been recalculated.
+
+
 This repository preserves the measured-data processing, simulation exports, numerical analyses, and audit trail accompanying **“Validation of PV Modeling in an Integrated Building Energy Simulation Tool”** (Rynoson, Bales and Battikh).
 
 **Current state (5 November 2026): Revision 2 working candidate, NOT a fully frozen/publication-verified release.** The repository intentionally retains earlier analyses. **The original `01–11` numerical workflow is *not* the authoritative annual AC-power result for Revision 2.**
