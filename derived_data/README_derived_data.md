@@ -1,5 +1,8 @@
 # Derived data
 
+> **Revision 2 data warning (5 November 2026):** `annual_unshaded_analysis.csv` and `annual_unshaded_analysis_Engerer2.csv` are **canonical for the earlier 01–11 workflow**, not the reconstructed 4,478-hour Revision 2 annual AC reference. The current AC comparison cohorts are `results/annual_audit/28_annual_AC_primary_fixed_CET.csv` and `28_annual_AC_sensitivity_civil_unshifted.csv`, with [source/provenance map](../docs/REVISION2_RESULT_MAP.md). Do not regenerate the old `02_run_analysis.py` outputs and call them Revision 2 annual AC metrics. The corrected **shading** source for the 2023 study is `derived_data/shading_analysis_final_A3_C9.csv`; earlier shading CSVs are retained for source reconciliation. The historical data descriptions below remain useful for provenance, not for selecting the corrected current AC cohort.
+
+
 This directory contains the canonical and analysis-ready datasets generated from the original measurements, IDA ICE exports, PVsyst exports, and associated processing inputs.
 
 These files are not raw measurements and should not be treated as original source data.
@@ -83,7 +86,7 @@ where appropriate.
 
 ## `annual_unshaded_analysis.csv`
 
-This is the primary annual canonical dataset.
+This is the **original-generation** annual canonical dataset, not the corrected Revision 2 AC cohort.
 
 It represents the Perez–Driesse baseline analysis and contains aligned values for:
 
@@ -378,7 +381,7 @@ For the final repository release:
 annual_unshaded_analysis.csv
 ```
 
-should be treated as the authoritative Perez–Driesse annual analysis dataset.
+should be treated as the **historical 01–11** Perez–Driesse annual analysis dataset; the Revision 2 annual AC cohort is in `results/annual_audit/28_*`.
 
 Where included:
 
