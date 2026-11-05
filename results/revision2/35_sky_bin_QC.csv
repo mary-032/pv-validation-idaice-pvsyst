@@ -1,0 +1,7 @@
+scenario,system,n_annual_AC_hours,n_Eext_positive,n_AOI_lt80_Eext_positive,n_Eext_gt100_AOI_lt80,n_Eext_zero_or_nonpositive,n_ineligible_AOI_gte80_among_Eext_positive,n_kt_gt1,n_kt_gt2,n_unclassified_Eext_positive,n_physical_dates_with_AC_hours,n_physical_days_without_AC_hours,missing_day_labels,measured_kWh_annual_AC,pct_annual_measured_energy_in_primary_sky_bins
+fixed_CET_hypothesis,A,4478,3932,3593,3593,546,339,131,86,0,364,1,2020-12-31,3648.540780437,97.425112849
+fixed_CET_hypothesis,B,4478,3932,3593,3593,546,339,159,90,0,364,1,2020-12-31,4230.834711114,97.729030086
+fixed_CET_hypothesis,C,4478,3932,3593,3593,546,339,159,90,0,364,1,2020-12-31,2809.807941398,98.486271489
+civil_unshifted,A,4478,3932,3593,3593,546,339,131,86,0,364,1,2020-12-31,3648.540780437,97.425112849
+civil_unshifted,B,4478,3932,3593,3593,546,339,159,90,0,364,1,2020-12-31,4230.834711114,97.729030086
+civil_unshifted,C,4478,3932,3593,3593,546,339,159,90,0,364,1,2020-12-31,2809.807941398,98.486271489
