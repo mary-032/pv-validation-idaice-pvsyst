@@ -1,5 +1,8 @@
 # System C/9 — validated shading-clock sensitivity integration
 
+> **Current repository status (5 November 2026):** The ZIP extraction / patch instructions below document how the October 2026 C/9 correction was incorporated. The current repository already contains the relevant script, test and shaded outputs; **do not reapply the old patch or treat the ZIP instructions as a clean-clone procedure**. For current source/reproduction mapping see [REVISION2_RESULT_MAP.md](REVISION2_RESULT_MAP.md) and [REVISION2_REPRODUCIBILITY.md](REVISION2_REPRODUCIBILITY.md). The C measurement timestamp reindexing remains **inferred, not independently authenticated**; both the original and reindexed results are preserved. `docs/Final_Shading_Audit_2026-10-27.md` identifies the limits of source and PVsyst geometry verification.
+
+
 **Prepared 22 October 2026.** This is a new, non-destructive stage AFTER the already successful System A/3 pole chronology reconstruction (script 16). No simulation rerun is needed.
 
 ## Evidence and limits
