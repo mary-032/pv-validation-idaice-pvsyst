@@ -46,6 +46,8 @@
 | **M15** | Medium | pp.16, 23, 28 | `significantly higher` relative to ASHRAE's 30% reference implies significance testing against an engineering threshold; System C IDA is only **30.29%**. Also comparisons of daily energy error should not imply hourly shape/shadow-affected-hour accuracy. | Prefer `exceeded the 30% illustrative reference`; distinguish hourly RMSE, daily net-energy bias, and shadow-specific prediction mechanisms. |
 | **M16** | Low | p.1 abstract lines 18, 22–24; p.11 lines 8, 20; p.15 lines 13–16; p.16 lines 1–5 | Typographic issues: `ystems A`; missing stop between `shading Sensitivity`; `Un unshifted`; `illustrationswere`; `to not`; `displayed in .`; inconsistent comma in 25.67; `AHRAE`. | Proofread text and cross-references after numerical corrections; remove revision highlighting from submission-ready PDF if unintended. |
 
+| **M17** | Medium | pp.5–7, 28 | The methods refer to **IDA ICE 5.1.1** (p.6) while Table 2 and the conclusion specify **5.1.1.1**. The more exact version/build cannot be independently authenticated from the secondary inventory alone. | Use consistent wording for the actual tested executable, and retain a separate provenance qualification if build metadata are unavailable. |
+
 ## Reproducibility and inference gates before manuscript freeze
 
 1. **Clock uncertainty is structural**. With fixed CET, IDA hourly RMSE is smaller for A/B/C; under `civil_unshifted`, PVsyst RMSE is smaller for A/B/C (IDA 390.93/521.09/378.77 W versus PVsyst 288.02/398.41/294.87 W). Neither the bootstrap intervals nor solar-noon check authenticates logger setup. Retain the alternative prominently.
