@@ -1,0 +1,28 @@
+name: Revision 2 Figure 3 historical audit checks
+on:
+  push:
+    paths:
+      - 'scripts/38_audit_figure3_history.py'
+      - 'tests/test_38_figure3_history.py'
+      - 'docs/REVISION2_FIGURE3_HISTORY.md'
+      - 'results/revision2/35_*'
+      - '.github/workflows/revision2-figure3-history-checks.yml'
+  pull_request:
+    paths:
+      - 'scripts/38_audit_figure3_history.py'
+      - 'tests/test_38_figure3_history.py'
+      - 'docs/REVISION2_FIGURE3_HISTORY.md'
+      - 'results/revision2/35_*'
+      - '.github/workflows/revision2-figure3-history-checks.yml'
+jobs:
+  check-current-and-reconciliation-logic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify current Step 35 tables (no proprietary source files)
+        run: python scripts/38_audit_figure3_history.py --verify-current
+      - name: Test historical-sign and cohort safeguards
+        run: python -m unittest discover -s tests -p 'test_38*.py' -v
