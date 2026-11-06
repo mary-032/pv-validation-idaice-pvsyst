@@ -1,0 +1,26 @@
+name: Revision 2 historical source metadata safety
+
+on:
+  push:
+    paths:
+      - 'scripts/18_annual_preflight_and_pvsyst_inventory.py'
+      - 'scripts/19_pvsyst_full_variant_provenance.py'
+      - 'tests/test_37_local_metadata_scripts.py'
+      - '.github/workflows/revision2-source-metadata-checks.yml'
+  pull_request:
+    paths:
+      - 'scripts/18_annual_preflight_and_pvsyst_inventory.py'
+      - 'scripts/19_pvsyst_full_variant_provenance.py'
+      - 'tests/test_37_local_metadata_scripts.py'
+      - '.github/workflows/revision2-source-metadata-checks.yml'
+
+jobs:
+  no-proprietary-sources-needed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify safe source handling using only synthetic fixtures
+        run: python -m unittest discover -s tests -p 'test_37*.py' -v
