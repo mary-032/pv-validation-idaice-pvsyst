@@ -1,0 +1,27 @@
+{
+  "status": "REVISION2_SUPPLEMENT_CANDIDATE_NOT_APPROVED",
+  "builder": "scripts/40_build_seasonal_diurnal_supplement.py",
+  "reference": "Step 28 corrected matched power, cross-checked against Step 29",
+  "input_sha256": {
+    "results/annual_audit/28_annual_AC_primary_fixed_CET.csv": "0b22af2999d4833cf8b7f11b3177404c3c397ca2553fd933ca0d3d2dee2ce826",
+    "results/annual_audit/28_annual_AC_sensitivity_civil_unshifted.csv": "e3cd20d747d416a2a6d3e43907b37d24cb92496e439c556260ccfcb881c20100",
+    "results/revision2/29_seasonal_AC.csv": "fc0ec762014d9a40c0d965d148676da2dea5c17ac837ead909a0688ffd6d586c",
+    "results/revision2/29_diurnal_AC.csv": "907e3ce1ba6f7a4169232f5619dbc0e4ba3f081769735fdfc5c00ab9e465cf2c"
+  },
+  "season_definitions": "DJF / MAM / JJA / SON using local physical date",
+  "diurnal_hour": "physical measured interval start, local wall clock",
+  "bias_sign": "simulated minus measured (W or percent)",
+  "diurnal_shaded_band": "25th to 75th sample percentile (type-7), not a confidence interval",
+  "cohort_hours_per_system": 4478,
+  "missing_selected_date": "2020-12-31 (cause not established)",
+  "clock_scenarios": [
+    "fixed_CET_hypothesis",
+    "civil_unshifted"
+  ],
+  "limitations": [
+    "original logger clock not independently authenticated",
+    "seasonal and diurnal point estimates lack block-bootstrap CIs",
+    "diurnal signatures do not identify causes of power error",
+    "seasonal CV(RMSE) can be inflated by low mean measured power"
+  ]
+}
