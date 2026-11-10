@@ -1,0 +1,28 @@
+name: Revision 2 Step 40 supplement tests
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/40_build_seasonal_diurnal_supplement.py'
+      - 'tests/test_40_seasonal_diurnal_supplement.py'
+      - 'docs/README_STEP40_SEASONAL_DIURNAL.md'
+      - 'docs/STEP40_SUPPLEMENT_MANUSCRIPT_GUIDE.md'
+      - '.github/workflows/revision2-supplement40-checks.yml'
+  push:
+    paths:
+      - 'scripts/40_build_seasonal_diurnal_supplement.py'
+      - 'tests/test_40_seasonal_diurnal_supplement.py'
+      - '.github/workflows/revision2-supplement40-checks.yml'
+
+jobs:
+  step40-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile and run synthetic tests; no original data required
+        run: |
+          python -m py_compile scripts/40_build_seasonal_diurnal_supplement.py
+          python -m unittest discover -s tests -p 'test_40*.py' -v
