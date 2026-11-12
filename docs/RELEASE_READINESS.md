@@ -2,7 +2,7 @@
 
 > **12 November 2026 author decision:** Manuscript results select CET/CEST-labelled measured data matched to fixed-CET simulation-model intervals. Both computational clock scenarios remain preserved for full repository verification, but only the adopted one is used in the article/supplement. See [clock-convention decision](REVISION2_CLOCK_CONVENTION_DECISION.md). This is not independent authentication of the original logger settings or a final data-release approval.
 
-> **Phase 2 update (5 November 2026):** Source-derived provisional Step 29 monthly-energy RMSE, seasonal and diurnal statistics have been added in `results/revision2/` with a reproducible aggregation script and tests. Their independent execution and manuscript acceptance remain open. The older Figure 3 and `05_*` inferential files remain historical. A source-cohort coverage review is warranted: **31 December 2020 has no selected daylight hour** in the corrected Step 28 cohort; do not infer a missing-source cause without checking.
+> **Historical checkpoint (5 November 2026; superseded by the updates below):** At that time Step 29 monthly/seasonal/diurnal aggregates were provisional, and the regenerated Figure 3 and supplement had not yet been verified. These tasks were subsequently completed in Steps 35 and 40; the 12 November publication-selection decision is documented above. The earlier-generation `05_*` inference results remain historical, and source-level checks including the absent 31 December 2020 cohort date remain relevant.
 
 
 **Prepared:** 5 November 2026. **Status:** OPEN; no approval, DOI, merged change or final release is asserted.
