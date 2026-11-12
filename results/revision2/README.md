@@ -1,6 +1,8 @@
 # Revision 2 AC aggregate diagnostics — Step 29
 
-**Created:** 5 November 2026. **Status:** *Candidate analytical results, pending independent clean-clone execution and manuscript sign-off.* This directory contains **new**, explicitly versioned outputs from the corrected Step 28 annual AC paired series. Earlier `results/Monthly_RMSE_recomputed.csv`, older `05_*` uncertainty outputs and `results/Figure3_weather_bins_recomputed.csv` remain **historical** and have not been overwritten.
+> **Journal selection (12 November 2026):** The authors use `fixed_CET_hypothesis` (CET/CEST-labelled measurements matched to fixed-CET model intervals). `civil_unshifted` and its results remain archived for complete repository reproduction, **not selected for the article/supplement**. See [clock decision](../../docs/REVISION2_CLOCK_CONVENTION_DECISION.md), [Step 35](README_STEP35.md) and [Step 40](../../docs/README_STEP40_SEASONAL_DIURNAL.md).
+
+**Created:** 5 November 2026. **Updated:** 12 November 2026 (publication clock choice; Steps 35 and 40 now generated). **Status:** audited analytical outputs; final author and source-release approval remain outstanding. This directory contains versioned outputs from the corrected Step 28 annual AC paired series. Earlier monthly, original `05_*` and legacy Figure 3 calculations are preserved separately.
 
 ## Source, script and reproducibility
 
@@ -48,7 +50,7 @@ and its specific equivalent divides by the system DC capacity in kWp. This repro
 - Composite diurnal bins are defined by the **hour of the physical measured-interval start**, in the same local wall-clock labels as Step 28. They are **not** shifted to the model-clock hypothesis and cannot be treated as a solar-time-adjusted diurnal series.
 - All biases here are `simulated − measured`. `CVRMSE_pct = RMSE_W / mean_measured_W × 100`; `nMBE_pct = MBE_W / mean_measured_W × 100`. The energy percentage bias is equivalent to nMBE for complete paired hourly intervals.
 - The source contains **4,478** matched selected intervals per system, spread over **364 distinct physical dates**; **31 December 2020 has no selected interval in the Step 28 cohort**. This is an *observed property of the existing source selection*, **not evidence of the cause**. Before using the aggregates to make claims about whole-year completeness, audit why this date is absent from the selected cohort.
-- The original RISE logger clock cannot be independently authenticated; results under `civil_unshifted` are equally retained. Temporal aggregation can hide considerable hourly errors by signed cancellation.
+The original RISE logger clock cannot be independently authenticated; the authors selected CET/CEST-labelled measurements matched to fixed-CET simulation intervals for the article and retain `civil_unshifted` as an archived sensitivity. Temporal aggregation can hide substantial signed hourly errors. See the [clock decision](../../docs/REVISION2_CLOCK_CONVENTION_DECISION.md).
 
 ## Monthly energy RMSE — working fixed-CET hypothesis
 
@@ -60,8 +62,8 @@ and its specific equivalent divides by the system DC capacity in kWp. This repro
 
 A model may yield smaller hourly power RMSE yet **larger monthly energy RMSE** because temporal summation changes the weight and cancellation of errors. System B is a clear example: IDA ICE's fixed-CET hourly RMSE (242.51 W) is below PVsyst's (311.47 W), but the twelve-month energy RMSE is higher in IDA ICE (3.999 vs 2.414 kWh/kWp). Do not interpret the two summary metrics as contradictory.
 
-## Remaining missing Revision 2 deliverables
+## Subsequent analyses and remaining release gates
 
-The revised `kt_tilt` weather/sky-bin breakdown and Figure 3 **have not been recomputed**. They require recreating the azimuth-aware extraterrestrial tilted reference, AOI screen, bin threshold handling, matching the corrected Step 28 AC cohort and verifying the sample count in each resulting bin. The old sky-bin file must **not** be passed off as corrected just because Step 29 monthly/seasonal files exist. Also outstanding: accepted 30-day bootstrap uncertainty for the new conditional aggregations, and explicit reviewer/manuscript source mapping.
+The tilted irradiance-index Figure 3 was **recomputed in Step 35**, with the corrected azimuth-aware geometry and AOI screen (3,593 selected hours per system). Step 40 also generated and checked the seasonal tables and composite diurnal-error figures using Step 29 aggregates as cross-checks. The journal supplement selects Step 40's primary `S1a` sources as **Table S1** and **Figure S1**; the `S1b` sources are archived alignment sensitivities only. The earlier `Figure3_weather_bins_recomputed.csv` remains historical. No season- or hour-specific bootstrap inference is claimed. Final author manuscript approval, source provenance and publication-release gates remain outstanding.
 
 The Git history, untouched original cohort and older canonical scripts preserve the full revision trail. See `docs/REVISION2_RESULT_MAP.md` and `docs/RELEASE_READINESS.md`.

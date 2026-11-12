@@ -1,6 +1,6 @@
 # PV validation: IDA ICE versus PVsyst
 
-> **Phase 2 analytical update (5 November 2026):** Provisional Step 29 monthly energy RMSE, seasonal and composite diurnal AC diagnostics for **both** Step 28 clock hypotheses are now in [results/revision2/](results/revision2/), with an accompanying Python script. These outputs still require independent clean-clone checking. Older Figure 3 and `05_*` uncertainties have **not** been recalculated.
+> **Revision 2 documentation update (12 November 2026):** Step 29 monthly/seasonal/diurnal, Step 35 Figure 3 and Step 40 supplementary results have now been generated and checked. The authors selected Swedish CET/CEST measurement labels aligned to fixed-CET model intervals for the revised manuscript. The alternative unshifted calculation remains archived. See [clock convention decision](docs/REVISION2_CLOCK_CONVENTION_DECISION.md). The full source release is not yet approved.
 
 
 This repository preserves the measured-data processing, simulation exports, numerical analyses, and audit trail accompanying **“Validation of PV Modeling in an Integrated Building Energy Simulation Tool”** (Rynoson, Bales and Battikh).
@@ -11,7 +11,7 @@ This repository preserves the measured-data processing, simulation exports, nume
 
 | Need | Read / use |
 |---|---|
-| **Which values can I use for Revision 2?** | [Revision 2 result map](docs/REVISION2_RESULT_MAP.md) — authoritative-versus-historical file paths, sample counts, clock uncertainty and remaining gaps |
+| **Which values can I use for Revision 2?** | [Revision 2 result map](docs/REVISION2_RESULT_MAP.md) — publication versus historical results; [clock convention decision](docs/REVISION2_CLOCK_CONVENTION_DECISION.md) — adopted matching and archived sensitivity |
 | Reproduce the **corrected annual AC** candidate | [Revision 2 reproduction guide](docs/REVISION2_REPRODUCIBILITY.md) and [Step 28 data](results/annual_audit/) |
 | Inspect the shaded 2023 experiment | [Final shading audit](docs/Final_Shading_Audit_2026-10-27.md), [System A chronology](docs/README_A3_SHADING_REBUILD.md), [System C clock sensitivity](docs/README_C9_CLOCK_INTEGRATION.md) |
 | Understand source files and variables | [Data provenance](docs/DATA_PROVENANCE.md), [data dictionary](docs/DATA_DICTIONARY.md) |
@@ -32,7 +32,7 @@ Three south-facing, 45° PV installations at the RISE research facility in Borå
 
 There are two *different* measurement campaigns: **1 June 2020–31 May 2021** for annual unshaded comparisons (original measurements every 10 minutes) and **1 May–19 June 2023** for the near-field shading experiment (original measurements every 30 seconds, compared hourly). The study evaluates PV output, not experimentally validated joint whole-building energy demand and PV operation.
 
-## Corrected annual AC-power analysis — conditional working result
+## Corrected annual AC-power analysis — adopted temporal convention
 
 `results/annual_audit/28_annual_AC_primary_fixed_CET.csv` contains the paired comparison observations. The point estimates are in `28_annual_AC_primary_and_sensitivity_metrics.csv`; the three paired 95% RMSE-difference bootstrap intervals are in `28_annual_AC_primary_CI30d.csv`.
 
@@ -46,7 +46,9 @@ IDA ICE AC generation uses the **hourly-averaged electrical-system “Produced p
 | B | 242.51 | 311.47 | −68.96 | [−96.18, −41.01] |
 | C | 190.03 | 245.00 | −54.97 | [−72.68, −36.00] |
 
-**These model rankings are conditional on an incompletely authenticated clock convention.** The selected interpretation treats the model as fixed CET and RISE measurements as Swedish CET/CEST. Under the mandatory alternative *unshifted civil-clock* interpretation, the ranking reverses for all three systems. The bootstrap intervals do not include this structural uncertainty. Original logger setup records and some PVsyst import inputs are unavailable. The existing `28_annual_AC_release_candidate_manifest.json` explicitly records that this is **not a final locked release**.
+**Temporal convention selected for the revised manuscript (12 November 2026):** RISE measurement timestamps are interpreted as Swedish local civil time (CET in winter and CEST in summer). Simulation-output intervals are matched using a fixed-CET model time base, with the corresponding one-hour summer-time adjustment. The script identifier `fixed_CET_hypothesis` describes the *model lookup clock*, not a fixed-CET measurement logger. Under this alignment IDA ICE has lower annual hourly RMSE for all three systems.
+
+The alternative `civil_unshifted` alignment was evaluated during development. It reverses the hourly-RMSE rankings and **remains archived in the repository for reproducibility**, but is **not used for the selected manuscript or supplement**. The authors selected the convention based on the interpreted time standards and supporting GTI timing diagnostic, not by minimizing error. The original logger settings have **not** been independently authenticated; the 30-day bootstrap intervals describe sampling variability within the adopted alignment, not uncertainty in the original timestamp convention. See the [clock convention decision](docs/REVISION2_CLOCK_CONVENTION_DECISION.md). The Step 28 provenance manifest still does not constitute a final locked source release.
 
 ## Shading experiment
 

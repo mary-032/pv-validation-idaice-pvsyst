@@ -1,5 +1,7 @@
 # Reproducing the Revision 2 annual AC-power candidate
 
+> **12 November 2026 manuscript selection:** The authors adopt Swedish CET/CEST measurement labels matched to fixed-CET model-output intervals (`fixed_CET_hypothesis`). The alternative `civil_unshifted` remains a **required check for complete repository reproducibility**, not a figure, table or additional clock scenario chosen for the submitted article. Original logger settings have not been independently authenticated. See [clock-convention decision](REVISION2_CLOCK_CONVENTION_DECISION.md).
+
 **Status (5 November 2026): audited working candidate, not an independently authenticated or frozen publication release.** This guide complements [REVISION2_RESULT_MAP.md](REVISION2_RESULT_MAP.md). For the **historical `01–11` cohort**, use [REPRODUCIBILITY.md](REPRODUCIBILITY.md) instead.
 
 ## A. Read-only verification from the committed files (preferred first step)
@@ -37,7 +39,7 @@ A reviewer can read the `28_annual_AC_primary_and_sensitivity_metrics.csv` and c
 | B | 242.51 | 311.47 | 4,478 |
 | C | 190.03 | 245.00 | 4,478 |
 
-The primary clock is `fixed_CET_hypothesis`. Compare *the same* measured rows under `civil_unshifted` (from the second CSV and metrics file). Verify that the RISE measured energy per system is invariant to model-clock selection. The ranking reversal is a **required reported sensitivity**, not a statistical confidence-interval effect. The 30-day intervals are for `RMSE_IDA - RMSE_PVsyst` under the fixed-CET scenario. For interval and channel semantics, read Steps [23](../results/annual_audit/23_annual_AC_channel_report.md), [26](../results/annual_audit/26_Annual_AC_All_Systems_Hourly_Table_Audit_2026-10-28.md), [27](../results/annual_audit/27_CLOCK_PROVENANCE_EVIDENCE_2026-10-28.md) and [28](../results/annual_audit/28_annual_AC_release_candidate_note.md).
+The **publication-selected alignment** is `fixed_CET_hypothesis`: Swedish CET/CEST measurement labels matched to fixed-CET model intervals. For a **complete repository audit**, also compare those same measured observations under `civil_unshifted`, verify measured energy per system is invariant and reproduce the model-ranking reversal. This is a **required repository verification**, not an alternative selected for journal presentation. The 30-day paired intervals for `RMSE_IDA - RMSE_PVsyst` describe variability **within** the adopted alignment. For interval and channel semantics, read Steps [23](../results/annual_audit/23_annual_AC_channel_report.md), [26](../results/annual_audit/26_Annual_AC_All_Systems_Hourly_Table_Audit_2026-10-28.md), [27](../results/annual_audit/27_CLOCK_PROVENANCE_EVIDENCE_2026-10-28.md) and [28](../results/annual_audit/28_annual_AC_release_candidate_note.md).
 
 ## B. Reconstruction from source files and archived simulator outputs
 
@@ -74,7 +76,7 @@ python scripts/28_build_annual_AC_release_candidate.py
 5. PVsyst: `E_Grid` at its source interval semantics.
 6. Power error and energy bias use **simulated minus measured**; paired `delta_RMSE` means **IDA minus PVsyst**.
 7. No residual-based rejection of annual AC observations in Step 28.
-8. Fixed-CET clock interpretation is a working hypothesis. `civil_unshifted` is retained as a scientifically consequential alternative.
+8. `fixed_CET_hypothesis` is the author-selected manuscript scenario (fixed-CET model lookup versus Swedish CET/CEST measurement labels). `civil_unshifted` remains a preserved, scientifically consequential repository sensitivity, not a selected journal result. Original logger settings are not independently authenticated.
 9. A 30-day moving-block bootstrap with 5,000 resamples describes conditional temporal sampling variability, **not** undocumented logger settings or other structural uncertainties.
 
 ## C. Shading reconstruction is a separate pipeline
