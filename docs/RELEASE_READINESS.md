@@ -1,5 +1,7 @@
 # Revision 2 publication release-readiness register
 
+> **12 November 2026 author decision:** Manuscript results select CET/CEST-labelled measured data matched to fixed-CET simulation-model intervals. Both computational clock scenarios remain preserved for full repository verification, but only the adopted one is used in the article/supplement. See [clock-convention decision](REVISION2_CLOCK_CONVENTION_DECISION.md). This is not independent authentication of the original logger settings or a final data-release approval.
+
 > **Phase 2 update (5 November 2026):** Source-derived provisional Step 29 monthly-energy RMSE, seasonal and diurnal statistics have been added in `results/revision2/` with a reproducible aggregation script and tests. Their independent execution and manuscript acceptance remain open. The older Figure 3 and `05_*` inferential files remain historical. A source-cohort coverage review is warranted: **31 December 2020 has no selected daylight hour** in the corrected Step 28 cohort; do not infer a missing-source cause without checking.
 
 
@@ -13,14 +15,14 @@ This is a **work checklist**, not a report that every test below has passed. It 
 - [ ] **Clean-clone proof:** demonstrate that the Step 23 → Step 26 → Step 27 → Step 28 route can be run using the distributed source and normalized IDA hourly Table exports; capture full commands and checked output hashes. An available CSV does **not** by itself prove complete rerun from raw data.
 - [ ] **Explain the missing inputs:** confirm exact original hourly IDA Table Excel exports (and fingerprints) and whether they can be redistributed; record the missing `Meteo_89_PD.csv` and `pvsyst Rise project.MEF` and the original RISE logger time metadata. Disclose reconstruction limits rather than inventing missing source files.
 - [ ] **Clarify AC boundary:** retain `EMS/Pprod_log` hourly-Table primary, `inverter_o` / sampled power sensitivities, and the field AC meter boundary uncertainties. Check that every manuscript table and figure uses the declared output semantics.
-- [ ] **Preserve both annual clock interpretations:** include `fixed_CET_hypothesis` and `civil_unshifted` for the same 4,478 physical selected records per system. The rankings reverse and neither the 30-day CIs nor the solar-noon diagnostic authenticates the original logger settings.
+- [x] **Document annual clock selection and preserve the alternative:** manuscript = `fixed_CET_hypothesis` (CET/CEST measurement labels, fixed-CET model lookup); archived sensitivity = `civil_unshifted`. The alternative's ranking reversal remains documented and reproducible, but is not selected for journal presentation. The original logger setup remains independently unverified.
 - [ ] **Create a consistent result namespace:** either generate `results/revision2/` from source scripts or maintain a reviewed manifest mapping each manuscript table to `annual_audit/28_*` and the separate shaded files. Make old `Table6_Power_recomputed.csv`, `05_*` and `PV_MASTER_RESULTS_CURRENT_PD.*` unambiguously **legacy**. Only rename/move with preserved scripts and updated references; documentation alone must not break old workflows.
 
 ## 2. Necessary scientific follow-through (not solved by relabelling files)
 
-- [ ] **Recompute monthly RMSE from Step 28 annual AC** on documented physical months, calendar aggregation and **DC kWp** denominator, including sample/energy coverage. The old `Monthly_RMSE_recomputed.csv` is NOT Step 28-compatible.
-- [ ] **Recompute weather-bin errors/Figure 3** from identical Step 28 annual AC rows, documented geometry/index/AOI filtering, bin counts, mean measured power, RMSE and MAE (W), CV(RMSE), nMBE, and necessary clock sensitivity. The current `Figure3_weather_bins_recomputed.csv` and `05_Weather_bin_CI.csv` are earlier-generation results.
-- [ ] **Recompute seasonal and composite diurnal diagnostics** on the corrected hourly cohort if referenced in manuscript/reviewer replies, with hourly sample counts and non-causal interpretations.
+- [x] **Recompute monthly RMSE from Step 28:** Step 29 contains the source-aligned monthly-energy statistics, cohorts and checks; original `Monthly_RMSE_recomputed.csv` remains a historical output. Final manuscript approval is a separate step.
+- [x] **Recompute irradiance-index Figure 3 on Step 28:** Step 35 includes documented geometry, AOI selection, bin counts and statistical definitions, with both computational clocks archived. The journal figure selects the adopted CET/CEST-measurement alignment. Historical `Figure3_weather_bins_recomputed.csv` must not replace it.
+- [x] **Recompute seasonal and diurnal results:** Steps 29/40 produced and validated source-derived tables and three-panel diurnal distributions. The supplement selects Step 40's `S1a` sources as journal **Table S1/Figure S1**; the other scenario stays archived.
 - [ ] **Audit 30-day inferential and uncertainty overlays** against the Step 28 cohort before reusing historical `05_*`, `Table6_Power_uncertainty_CI30d.csv`, measurement uncertainty envelopes, Engerer2 or temporal-aggregation tables. Statistical intervals cannot capture unsupported structural timing/output interpretations.
 - [ ] **Decide irradiance-result presentation:** physically non-equivalent IDA ICE/PVsyst effective channels must not be presented as an independent transposition model ranking. Either obtain comparable incident GTI outputs or label the old irradiance table as a non-like-for-like processing-chain/channel diagnostic.
 - [ ] **Document temperature cohort and observation boundary:** measured module back-surface vs modelled cell/panel variables; distinguish the original `n` from corrected AC `n`. Avoid relative Celsius error as if physically meaningful.
@@ -55,6 +57,6 @@ This is a **work checklist**, not a report that every test below has passed. It 
 
 ## 6. Release decision
 
-The corrected 4,478-hour AC work is an **audited working candidate**, and the geometry/clock shading corrections are documented. **The repository is not yet a single unified manuscript reproduction pipeline.** Documentation can remove ambiguity now; the missing regenerated monthly/weather-bin/inference artifacts and source-level verification must not be represented as completed until checked.
+The corrected 4,478-hour AC work is an **audited working candidate**. The Step 29 monthly/seasonal/diurnal, Step 35 Figure 3 and Step 40 supplementary outputs have been generated and checked. **The repository is not yet a single unified manuscript reproduction pipeline.** Final author-approved manuscript/source-release checks, some native-file provenance and data-sharing permissions remain separate outstanding requirements.
 
 This checklist is intended to be updated with dates, Git commit IDs and exact evidence paths for each closed item.
