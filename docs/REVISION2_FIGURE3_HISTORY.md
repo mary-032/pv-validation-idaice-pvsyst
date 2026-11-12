@@ -1,5 +1,7 @@
 # Step 38 — Figure 3 development-history audit (Steps 30–34)
 
+> **Subsequent author decision (12 November 2026):** The revised article selects Swedish CET/CEST measurement labels aligned with fixed-CET model-output intervals (`fixed_CET_hypothesis`). Recommendations in this dated audit that both clock scenarios appear in the manuscript reflect the assessment *at that time* and are superseded **for publication presentation only**. The alternative remains archived and reproducible; original logger settings have not been independently authenticated. See [clock decision](REVISION2_CLOCK_CONVENTION_DECISION.md).
+
 **Audit date:** 6 November 2026. **Status:** historical provenance *only*, not a manuscript release or a reconstruction of the original MATLAB Figure 3. The numerical reference for the present Revision 2 candidate remains **Step 35** (`scripts/35_rebuild_revision2_sky_bins.py`, `results/revision2/35_*`). This document corrects outdated historical statements that call Step 34 the selected figure.
 
 ## Scope and evidence
