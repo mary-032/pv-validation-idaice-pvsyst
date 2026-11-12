@@ -5,6 +5,8 @@
 
 ## Why this exists
 
+> **Journal selection (12 November 2026):** Step 40 intentionally builds both clock cases for transparent, reproducible analysis. Only `Table_S1a_seasonal_fixed_CET_hypothesis.*` and `Figure_S1a_diurnal_fixed_CET_hypothesis.*` are selected for the supplement, where they are called **Table S1** and **Figure S1**. The `S1b` results remain archived in GitHub, not submitted. The fixed-CET identifier concerns *simulation-model lookup*; the measurement labels are interpreted as Swedish CET/CEST. See [clock decision](REVISION2_CLOCK_CONVENTION_DECISION.md).
+
 Reviewer 7 requested seasonal performance metrics and composite diurnal error distributions. Step 29 already contains the season-specific metrics and hourly **means**, but the latter lack observed spread. This builder produces two manuscript-ready seasonal tables and two three-panel composite diurnal figures, with **within-hour interquartile bands** calculated from the same individual Step 28 residuals.
 
 ## Inputs and exact cohort
@@ -16,7 +18,7 @@ Reviewer 7 requested seasonal performance metrics and composite diurnal error di
 
 Exactly **4,478 paired selected daylight hours per system** are used under *each* clock scenario; no extra threshold, residual trimming or shadow-hour mask is introduced. Each hour is a measured **physical interval start** in local civil-clock labels. The selected cohort contains 364 distinct calendar dates, with **31 December 2020 absent**. This is a coverage observation; its source cause has not been independently established.
 
-Seasons are **DJF** (Dec–Feb), **MAM** (Mar–May), **JJA** (Jun–Aug), **SON** (Sep–Nov). For each system and software the sample counts are **703 / 1,310 / 1,537 / 928 hours**, respectively. They sum to 4,478. Seasonal CV(RMSE) and nMBE refer to **hourly AC power** and each season's own mean measured power; they are **not** monthly kWh/kWp energy RMSE.
+Seasons are **DJF** (Dec–Feb), **MAM** (Mar–May), **JJA** (Jun–Aug), **SON** (Sep–Nov). For each system and software the sample counts are **703 / 1,310 / 1,537 / 928 hours**, respectively. They sum to 4,478. Seasonal CV(RMSE) and nMBE refer to **hourly AC power** and each season's own mean measured power; they are **not** monthly kWh/kWp energy RMSE. These month groupings are **conventional descriptive categories**, not observed onset/end dates of local meteorological seasons; alternative boundary choices were not evaluated and could alter the seasonal statistics.
 
 ## Output register
 
