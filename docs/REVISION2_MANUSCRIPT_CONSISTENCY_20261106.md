@@ -1,5 +1,7 @@
 # Step 39 — Manuscript-to-results consistency audit (working review)
 
+> **Subsequent author decision (12 November 2026):** The revised article selects Swedish CET/CEST measurement labels aligned with fixed-CET model-output intervals (`fixed_CET_hypothesis`). Recommendations in this dated audit that both clock scenarios appear in the manuscript reflect the assessment *at that time* and are superseded **for publication presentation only**. The alternative remains archived and reproducible; original logger settings have not been independently authenticated. See [clock decision](REVISION2_CLOCK_CONVENTION_DECISION.md).
+
 **Audited manuscript:** `Revision2_clean_20261104.pdf` (33 pages; PDF generated 4 November 2026; supplied by the author).  
 **GitHub numerical reference:** `mary-032/pv-validation-idaice-pvsyst` at commit `c1aa4a10154ca833279d6bf4d9017267efb8a86e` (6 November 2026).  
 **Scope:** The 4 November draft versus the corrected Revision 2 annual AC power, monthly energy, sky-bin, legacy GTI/temperature, and shaded energy tables. This is a source-traceability review, **not** approval for submission or public data redistribution. Page/line positions refer to small printed line numbers in this specific PDF.
