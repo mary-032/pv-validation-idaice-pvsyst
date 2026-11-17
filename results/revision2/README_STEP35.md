@@ -1,5 +1,7 @@
 # Step 35 — Revision 2 tilted irradiance-index diagnostics and Figure 3
 
+> **Paper navigation:** the manuscript's Figure 3 and the new Supplementary **Table S2** come from the adopted `fixed_CET_hypothesis`, AOI<80° source table. See [publication-results index](../../docs/PUBLICATION_RESULTS.md); alternative clock figures remain generator-controlled audit assets.
+
 > **Journal selection (12 November 2026):** Figure 3 uses `fixed_CET_hypothesis` with AOI < 80°, meaning Swedish CET/CEST measurement labels matched to fixed-CET model intervals. The `civil_unshifted` figure remains an archived diagnostic, **not** a second submitted figure. Original logger settings remain independently unauthenticated. See [clock decision](../../docs/REVISION2_CLOCK_CONVENTION_DECISION.md).
 
 **Prepared 5 November 2026. Candidate / not a final manuscript release.**

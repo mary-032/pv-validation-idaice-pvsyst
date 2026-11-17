@@ -1,5 +1,7 @@
 # Revision 2 publication release-readiness register
 
+> **Publication navigation improved (17 November 2026):** [Paper source index](PUBLICATION_RESULTS.md) now maps Table 6, Figure 3, Table S1, Figure S1 and Table S2; a standard-library read-only regression gate checks their selected numerical anchors. Original-generation Figure 3 files were moved byte-for-byte to `archive/legacy_figure3/`; a separate archival branch preserves the pre-curation state. These improvements do **not** imply source-native clean-clone reproduction or release approval.
+
 > **12 November 2026 author decision:** Manuscript results select CET/CEST-labelled measured data matched to fixed-CET simulation-model intervals. Both computational clock scenarios remain preserved for full repository verification, but only the adopted one is used in the article/supplement. See [clock-convention decision](REVISION2_CLOCK_CONVENTION_DECISION.md). This is not independent authentication of the original logger settings or a final data-release approval.
 
 > **Historical checkpoint (5 November 2026; superseded by the updates below):** At that time Step 29 monthly/seasonal/diurnal aggregates were provisional, and the regenerated Figure 3 and supplement had not yet been verified. These tasks were subsequently completed in Steps 35 and 40; the 12 November publication-selection decision is documented above. The earlier-generation `05_*` inference results remain historical, and source-level checks including the absent 31 December 2020 cohort date remain relevant.

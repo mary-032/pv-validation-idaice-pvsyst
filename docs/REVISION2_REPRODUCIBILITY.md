@@ -1,10 +1,20 @@
 # Reproducing the Revision 2 annual AC-power candidate
 
+> **Publication-first shortcut (17 November 2026):** Begin with [Table 6, Figure 3, Table S1, Figure S1 and Table S2 source map](PUBLICATION_RESULTS.md), then run `python scripts/41_verify_publication_outputs.py` from the repository root. This is a **read-only standard-library regression test** on the committed selected sources, not an independent rerun of IDA ICE/PVsyst or the missing native model input files. The full historic two-scenario procedure below is retained separately for provenance.
+
 > **12 November 2026 manuscript selection:** The authors adopt Swedish CET/CEST measurement labels matched to fixed-CET model-output intervals (`fixed_CET_hypothesis`). The alternative `civil_unshifted` remains a **required check for complete repository reproducibility**, not a figure, table or additional clock scenario chosen for the submitted article. Original logger settings have not been independently authenticated. See [clock-convention decision](REVISION2_CLOCK_CONVENTION_DECISION.md).
 
-**Status (5 November 2026): audited working candidate, not an independently authenticated or frozen publication release.** This guide complements [REVISION2_RESULT_MAP.md](REVISION2_RESULT_MAP.md). For the **historical `01–11` cohort**, use [REPRODUCIBILITY.md](REPRODUCIBILITY.md) instead.
+**Status (17 November 2026): audited working candidate, not an independently authenticated or frozen publication release.** This guide complements [REVISION2_RESULT_MAP.md](REVISION2_RESULT_MAP.md). For the **historical `01–11` cohort**, use [REPRODUCIBILITY.md](REPRODUCIBILITY.md) instead.
 
 ## A. Read-only verification from the committed files (preferred first step)
+
+For the actual submitted manuscript's selected results (including the two newly added supplementary items), use the [publication index](PUBLICATION_RESULTS.md) and run:
+
+```bash
+python scripts/41_verify_publication_outputs.py
+```
+
+This checks the adopted rows only and leaves existing results untouched. By contrast, Steps 28/29/35/40 deliberately retain their **alternative alignment** as a separate complete *repository research audit*; do not confuse an archived scenario with a submitted figure or table. Older original-generation Figure 3 output files now reside in [`archive/legacy_figure3/`](../archive/legacy_figure3/).
 
 The source of the current manuscript's corrected annual AC figures is:
 
@@ -68,6 +78,8 @@ python scripts/28_build_annual_AC_release_candidate.py
 **Important:** Step 26 reads `23_annual_AC_channel_comparison_hourly.csv` and `26_IDA_hourly_mean_normalized.csv` from `results/annual_audit/`; Step 28 checks fingerprints and will stop if its anticipated sources have changed. If a stage fails, do not manually modify upstream CSVs to force it to pass. Record the error, source fingerprints and differing output. Never apply the PVsyst weather-import one-hour shift again to `E_Grid`.
 
 ### Comparison semantics that must not change silently
+
+The publication-first read-only verifier covers the current numerical anchors; the following detailed source-reconstruction checks also include the archived timing comparison.
 
 1. RISE measured power: original ten-minute data, six valid records per full hourly interval.
 2. Daylight: physical astronomical solar elevation > 0° at **measured interval start**.

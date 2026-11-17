@@ -1,13 +1,15 @@
 # Revision 2 result map and provenance status
 
+> **First stop for submitted tables and figures (17 November 2026):** [**Publication-results index**](PUBLICATION_RESULTS.md) maps Table 6, Figure 3, Table S1, Figure S1 and **Table S2** to the selected primary files, and supplies the read-only numerical verification command. This older audit-wide map also contains mixed-generation and archived sensitivity results; do not interpret it as a list of submission figures.
+
 > **Publication-selection update (12 November 2026):** Swedish CET/CEST measured timestamps matched to fixed-CET model intervals are the selected convention for the revised manuscript. `civil_unshifted` remains an archived repository sensitivity, **not a submitted article/supplement result**. Step 29 monthly/seasonal/diurnal, Step 35 Figure 3 and Step 40 supplementary results are available. See [clock decision](REVISION2_CLOCK_CONVENTION_DECISION.md).
 
 
-**Documentation checkpoint:** 5 November 2026.  
+**Original documentation checkpoint:** 5 November 2026; **publication navigation updated:** 17 November 2026.  
 **Repository baseline inspected:** `d89e8d48292c6c422710d53169eb2563029e3bed` (29 October 2026).  
-**Status:** **Working Revision 2 manuscript candidate, not a signed-off or immutable release.** No code, numeric outputs, raw data, or historical assets were changed in preparing this map.
+**Status:** **Working Revision 2 manuscript candidate, not a signed-off or immutable release.** The publication curation archives the superseded original Figure 3 files byte-for-byte; it does not modify numerical results, experimental inputs or active generation scripts.
 
-> **Read this file before using a result in a manuscript.** The repository contains *two distinct annual analysis generations*. The original `01–11` workflow is retained as methodological history; it must **not** be represented as reproducing the corrected Revision 2 annual AC comparison. The corrected annual AC candidate is stored under `results/annual_audit/28_*`. The shading reconstruction is a *separate* audited chain. Do not combine metrics, confidence intervals, exclusions, or populations from different generations without a documented recomputation.
+> **Use the [publication-results index](PUBLICATION_RESULTS.md) before taking any result into the manuscript.** The repository contains *two distinct annual analysis generations*. The original `01–11` workflow is retained as methodological history; it must **not** be represented as reproducing the corrected Revision 2 annual AC comparison. The corrected annual AC candidate is stored under `results/annual_audit/28_*`. The shading reconstruction is a *separate* audited chain. Do not combine metrics, confidence intervals, exclusions, or populations from different generations without a documented recomputation.
 
 ## 1. At-a-glance source-of-truth matrix
 

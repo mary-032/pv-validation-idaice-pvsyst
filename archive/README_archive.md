@@ -1,6 +1,8 @@
 # Archive
 
-> **Revision 2 context (5 November 2026):** Historical artifacts are *not limited to this directory*. For script compatibility, important superseded **generated outputs** still reside under `results/`, `derived_data/` and in the original `00–11` workflow. In particular, the old master workbook, Table 6, monthly RMSE, Figure 3, and `05_*` statistics are historical for the new annual AC comparison even though they have not been physically moved into `archive/`. The current conditional annual AC dataset is under `results/annual_audit/28_*`. Refer to [REVISION2_RESULT_MAP.md](../docs/REVISION2_RESULT_MAP.md). Keep historical files and commit history; do not break old script paths simply to make the tree look cleaner.
+For the manuscript's **Table 6, Figure 3, Table S1, Figure S1 and Table S2**, never choose a historical output from this directory: use the [publication index](../docs/PUBLICATION_RESULTS.md).
+
+> **Publication/history separation (17 November 2026):** The superseded original Figure 3 outputs were moved byte-for-byte into [`legacy_figure3/`](legacy_figure3/). Earlier `Table6_Power_recomputed.csv`, old monthly and `05_*` outputs remain under `results/` for original-script compatibility but are **not manuscript sources**. Start at [publication results](../docs/PUBLICATION_RESULTS.md) and [history classification](PUBLICATION_VS_HISTORY.md). The pre-curation repository state is preserved on branch `archive/pre-publication-curation-20261117` (commit `74dc269`), **not a release tag**. Mixed-scenario annual diagnostics are deliberately retained at generator-controlled paths; neither the adopted results nor historic calculations were redefined.
 
 
 This directory contains superseded, historical, or development-stage analysis material retained for provenance.
