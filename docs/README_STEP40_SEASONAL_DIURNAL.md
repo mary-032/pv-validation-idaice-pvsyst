@@ -1,5 +1,7 @@
 # Step 40 — Revision 2 seasonal tables and composite diurnal error figures
 
+> **Paper navigation:** the journal uses **Table S1** and **Figure S1**, sourced from the **S1a / `fixed_CET_hypothesis` files only**; see [publication-results index](PUBLICATION_RESULTS.md). Step 40 intentionally retains S1b as a repository-only methodological sensitivity and continues to test both scenarios.
+
 **Status:** manuscript/supplement **candidates**, not a signed-off research release.  
 **Scientific provenance:** corrected Step 28 matched hourly AC series, checked against Step 29 aggregates. This step is **descriptive postprocessing only**; it does not rerun IDA ICE or PVsyst, infer clocks, select outliers, or replace historical results.
 

@@ -1,16 +1,17 @@
 # PV validation: IDA ICE versus PVsyst
 
-> **Revision 2 documentation update (12 November 2026):** Step 29 monthly/seasonal/diurnal, Step 35 Figure 3 and Step 40 supplementary results have now been generated and checked. The authors selected Swedish CET/CEST measurement labels aligned to fixed-CET model intervals for the revised manuscript. The alternative unshifted calculation remains archived. See [clock convention decision](docs/REVISION2_CLOCK_CONVENTION_DECISION.md). The full source release is not yet approved.
+> **Publication-results navigation updated 17 November 2026:** Start at [**Publication results: Table 6, Figure 3, Table S1, Figure S1, Table S2**](docs/PUBLICATION_RESULTS.md) and use the read-only source checker (`python scripts/41_verify_publication_outputs.py`). The paper adopts Swedish CET/CEST measured timestamps matched to fixed-CET model output intervals. Alternative-clock files and old analyses remain for *computational provenance*, not as manuscript results; see the [archive guide](archive/PUBLICATION_VS_HISTORY.md) and [clock decision](docs/REVISION2_CLOCK_CONVENTION_DECISION.md). This documentation curation does not constitute a final original-source release.
 
 
 This repository preserves the measured-data processing, simulation exports, numerical analyses, and audit trail accompanying **“Validation of PV Modeling in an Integrated Building Energy Simulation Tool”** (Rynoson, Bales and Battikh).
 
-**Current state (5 November 2026): Revision 2 working candidate, NOT a fully frozen/publication-verified release.** The repository intentionally retains earlier analyses. **The original `01–11` numerical workflow is *not* the authoritative annual AC-power result for Revision 2.**
+**Current state (17 November 2026): Revision 2 publication source files checked, but NOT a fully frozen or independently reconstructed original-source release.** The repository intentionally retains earlier analyses. **The original `01–11` numerical workflow is *not* the authoritative annual AC-power result for Revision 2.**
 
 ## Start here
 
 | Need | Read / use |
 |---|---|
+| **Which files produce Table 6, Figure 3, Table S1, Figure S1 and Table S2?** | **[Publication results index](docs/PUBLICATION_RESULTS.md)** (primary reader entry point); [read-only numerical verifier](scripts/41_verify_publication_outputs.py) |
 | **Which values can I use for Revision 2?** | [Revision 2 result map](docs/REVISION2_RESULT_MAP.md) — publication versus historical results; [clock convention decision](docs/REVISION2_CLOCK_CONVENTION_DECISION.md) — adopted matching and archived sensitivity |
 | Reproduce the **corrected annual AC** candidate | [Revision 2 reproduction guide](docs/REVISION2_REPRODUCIBILITY.md) and [Step 28 data](results/annual_audit/) |
 | Inspect the shaded 2023 experiment | [Final shading audit](docs/Final_Shading_Audit_2026-10-27.md), [System A chronology](docs/README_A3_SHADING_REBUILD.md), [System C clock sensitivity](docs/README_C9_CLOCK_INTEGRATION.md) |
@@ -18,7 +19,7 @@ This repository preserves the measured-data processing, simulation exports, nume
 | Understand earlier methods and outputs | [Historical workflow documentation](docs/REPRODUCIBILITY.md), [results index](results/README_results.md), [archive](archive/README_archive.md) |
 | See what is **not yet publication-ready** | [Release-readiness checklist](docs/RELEASE_READINESS.md) |
 
-**Crucial distinction:** `derived_data/annual_unshaded_analysis.csv`, `results/Table6_Power_recomputed.csv`, `results/Monthly_RMSE_recomputed.csv`, `results/Figure3_weather_bins_recomputed.csv`, the original `05_*` inference results, and `results/PV_MASTER_RESULTS_CURRENT_PD.*` all belong to the earlier analytical generation. They remain **preserved for provenance and for explaining the earlier revisions**, but they do not reproduce the corrected Step 28 annual AC comparison. Do **not** use the older master workbook as the Revision 2 master dataset.
+**Crucial distinction:** `derived_data/annual_unshaded_analysis.csv`, `results/Table6_Power_recomputed.csv`, `results/Monthly_RMSE_recomputed.csv`, the [archived original Figure 3 and bin CSV](archive/legacy_figure3/), the original `05_*` inference results, and `results/PV_MASTER_RESULTS_CURRENT_PD.*` all belong to the earlier analytical generation. They remain **preserved for provenance and for explaining the earlier revisions**, but they do not reproduce the corrected Step 28 annual AC comparison. Do **not** use the older master workbook as the Revision 2 master dataset.
 
 ## Study design
 
@@ -34,6 +35,8 @@ There are two *different* measurement campaigns: **1 June 2020–31 May 2021** f
 
 ## Corrected annual AC-power analysis — adopted temporal convention
 
+**Publication-only view:** the [publication index](docs/PUBLICATION_RESULTS.md) identifies the adopted source for **Table 6, Figure 3, Supplementary Table S1, Figure S1 and Table S2**. Run `python scripts/41_verify_publication_outputs.py` for read-only regression checks before copying values to a manuscript; source filenames and numerical data remain unchanged.
+
 `results/annual_audit/28_annual_AC_primary_fixed_CET.csv` contains the paired comparison observations. The point estimates are in `28_annual_AC_primary_and_sensitivity_metrics.csv`; the three paired 95% RMSE-difference bootstrap intervals are in `28_annual_AC_primary_CI30d.csv`.
 
 The working cohort consists of **4,478 common, complete astronomical-daylight hourly intervals per system**, derived from six original 10-minute AC measurements per interval. Daylight selection uses solar elevation above 0° **at the measured interval start**. No model-residual-based outliers were removed in this corrected AC cohort.
@@ -48,7 +51,7 @@ IDA ICE AC generation uses the **hourly-averaged electrical-system “Produced p
 
 **Temporal convention selected for the revised manuscript (12 November 2026):** RISE measurement timestamps are interpreted as Swedish local civil time (CET in winter and CEST in summer). Simulation-output intervals are matched using a fixed-CET model time base, with the corresponding one-hour summer-time adjustment. The script identifier `fixed_CET_hypothesis` describes the *model lookup clock*, not a fixed-CET measurement logger. Under this alignment IDA ICE has lower annual hourly RMSE for all three systems.
 
-The alternative `civil_unshifted` alignment was evaluated during development. It reverses the hourly-RMSE rankings and **remains archived in the repository for reproducibility**, but is **not used for the selected manuscript or supplement**. The authors selected the convention based on the interpreted time standards and supporting GTI timing diagnostic, not by minimizing error. The original logger settings have **not** been independently authenticated; the 30-day bootstrap intervals describe sampling variability within the adopted alignment, not uncertainty in the original timestamp convention. See the [clock convention decision](docs/REVISION2_CLOCK_CONVENTION_DECISION.md). The Step 28 provenance manifest still does not constitute a final locked source release.
+The alternative `civil_unshifted` alignment was evaluated during development. It reverses the hourly-RMSE rankings and **remains in the generator-controlled research outputs for audit reproducibility**, but is **not used for the selected manuscript or supplement**. The authors selected the convention based on the interpreted time standards and supporting GTI timing diagnostic, not by minimizing error. The original logger settings have **not** been independently authenticated; the 30-day bootstrap intervals describe sampling variability within the adopted alignment, not uncertainty in the original timestamp convention. See the [clock convention decision](docs/REVISION2_CLOCK_CONVENTION_DECISION.md). The Step 28 provenance manifest still does not constitute a final locked source release.
 
 ## Shading experiment
 
@@ -75,7 +78,7 @@ derived_data/        Processed canonical datasets; several annual files are hist
 scripts/             Original 00–11 pipeline and subsequent 16–28 targeted source audits
 results/             Legacy outputs, shaded analyses, and results/annual_audit/28_* working AC release
 docs/                Provenance map, methods, data dictionary, reproducibility and audit records
-archive/             Superseded development scripts (retained, not deleted)
+archive/             Original-generation Figure 3 files, historical index and legacy scripts
 tests/               Existing targeted tests (not a comprehensive release regression suite)
 config.json          Settings for the original canonical 01–11 workflow; NOT a Step 28 cohort definition
 ```
@@ -87,6 +90,10 @@ Use [the Revision 2 reproduction guide](docs/REVISION2_REPRODUCIBILITY.md) to wo
 Use an isolated Python environment and install `requirements.txt`. A clean clone may require third-party or proprietary files for full reconstruction; see [data/README_data.md](data/README_data.md). The `00–11` scripts were used for prior analysis generations and are retained for auditability. They can overwrite historical-generation outputs; do **not** run them expecting to reproduce Revision 2 power metrics. The `20–28` scripts are the corrected annual AC diagnostic chain and should be rerun in a scratch clone/branch with explicit source and output verification.
 
 The source code and original documentation use the MIT License with third-party data restrictions described in [LICENSE.md](LICENSE.md). Presence of third-party data in a public repository does not alone establish redistribution permission; check source agreements before archival release.
+
+## Archived history and snapshot
+
+The earlier Figure 3 plots and bin CSV are now in [`archive/legacy_figure3/`](archive/legacy_figure3/). A preservation **branch** [`archive/pre-publication-curation-20261117`](https://github.com/mary-032/pv-validation-idaice-pvsyst/tree/archive/pre-publication-curation-20261117) points to the pre-cleanup commit `74dc269`; it is *not* a Git tag or a final scientific release. The archived alternative annual clock files remain in their original deterministic generator locations because moving them would break Steps 28/29/35/40 and the existing historical checks. [What is historical versus published?](archive/PUBLICATION_VS_HISTORY.md)
 
 ## Citation, authors and release status
 

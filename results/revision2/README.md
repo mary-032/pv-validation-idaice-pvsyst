@@ -1,5 +1,7 @@
 # Revision 2 AC aggregate diagnostics — Step 29
 
+> **Publication-first link:** [Selected Table 6, Figure 3, Table S1, Figure S1 and Table S2](../../docs/PUBLICATION_RESULTS.md); verify with `python scripts/41_verify_publication_outputs.py`. The Step 29/35/40 outputs still contain two scenarios by design; only `fixed_CET_hypothesis` is selected for the article. Previously published original-generation Figure 3 files were moved to [`archive/legacy_figure3/`](../../archive/legacy_figure3/).
+
 > **Journal selection (12 November 2026):** The authors use `fixed_CET_hypothesis` (CET/CEST-labelled measurements matched to fixed-CET model intervals). `civil_unshifted` and its results remain archived for complete repository reproduction, **not selected for the article/supplement**. See [clock decision](../../docs/REVISION2_CLOCK_CONVENTION_DECISION.md), [Step 35](README_STEP35.md) and [Step 40](../../docs/README_STEP40_SEASONAL_DIURNAL.md).
 
 **Created:** 5 November 2026. **Updated:** 12 November 2026 (publication clock choice; Steps 35 and 40 now generated). **Status:** audited analytical outputs; final author and source-release approval remain outstanding. This directory contains versioned outputs from the corrected Step 28 annual AC paired series. Earlier monthly, original `05_*` and legacy Figure 3 calculations are preserved separately.

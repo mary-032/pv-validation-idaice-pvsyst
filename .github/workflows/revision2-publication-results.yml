@@ -1,0 +1,27 @@
+name: Revision 2 adopted publication results
+
+on:
+  pull_request:
+    paths:
+      - "scripts/41_verify_publication_outputs.py"
+      - ".github/workflows/revision2-publication-results.yml"
+      - "results/annual_audit/28_*"
+      - "results/revision2/29_*"
+      - "results/revision2/35_*"
+      - "results/revision2/40_supplement/**"
+      - "docs/PUBLICATION_RESULTS.md"
+  workflow_dispatch:
+
+jobs:
+  publication-source-gates:
+    name: Validate Table 6, Figure 3, Table S1, Figure S1, Table S2
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify committed publication sources without changing outputs
+        run: python scripts/41_verify_publication_outputs.py
