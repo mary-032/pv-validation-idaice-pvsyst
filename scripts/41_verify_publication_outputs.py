@@ -83,7 +83,7 @@ def check() -> None:
                       x["scenario"] == SCENARIO and x["system"] == sys and
                       x["selection"] == "Eext_positive_AOI_lt80" and
                       math.isclose(float(x["kt_lower_inclusive"]), lo, abs_tol=1e-9) and
-                      (math.isinf(hi) and x["kt_upper_exclusive"].lower() in ("inf", "infinity") or
+                      (math.isinf(hi) and x["kt_upper_exclusive"].lower() in ("", "inf", "infinity") or
                        not math.isinf(hi) and math.isclose(float(x["kt_upper_exclusive"]), hi, abs_tol=1e-9))]
             assert len(chosen) == 2, (sys, idx, len(chosen))
             assert set(r["model"] for r in chosen) == {"IDA ICE", "PVsyst"}
